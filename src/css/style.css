@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "./components/_config.css";
+
+@layer utilities {
+  .container,
+  .c-container {
+    @apply mx-auto px-6;
+  }
+}
+
+@layer components {
+  [x-cloak] {
+    display: none !important;
+  }
+
+  html {
+    @apply md:text-[1.2307692308vw] lg:text-[16px];
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+
+  /* @import "./components/swup.css"; */
+
+  @import "./components/btn.css";
+  @import "./components/header.css";
+
+  @import "./pages/home.css";
+  @import "./pages/post.css";
+  @import "./pages/contact.css";
+}

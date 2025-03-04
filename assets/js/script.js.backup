@@ -1,0 +1,62 @@
+.main-text {
+  @apply relative z-20;
+}
+.text-clone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 1;
+  @apply bg-black z-10;
+}
+
+const mainText = document.querySelector(".main-text");
+const parent = mainText.parentElement;
+
+// Buat 6 duplikasi teks
+const cloneCount = 6;
+const cloneOffsets = [-60, -40, -20, 20, 40, 60]; // Posisi awal
+const cloneOpacities = [0.8, 0.7, 0.6, 0.6, 0.7, 0.8];
+
+for (let i = 0; i < cloneCount; i++) {
+  const clone = mainText.cloneNode(true);
+  clone.classList.add("text-clone");
+  clone.style.transform = `translateY(${cloneOffsets[i*2]}px)`;
+  clone.style.opacity = "1";
+  parent.appendChild(clone);
+}
+
+// Animasi pergerakan teks clone (tetap pakai scrub)
+gsap.to(".text-clone", {
+  y: 0,
+  scrollTrigger: {
+    trigger: ".home-virtual",
+    start: "top center",
+    end: "center center",
+    scrub: true,
+  }
+});
+
+// Saat teks sudah bersatu, langsung menghilang (tanpa scrub)
+gsap.to(".text-clone", {
+  opacity: 0,
+  duration: 0.1, // Transisi cepat, hampir instan
+  scrollTrigger: {
+    trigger: ".home-virtual",
+    start: "center center",
+    toggleActions: "play none none none" // Hilang saat mencapai titik ini
+  }
+});
+
+// Ubah teks utama menjadi biru setelah clone menghilang
+gsap.to(".main-text", {
+  color: "blue",
+  "-webkit-text-stroke": "0rem", // Hilangkan outline
+  "-webkit-text-fill-color": "blue",
+  scrollTrigger: {
+    trigger: ".home-virtual",
+    start: "center center",
+    toggleActions: "play none none none"
+  }
+});

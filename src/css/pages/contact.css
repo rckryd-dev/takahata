@@ -1,0 +1,141 @@
+.p-contact {
+  @apply py-24;
+
+  &__content {
+
+    .c-container {
+      @apply max-w-[calc(70rem_+_3rem)];
+    }
+
+    &__head {
+      &__txt {
+        @apply text-center text-xl mb-8;
+      }
+
+      &__tel {
+        @apply border rounded-2xl text-center py-14 px-4 max-w-148 mx-auto;
+
+        &__info {
+          @apply flex gap-8 justify-center text-[2rem];
+
+          h3 {
+
+          }
+          a {
+            @apply font-medium;
+          }
+        }
+
+        &__hours {
+          @apply mt-8
+        }
+      }
+
+      &__steps {
+        @apply grid grid-cols-3 gap-3 mt-32;
+
+        li {
+          @apply h-24 grid place-content-center text-2xl border;
+
+          &.is-current {
+            @apply bg-black text-white;
+          }
+        }
+
+      }
+    }
+
+    .mw_wp_form {
+      @apply mt-20;
+
+      .vertical-item {
+        @apply block;
+        + .vertical-item {
+          @apply !mt-5;
+        }
+      }
+
+      table {
+        @apply w-full;
+
+        tr {
+          th,
+          td {
+            @apply align-top;
+          }
+
+          th {
+            @apply flex items-center gap-3 max-w-88 font-normal;
+
+            ._label {
+              @apply text-xl;
+            }
+
+            ._require {
+              @apply bg-[#9F0F0C] text-white inline-block leading-none p-2.5 whitespace-nowrap tracking-normal rounded;
+            }
+          }
+
+          td {
+            @apply pb-10;
+
+            ._input {
+              input:not([type="radio"]):not([type="checkbox"]),
+              textarea {
+                @apply border border-[#c4c3c3] bg-[#f2f2f2] rounded-lg text-lg w-full max-w-130 p-5;
+              }
+
+              input:not([type="radio"]):not([type="checkbox"]) {
+                @apply h-17.5;
+              }
+
+              input[type=radio] {
+                @apply hidden;
+                
+                + span {
+                  @apply text-xl cursor-pointer inline-block leading-none pl-12 relative;
+
+                  &::before {
+                    @apply aspect-square bg-white border rounded-full content-[''] block left-0 absolute top-1/2 -translate-y-1/2 w-6.5;
+                  }
+
+                  &::after {
+                    @apply aspect-square border border-transparent rounded-full content-[''] left-1 opacity-0 absolute top-1/2 -translate-y-1/2 w-[1.125rem] transition-all bg-[linear-gradient(318.61deg,#5F9EA0_-20.87%,#4682B4_81.02%,#B0E0E6_114.98%)];
+                  }
+                }
+
+                &:checked {
+                  + span {
+                    &::after {
+                      @apply opacity-100;
+                    }
+                  }
+                }
+              }
+
+              textarea {
+                @apply min-h-50 field-sizing-content;
+              }
+            }
+            
+            small {
+              @apply block mt-4 text-[#707070];
+            }
+
+            ._zip {
+              @apply flex items-center gap-2;
+
+              span {
+                @apply text-lg;
+              }
+
+              input {
+                @apply !max-w-50;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

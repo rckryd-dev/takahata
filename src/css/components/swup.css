@@ -1,0 +1,8 @@
+.transition-fade {
+  @apply opacity-100 transition-opacity duration-300 ease-out;
+}
+
+html.is-changing .transition-fade {
+  @apply opacity-0 transition-opacity duration-300 delay-300 ease-in;
+}
+

@@ -1,0 +1,31 @@
+.p-post {
+  @apply py-24;
+
+  &__list {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-10;
+  }
+  &__card {
+    
+    &__thumb {
+      img {
+        @apply aspect-video object-cover;
+      }
+    }
+
+    &__body {
+      @apply mt-2;
+
+      span {
+
+      }
+
+      h2 {
+        @apply font-medium mt-2;
+      }
+
+      p {
+        @apply line-clamp-2 text-sm mt-1;
+      }
+    }
+  }
+}
