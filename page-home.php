@@ -3,6 +3,7 @@
  * Template Name: Home Page
  */
 get_header();
+get_template_part('parts/scroll-down');
 ?>
 <main class="p-home">
   <section data-bg-color="black" class="home-top">
@@ -244,7 +245,10 @@ get_header();
   </section>
 </main>
 
-<?php get_footer(); ?>
+<?php 
+  get_footer(); 
+  get_template_part('parts/scroll-down-script');
+?>
 <script>
   const vrData = <?= $jsonData ?>;
   console.log(vrData);
