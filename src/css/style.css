@@ -14,7 +14,7 @@
   }
 
   html {
-    @apply md:text-[1.2307692308vw] lg:text-[16px];
+    @apply text-[2.5vw] sm:text-[16px] md:text-[1.2307692308vw] lg:text-[16px];
   }
 
   body {

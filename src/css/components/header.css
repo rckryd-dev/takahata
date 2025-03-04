@@ -1,5 +1,5 @@
 .navbar {
-  @apply flex justify-between items-center h-24 px-12 pt-8;
+  @apply flex justify-between items-center px-12 pt-8 max-md:px-6 max-md:pt-7.5;
 
   &__logo {
     @apply w-[6.6875rem];
@@ -14,7 +14,7 @@
   @apply relative text-[10px];
 
   &__txt-btn {
-    @apply font-acumin-variable tracking-[.02em] text-xl text-primary z-[1];
+    @apply font-acumin-variable tracking-[.02em] text-xl max-md:text-3xl text-primary z-[1];
     font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
   }
 
@@ -141,19 +141,19 @@
     will-change: width, height, opacity;
 
     .navlinks {
-      @apply flex flex-col gap-4 pointer-events-none;
+      @apply flex flex-col gap-4 max-md:gap-6 pointer-events-none;
   
       li {
-        @apply font-acumin-variable text-3xl font-black;
+        @apply font-acumin-variable text-3xl max-md:text-[4.25rem] font-black;
   
         a {
-          @apply relative pl-8;
+          @apply relative pl-8 max-md:pl-15;
           -webkit-text-stroke: .0313rem var(--color-primary);
           -webkit-text-fill-color: transparent;
           transition: all .3s ease-out;
   
           &::before {
-            @apply absolute content-[''] left-0 w-6 h-1 bg-primary top-1/2 -translate-y-1/2;
+            @apply absolute content-[''] left-0 w-6 h-1 max-md:w-11 max-md:h-1.5 bg-primary top-1/2 -translate-y-1/2;
             transition: all .3s ease-out;
           }
   
@@ -162,7 +162,7 @@
             -webkit-text-fill-color: var(--color-primary);
   
             &::before {
-              @apply w-4 h-0.5;
+              @apply w-4 h-0.5 max-md:w-6.75 max-md:h-1;
             }
           }
         }
@@ -174,7 +174,7 @@
             -webkit-text-fill-color: var(--color-primary);
   
             &::before {
-              @apply w-4 h-0.5;
+              @apply w-4 h-0.5 max-md:w-6.75 max-md:h-1;
             }
           }
         }
@@ -182,8 +182,7 @@
     }
 
     &.is-open {
-      @apply -top-4 -right-6 opacity-100 pt-26 px-10 pb-10 w-100 h-100;
-      border-radius: 1.25rem;
+      @apply -top-4 max-md:-top-7.5 -right-6 opacity-100 pt-26 max-md:pt-61.5 px-10 max-md:px-7.5 pb-10 w-100 max-md:w-screen h-100 max-md:h-[100svh] rounded-[1.25rem] max-md:rounded-[0];
       transition: all .4s .2s, opacity .3s;
 
       .navlinks {

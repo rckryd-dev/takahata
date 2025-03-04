@@ -9,7 +9,7 @@
 <header 
     class="fixed top-0 w-full z-50">
     <div class="navbar">
-        <a href="<?php echo home_url(); ?>">
+        <a href="<?php echo home_url(); ?>" class="z-10">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/takahata-logo.svg" alt="<?php bloginfo('name'); ?> Logo" class="navbar__logo">
         </a>
         
@@ -18,7 +18,7 @@
             x-data="drawer"
             @click.outside="setDrawerState(false)"
         >
-            <div class="flex gap-3 items-center">
+            <div class="flex gap-2 md:gap-3 items-center">
                 <span class="drawer__txt-btn" :class="{ 'text-primary': drawerOpen }">MENU</span>
                 <button class="drawer__btn" :class="{ 'is-open': drawerOpen }" @click="setDrawerState(!drawerOpen)"><span></span></button>
             </div>
