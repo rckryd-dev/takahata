@@ -385,6 +385,7 @@ Text Domain: takahata
     }
   }
   body {
+    overflow-x: hidden;
     background-color: var(--color-black);
     color: var(--color-white);
   }
@@ -822,8 +823,33 @@ Text Domain: takahata
   .p-home .home-virtual {
     --title-stroke: var(--color-primary);
     --title-fill: transparent;
+    position: relative;
     padding-top: calc(var(--spacing) * 33);
     padding-bottom: calc(var(--spacing) * 24);
+  }
+  .p-home .home-virtual .running-txt {
+    position: absolute;
+    top: 21.875rem;
+    z-index: calc(1 * -1);
+    width: 100%;
+    overflow: hidden;
+    opacity: 10%;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .p-home .home-virtual .running-txt > div {
+    font-family: var(--font-acumin-variable);
+    font-size: 10.625rem;
+    --tw-leading: 1.15;
+    line-height: 1.15;
+    --tw-tracking: .02em;
+    letter-spacing: .02em;
+    color: var(--color-primary);
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+  }
+  .p-home .home-virtual .running-txt > div > span {
+    -webkit-text-stroke: .25rem var(--title-stroke, var(--color-primary));
+    -webkit-text-fill-color: var(--title-fill, transparent);
   }
   .p-home .home-virtual .wrapper {
     margin-inline: auto;

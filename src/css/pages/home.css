@@ -90,7 +90,22 @@
   .home-virtual {
     --title-stroke: var(--color-primary);
     --title-fill: transparent;
-    @apply pt-33 pb-24;
+    @apply pt-33 pb-24 relative;
+
+    .running-txt {
+      @apply opacity-10 overflow-hidden absolute -z-[1] top-[21.875rem] select-none w-full;
+
+      > div {
+        @apply font-acumin-variable text-[10.625rem] tracking-[.02em] leading-[1.15] text-primary;
+        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+        > span {
+          /* -webkit-text-stroke: .25rem var(--color-primary);
+          -webkit-text-fill-color: transparent; */
+          -webkit-text-stroke: .25rem var(--title-stroke, var(--color-primary));
+          -webkit-text-fill-color: var(--title-fill, transparent);
+        }
+      }
+    }
 
     .wrapper {
       @apply flex gap-2.5 justify-center max-w-325 px-6.25 mx-auto;

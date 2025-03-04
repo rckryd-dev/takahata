@@ -48,6 +48,14 @@ get_header();
         <span>VIRTUAL</span>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-orn-right.svg" alt="Title Ornament Right">
       </h2>
+
+      <div class="running-txt">
+        <div>TAKAHATA<span>VIRTUAL</span></div>
+        <div>TAKAHATA<span>VIRTUAL</span></div>
+        <div>TAKAHATA<span>VIRTUAL</span></div>
+        <div>TAKAHATA<span>VIRTUAL</span></div>
+        <div>TAKAHATA<span>VIRTUAL</span></div>
+      </div>
       <?php
         $items = [
           [
