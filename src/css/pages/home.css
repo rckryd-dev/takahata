@@ -16,7 +16,7 @@
         }
       }
       span {
-        @apply block font-acumin-variable text-[15.3125rem] tracking-[.02em] leading-none text-center text-white;
+        @apply block font-acumin-variable text-[15.3125rem] max-md:text-[7.5rem] tracking-[.02em] leading-none text-center text-white;
         font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
         /* -webkit-text-stroke: .25rem var(--color-primary);
         -webkit-text-fill-color: transparent; */

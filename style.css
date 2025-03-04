@@ -853,6 +853,13 @@ Text Domain: takahata
     --tw-tracking: .02em;
     letter-spacing: .02em;
     color: var(--color-white);
+  }
+  @media (width < 48rem) {
+    .p-home section > h2 span {
+      font-size: 7.5rem;
+    }
+  }
+  .p-home section > h2 span {
     font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
     -webkit-text-stroke: .25rem var(--title-stroke, var(--color-primary));
     -webkit-text-fill-color: var(--title-fill, transparent);
