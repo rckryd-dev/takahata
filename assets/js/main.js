@@ -134,7 +134,7 @@ function initAnimations() {
       { opacity: 1, y: 0, duration, delay, ease: "power2.out",
         scrollTrigger: {
           trigger: selector,
-          start: "top 95%",
+          start: "top 90%",
           end: "top 60%",
           scrub: true,
           toggleActions: "play none none reverse"
@@ -142,37 +142,6 @@ function initAnimations() {
       }
     );
   }
-
-  // Layer Shift
-  gsap.to(".layer-shift > div", {
-    height: "0%",
-    duration: .5, // Durasi animasi tiap layer
-    ease: "power2.out",
-    stagger: {
-      amount: 0.15,
-      from: "end"
-    },
-    scrollTrigger: {
-      trigger: ".layer-shift",
-      start: "top 60%",
-      end: "top 10%",
-      scrub: true
-    }
-  });
-
-  // Title Change Color
-  gsap.to(".home-virtual > h2 > span", {
-    "--title-stroke": "#A7A04F",
-    "--title-fill": "#A7A04F",
-    duration: .5,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".home-virtual",
-      start: "top 9%",
-      end: "top 5%",
-      scrub: true,
-    }
-  });
 
   // Pages
   const mainElement = document.querySelector("main");
@@ -184,13 +153,54 @@ function initAnimations() {
     fadeUpAnimation(".home-about h2 img", 0, 1, 15);
     fadeUpAnimation(".home-about h2 span", 0, 1, 15);
     fadeUpAnimation("#about-desc", 0, 1, 30);
+    fadeUpAnimation(".home-virtual .wrapper", 0, 1, 30);
 
+    // Layer Shift
+    gsap.utils.toArray(".layer-shift").forEach((layer) => {
+      gsap.to(layer.children, {
+        height: "0%",
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: {
+          amount: 0.15,
+          from: "end"
+        },
+        scrollTrigger: {
+          trigger: layer,
+          start: "top 60%",
+          end: "top 10%",
+          scrub: true
+        }
+      });
+    });
+    
+    // Title Change Color
+    gsap.utils.toArray(".sec-title").forEach((title) => {
+      const span = title.querySelector("h2 > span");
+      const strokeColor = title.dataset.stroke || "#A7A04F";
+      const fillColor = title.dataset.fill || "#A7A04F";
+    
+      gsap.to(span, {
+        "--title-stroke": strokeColor,
+        "--title-fill": fillColor,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 9%",
+          end: "top 5%",
+          scrub: true,
+        }
+      });
+    });
+    
+
+    // Running Text
     const container = document.querySelector(".running-txt");
     const elements = gsap.utils.toArray(".running-txt div");
-
     elements.forEach((el, i) => {
       const isLeft = i % 2 === 0; 
-      const moveOffset = el.offsetWidth * 0.2; 
+      const moveOffset = el.offsetWidth * 0.4; 
 
       const startX = isLeft ? -moveOffset : moveOffset;
       const endX = isLeft ? moveOffset / 2 : -moveOffset / 2; 

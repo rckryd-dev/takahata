@@ -31,7 +31,7 @@
       grid-auto-rows: 1fr;
 
       > div {
-        @apply h-full;
+        @apply h-full bg-black;
       }
     }
   }
@@ -93,7 +93,7 @@
     @apply pt-33 pb-24 relative;
 
     .running-txt {
-      @apply opacity-10 overflow-hidden absolute -z-[1] top-[21.875rem] select-none w-full;
+      @apply opacity-10 overflow-hidden absolute -z-[1] top-[21.875rem] select-none w-full text-center;
 
       > div {
         @apply font-acumin-variable text-[10.625rem] tracking-[.02em] leading-[1.15] text-primary;
@@ -223,5 +223,11 @@
         }
       }
     }
+  }
+
+  .home-service {
+    --title-stroke: var(--color-primary);
+    --title-fill: transparent;
+    @apply pt-33 pb-24 relative;
   }
 }

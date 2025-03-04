@@ -270,6 +270,9 @@ Text Domain: takahata
   .mt-13\.75 {
     margin-top: calc(var(--spacing) * 13.75);
   }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
   .mr-2\.5 {
     margin-right: calc(var(--spacing) * 2.5);
   }
@@ -305,6 +308,9 @@ Text Domain: takahata
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-\[81\.25rem\] {
+    max-width: 81.25rem;
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -756,6 +762,7 @@ Text Domain: takahata
   }
   .p-home section .layer-shift > div {
     height: 100%;
+    background-color: var(--color-black);
   }
   .p-home .home-top {
     width: 100%;
@@ -833,6 +840,7 @@ Text Domain: takahata
     z-index: calc(1 * -1);
     width: 100%;
     overflow: hidden;
+    text-align: center;
     opacity: 10%;
     -webkit-user-select: none;
     user-select: none;
@@ -1033,6 +1041,13 @@ Text Domain: takahata
     transition-delay: 600ms;
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .p-home .home-service {
+    --title-stroke: var(--color-primary);
+    --title-fill: transparent;
+    position: relative;
+    padding-top: calc(var(--spacing) * 33);
+    padding-bottom: calc(var(--spacing) * 24);
   }
   .p-post {
     padding-block: calc(var(--spacing) * 24);
