@@ -71,9 +71,10 @@
   }
 
   .home-about {
-    @apply bg-cover pt-33 pb-24 max-md:pt-27.5 max-md:pb-20 text-center max-md:overflow-x-hidden;
+    @apply bg-cover pt-33 pb-24 max-md:pt-27.5 max-md:pb-20 text-center;
 
     .wrapper {
+      @apply max-md:overflow-x-hidden;
       h2 {
         @apply w-fit mx-auto;
 
