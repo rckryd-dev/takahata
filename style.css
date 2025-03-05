@@ -386,6 +386,11 @@ Text Domain: takahata
     transition-timing-function: var(--tw-ease, ease);
     transition-duration: var(--tw-duration, 0s);
   }
+  @media (width < 48rem) {
+    .max-md\:hidden {
+      display: none;
+    }
+  }
   @media (width >= 48rem) {
     .md\:mt-11 {
       margin-top: calc(var(--spacing) * 11);
@@ -1233,6 +1238,11 @@ Text Domain: takahata
   }
   @media (width < 48rem) {
     .p-home .home-virtual .wrapper .content__txt ul {
+      margin-top: calc(var(--spacing) * 11);
+    }
+  }
+  @media (width < 48rem) {
+    .p-home .home-virtual .wrapper .content__txt ul {
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
   }
@@ -1352,9 +1362,6 @@ Text Domain: takahata
     opacity: 100%;
   }
   .p-home .home-virtual .wrapper .aside {
-    visibility: hidden;
-    width: calc(var(--spacing) * 0);
-    opacity: 0%;
     transition-property: all;
     transition-timing-function: var(--tw-ease, ease);
     transition-duration: var(--tw-duration, 0s);
@@ -1367,6 +1374,21 @@ Text Domain: takahata
   @media (width < 48rem) {
     .p-home .home-virtual .wrapper .aside {
       margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  @media (width >= 48rem) {
+    .p-home .home-virtual .wrapper .aside {
+      visibility: hidden;
+    }
+  }
+  @media (width >= 48rem) {
+    .p-home .home-virtual .wrapper .aside {
+      width: calc(var(--spacing) * 0);
+    }
+  }
+  @media (width >= 48rem) {
+    .p-home .home-virtual .wrapper .aside {
+      opacity: 0%;
     }
   }
   .p-home .home-virtual .wrapper .aside__close-btn {
@@ -1393,13 +1415,21 @@ Text Domain: takahata
     }
   }
   .p-home .home-virtual .wrapper .aside__top, .p-home .home-virtual .wrapper .aside__card {
-    visibility: hidden;
-    opacity: 0%;
     transition-property: all;
     transition-timing-function: var(--tw-ease, ease);
     transition-duration: var(--tw-duration, 0s);
     --tw-duration: 100ms;
     transition-duration: 100ms;
+  }
+  @media (width >= 48rem) {
+    .p-home .home-virtual .wrapper .aside__top, .p-home .home-virtual .wrapper .aside__card {
+      visibility: hidden;
+    }
+  }
+  @media (width >= 48rem) {
+    .p-home .home-virtual .wrapper .aside__top, .p-home .home-virtual .wrapper .aside__card {
+      opacity: 0%;
+    }
   }
   .p-home .home-virtual .wrapper .aside__top {
     margin-bottom: calc(var(--spacing) * 2.5);

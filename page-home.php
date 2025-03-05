@@ -186,12 +186,53 @@ get_template_part('parts/scroll-down');
         <div class="content__img">
           <img :src="`<?php echo get_template_directory_uri(); ?>/assets/img/vr-img${data === 0 ? '' : `-${data}`}.png`" alt="VR Image">
         </div>
+        
+        <div id="VRAsideSP" class="aside md:hidden" x-show="selectedData !== 0" x-transition x-cloak>
+          <div class="sticky top-30">
+            <div class="aside__top">
+              <p x-text="vrData.find(i => i.id === selectedData)?.title || ''"></p>
+              <button @click="showCard = false; selectedData = 0; data = 0;" class="aside__close-btn">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-close.svg" alt="Close">
+              </button>
+            </div>
+            <div class="aside__card">
+              <img :src="`<?php echo get_template_directory_uri(); ?>/assets/img/${vrData.find(i => i.id === selectedData)?.img || 'vr-img.png'}`" :alt="vrData.find(i => i.id === selectedData)?.title || ''" class="_thumb">
+              
+              <ul class="_list">
+                <template x-for="listItem in vrData.find(i => i.id === selectedData)?.list || []">
+                    <li x-text="`・${listItem}`"></li>
+                </template>
+              </ul>
+
+              <a target="_blank" class="btn btn--secondary group mx-auto" :href="vrData.find(i => i.id === selectedData)?.link || ''">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-play.svg" alt="Play" class="w-6.25 mr-2.5">
+                <span>PLAY VR</span>
+              </a>
+
+              <p class="_desc" x-text="vrData.find(i => i.id === selectedData)?.description || ''"></p>
+            </div>
+          </div>
+        </div>
+
         <div class="content__txt">
           <ul @mouseleave="data = selectedData">
             <?php foreach ($items as $item): ?>
               <li>
                 <button 
-                  @click="showCard = true; selectedData = '<?= $item['id'] ?>'" 
+                  @click="
+                    showCard = true;
+                    selectedData = '<?= $item['id'] ?>';
+                    $nextTick(() => {
+                      if (window.innerWidth <= 767) {
+                        const target = document.getElementById('VRAsideSP');
+                        if (target) {
+                          const offset = 88;
+                          const topPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                          window.scrollTo({ top: topPos, behavior: 'smooth' });
+                        }
+                      }
+                    })
+                  " 
                   @mouseover="data = '<?= $item['id'] ?>'"
                   :class="{'selected': selectedData === '<?= $item['id'] ?>'}"
                   title="<?= $item['title'] ?>"
@@ -205,7 +246,7 @@ get_template_part('parts/scroll-down');
           </ul>
         </div>
       </div>
-      <div class="aside" :class="{'is-show': showCard}">
+      <div class="aside max-md:hidden" :class="{'is-show': showCard}">
         <div class="sticky top-30">
           <div class="aside__top">
             <p x-text="vrData.find(i => i.id === selectedData)?.title || ''"></p>

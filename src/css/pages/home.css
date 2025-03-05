@@ -57,8 +57,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Agar video menutupi seluruh layar */
-      z-index: -1; /* Supaya di belakang konten */
+      object-fit: cover; 
+      z-index: -1; 
     }
 
     .wrapper {
@@ -130,7 +130,7 @@
 
         &__txt {
           ul {
-            @apply grid grid-cols-2 max-md:grid-cols-1 gap-x-3.75 mt-13.75;
+            @apply grid grid-cols-2 max-md:grid-cols-1 gap-x-3.75 mt-13.75 max-md:mt-11;
 
             li {
               --color: var(--color-white);
@@ -200,7 +200,7 @@
       }
       
       .aside {
-        @apply w-0 opacity-0 invisible transition-all duration-600 ease-out transition-all duration-600 delay-100 max-md:mt-10;
+        @apply md:w-0 md:opacity-0 md:invisible transition-all duration-600 ease-out transition-all duration-600 delay-100 max-md:mt-10;
 
         &__close-btn {
           @apply select-none cursor-pointer transition-all duration-200 hover:opacity-75;
@@ -212,7 +212,7 @@
 
         &__top,
         &__card {
-          @apply opacity-0 invisible transition-all duration-100;
+          @apply md:opacity-0 md:invisible transition-all duration-100;
         }
 
         &__top {
