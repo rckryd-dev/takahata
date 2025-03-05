@@ -104,13 +104,18 @@ function initAnimations() {
             char.trim() ? `<span>${char}</span>` : char
           ).join("");
         } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName === "BR") {
-          newContent += "<br>";
+          // Ambil atribut-atributnya
+          const attributes = Array.from(node.attributes)
+            .map(attr => `${attr.name}="${attr.value}"`)
+            .join(" ");
+          // Buat ulang <br> dengan atributnya
+          newContent += `<br${attributes ? " " + attributes : ""}>`;
         }
       });
       element.innerHTML = newContent;
     });
   }
-
+  
   function animateTextColor(selector, startColor, endColor) {
     gsap.fromTo(`${selector} span`, 
       { color: startColor },
@@ -126,6 +131,7 @@ function initAnimations() {
       }
     );
   }
+  
 
   // **Animasi Fade Up**
   function fadeUpAnimation(selector, delay = 0, duration = 1, distance = 50) {

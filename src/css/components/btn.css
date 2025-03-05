@@ -1,13 +1,13 @@
 .btn {
-  @apply flex relative items-center justify-center h-16.25 w-75 rounded-[.625rem] transition-all duration-300 ease-out;
+  @apply flex relative items-center justify-center h-16.25 max-md:h-18.75  w-75 max-md:w-86.5 rounded-[.625rem] transition-all duration-300 ease-out;
 
   span {
-    @apply font-acumin-variable text-[1.5625rem] tracking-[.02em] leading-none;
+    @apply font-acumin-variable text-[1.5625rem] max-md:text-[1.75rem] tracking-[.02em] leading-none;
     font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
   }
 
   img {
-    @apply w-2.5 transition-all duration-200 ease-out;
+    @apply w-2.5 max-md:w-3.5 transition-all duration-200 ease-out;
 
     &.-abs {
       @apply absolute top-1/2 right-5 -translate-y-1/2 group-hover:translate-x-1;
