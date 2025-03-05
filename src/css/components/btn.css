@@ -14,6 +14,9 @@
     }
   }
 
+  &--primary {
+    @apply bg-linear-to-r from-primary to-primary-light text-black hover:opacity-75;
+  }
   &--secondary {
     @apply bg-black text-primary hover:bg-black/75;
   }

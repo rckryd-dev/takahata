@@ -140,7 +140,7 @@ function initAnimations() {
       { opacity: 1, y: 0, duration, delay, ease: "power2.out",
         scrollTrigger: {
           trigger: selector,
-          start: "top 90%",
+          start: "top 80%",
           end: "top 60%",
           scrub: true,
           toggleActions: "play none none reverse"
@@ -156,10 +156,20 @@ function initAnimations() {
   if (mainElement.classList.contains("p-home")) {
     wrapTextWithSpan("#about-desc");
     animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
-    fadeUpAnimation(".home-about h2 img", 0, 1, 15);
-    fadeUpAnimation(".home-about h2 span", 0, 1, 15);
-    fadeUpAnimation("#about-desc", 0, 1, 30);
-    fadeUpAnimation(".home-virtual .wrapper", 0, 1, 30);
+    fadeUpAnimation(".home-about h2 img", 0, 10, 50);
+    fadeUpAnimation(".home-about h2 span", 0, 10, 50);
+    fadeUpAnimation("#about-desc", 0, 10, 20);
+
+    fadeUpAnimation(".home-virtual .wrapper", 0, 10, 100);
+
+    wrapTextWithSpan("#company-desc p:nth-child(1)");
+    wrapTextWithSpan("#company-desc p:nth-child(2)");
+    animateTextColor("#company-desc", "#ffffff4d", "#ffffff");
+    fadeUpAnimation("#company-desc", 0, 10, 20);
+    fadeUpAnimation(".home-company .wrapper > img", 0, 10, 20);
+
+    wrapTextWithSpan("#attempt-desc");
+    animateTextColor("#attempt-desc", "#ffffff4d", "#ffffff");
 
     // Layer Shift
     gsap.utils.toArray(".layer-shift").forEach((layer) => {
@@ -226,6 +236,30 @@ function initAnimations() {
         }
       );
     });
+
+    // Attempt Imgs Parallax
+    const images = gsap.utils.toArray(".imgs-wrapper img");
+
+    images.forEach((img, i) => {
+      // Semakin besar index, semakin lambat geraknya (atau bisa dibalik)
+      const movement = (i + 1) * 30; // contoh: 30px, 60px, 90px, 120px
+
+      gsap.fromTo(
+        img,
+        { y: -movement }, // mulai lebih naik sesuai index
+        {
+          y: movement, // turun sesuai index pas scroll
+          ease: "none",
+          scrollTrigger: {
+            trigger: img,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    });
+
   }
 }
 
