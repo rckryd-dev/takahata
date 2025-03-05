@@ -193,7 +193,17 @@ get_template_part('parts/scroll-down');
           <div class="sticky top-30">
             <div class="aside__top">
               <p x-text="vrData.find(i => i.id === selectedData)?.title || ''"></p>
-              <button @click="showCard = false; selectedData = 0; data = 0;" class="aside__close-btn">
+              <button 
+              @click="
+                showCard = false;
+                selectedData = 0;
+                data = 0;
+                $nextTick(() => {
+                  setTimeout(() => {
+                    ScrollTrigger.refresh();
+                  }, 500);
+                });" 
+              class="aside__close-btn">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-close.svg" alt="Close">
               </button>
             </div>
@@ -232,6 +242,9 @@ get_template_part('parts/scroll-down');
                           const topPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
                           window.scrollTo({ top: topPos, behavior: 'smooth' });
                         }
+                        setTimeout(() => {
+                          ScrollTrigger.refresh();
+                        }, 500);
                       }
                     })
                   " 
@@ -385,7 +398,7 @@ get_template_part('parts/scroll-down');
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow.svg" alt="Arrrow" class="-abs">
       </a>
 
-      <img class="rounded-[.9375rem] mt-16 md:mt-24" src="<?php echo get_template_directory_uri(); ?>/assets/img/company" alt="Company Image">
+      <img class="rounded-[.9375rem] mt-16 md:mt-24" src="<?php echo get_template_directory_uri(); ?>/assets/img/company.jpg" alt="Company Image">
     </div>
     <div class="layer-shift">
       <div style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img-shift-03.jpg')"></div>
