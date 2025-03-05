@@ -239,7 +239,7 @@
           }
 
           ._desc {
-            @apply mt-7.5 max-md:text-lg;
+            @apply mt-7.5 max-md:text-lg text-justify md:tracking-[-.0625rem];
           }
         }
 

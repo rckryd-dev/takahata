@@ -1482,11 +1482,18 @@ Text Domain: takahata
   }
   .p-home .home-virtual .wrapper .aside__card ._desc {
     margin-top: calc(var(--spacing) * 7.5);
+    text-align: justify;
   }
   @media (width < 48rem) {
     .p-home .home-virtual .wrapper .aside__card ._desc {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  @media (width >= 48rem) {
+    .p-home .home-virtual .wrapper .aside__card ._desc {
+      --tw-tracking: -.0625rem;
+      letter-spacing: -.0625rem;
     }
   }
   .p-home .home-virtual .wrapper .aside.is-show {
