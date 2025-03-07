@@ -11,9 +11,9 @@
 </button> -->
 <footer style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img-02.jpg')" class="footer">
   <div class="wrapper">
-    <div class="flex justify-between">
-      <a href="<?php echo home_url(); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/takahata-logo-black.svg" alt="<?php bloginfo('name'); ?> Logo" class="footer__logo">
+    <div class="md:flex md:justify-between">
+      <a href="<?php echo home_url(); ?>" class="footer__logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/takahata-logo-black.svg" alt="<?php bloginfo('name'); ?> Logo">
       </a>
 
       <nav class="footer__navlinks">

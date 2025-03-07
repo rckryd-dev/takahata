@@ -352,7 +352,7 @@
   .home-attempt {
     --title-stroke: var(--color-primary);
     --title-fill: transparent;
-    @apply pt-33 pb-100 max-md:pt-26.5 relative;
+    @apply pt-33 pb-80 max-md:pt-26.5 max-md:pb-60 relative;
 
     & > h2 {
       picture {

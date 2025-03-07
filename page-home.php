@@ -451,7 +451,7 @@ get_template_part('parts/scroll-down');
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow-black.svg" alt="Arrrow" class="-abs">
       </a>
       
-      <div class="grid h-100 md:h-200">
+      <div class="grid h-130 md:h-200">
         <picture>
           <source media="(max-width: 47.9375rem)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/attempt-01_sp.png">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/attempt-01.png" id="img-01">

@@ -1,26 +1,32 @@
 .footer {
-  @apply pt-29.5 pb-5 bg-cover;
+  @apply pt-29.5 pb-5 max-md:pt-27.25 max-md:pb-8 bg-cover fixed w-full -z-[1] bottom-0;
 
   .wrapper {
-    @apply mx-auto max-w-325 px-27.5;
+    @apply mx-auto max-w-325 max-md:px-7.5 px-27.5;
   }
   &__logo {
-    @apply w-114.5;
+    @apply block w-fit max-md:mx-auto;
+
+    img {
+      @apply w-114.5;
+    }
   }
   &__navlinks {
+    @apply max-md:mt-22 max-md:w-fit max-md:ml-auto;
+
     ul {
       @apply flex flex-col gap-4.5;
     }
     
     li {
-      @apply font-acumin-variable text-3xl max-md:text-[4.25rem] font-black;
+      @apply font-acumin-variable text-3xl max-md:text-[2.625rem] font-black;
   
       a {
-        @apply relative pl-8 max-md:pl-15 text-black;
+        @apply relative pl-8 max-md:pl-9 text-black;
         transition: all .3s ease-out;
 
         &::before {
-          @apply absolute content-[''] left-0 w-6 h-1 max-md:w-11 max-md:h-1.5 bg-black top-1/2 -translate-y-1/2;
+          @apply absolute content-[''] left-0 w-6 h-1 max-md:w-6.75 max-md:h-1 bg-black top-1/2 -translate-y-1/2;
           transition: all .3s ease-out;
         }
 
@@ -35,6 +41,6 @@
     }
   }
   &__copy {
-      @apply font-bold text-black tracking-[.04em] text-right mt-22.5;
+      @apply max-md:text-[1.3125rem] font-bold text-black tracking-[.04em] text-right mt-22.5;
   }
 }
