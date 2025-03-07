@@ -28,29 +28,19 @@
             >
                 <ul class="navlinks">
                     <?php
-                    $menu_items = [
-                        'TOP' => home_url(),
-                        'ABOUT' => site_url('/about'),
-                        'SERVICE' => site_url('/service'),
-                        'NEWS' => site_url('/news'),
-                        'CONTACT' => site_url('/contact')
-                    ];
+                    include get_template_directory() . '/parts/navlinks.php';
 
-                    // Ambil URL path saat ini tanpa domain & hilangkan trailing slash
                     $current_url = untrailingslashit(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
-                    foreach ($menu_items as $label => $url) :
-                        // Ambil path URL menu & hilangkan trailing slash
+                    foreach ($navlinks as $label => $url) :
                         $menu_path = untrailingslashit(parse_url($url, PHP_URL_PATH));
 
-                        // Default: Tidak aktif
                         $is_active = false;
 
-                        // Jika halaman saat ini adalah homepage, hanya "TOP" yang aktif
                         if ($label === 'TOP') {
                             $is_active = is_front_page();
                         }
-                        // Jika halaman saat ini persis sama dengan menu path atau merupakan sub-halaman
+
                         elseif (!empty($menu_path) && strpos($current_url, $menu_path) === 0) {
                             $is_active = true;
                         }
