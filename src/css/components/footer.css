@@ -2,7 +2,7 @@
   @apply pt-29.5 pb-5 max-md:pt-27.25 max-md:pb-8 bg-cover fixed w-full -z-[1] bottom-0;
 
   .wrapper {
-    @apply mx-auto max-w-325 max-md:px-7.5 px-27.5;
+    @apply max-md:px-7.5 px-27.5;
   }
   &__logo {
     @apply block w-fit max-md:mx-auto;

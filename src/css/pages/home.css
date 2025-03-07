@@ -58,11 +58,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover; 
-      z-index: -1; 
     }
 
     .wrapper {
-      @apply w-full h-full bg-black/75 grid place-content-center;
+      @apply relative w-full h-full bg-black/75 grid place-content-center;
       
       p {
         @apply text-[4.6875rem] font-black tracking-[-.04em];
