@@ -45,6 +45,14 @@
     p {
       @apply text-lg max-md:text-2xl tracking-[-.04em] mt-2.5 max-md:mt-2 font-medium;
     }
+
+    [data-bg-color='black'] & { 
+      @apply text-primary;
+
+      h2 {
+        -webkit-text-stroke-color: var(--color-primary);
+      }
+    }
   }
 
   /* @import "./components/swup.css"; */

@@ -593,6 +593,12 @@ Text Domain: takahata
       line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
+  [data-bg-color='black'] .sc-title {
+    color: var(--color-primary);
+  }
+  [data-bg-color='black'] .sc-title h2 {
+    -webkit-text-stroke-color: var(--color-primary);
+  }
   .btn {
     position: relative;
     display: flex;
@@ -2432,7 +2438,6 @@ Text Domain: takahata
     }
   }
   .p-about .about-point .wrapper .point-list__num {
-    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
     -webkit-text-stroke: .0625rem var(--color-white);
     -webkit-text-fill-color: transparent;
   }
@@ -2535,6 +2540,104 @@ Text Domain: takahata
     .p-about .about-edu {
       padding-top: calc(var(--spacing) * 20);
     }
+  }
+  .p-about .about-edu .wrapper {
+    margin-inline: auto;
+    max-width: calc(var(--spacing) * 325);
+  }
+  .p-about .about-edu .edu-desc {
+    margin-top: calc(var(--spacing) * 24);
+    text-align: center;
+  }
+  .p-about .about-edu .edu-desc p:first-child {
+    font-size: 2.25rem;
+    --tw-leading: 1.83;
+    line-height: 1.83;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    --tw-tracking: .04em;
+    letter-spacing: .04em;
+  }
+  .p-about .about-edu .edu-desc p:nth-child(2) {
+    margin-top: calc(var(--spacing) * 4);
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    --tw-leading: 2.3;
+    line-height: 2.3;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    --tw-tracking: .04em;
+    letter-spacing: .04em;
+  }
+  .p-about .about-edu .edu-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: calc(var(--spacing) * 16);
+  }
+  .p-about .about-edu .edu-list__pagination {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2.5);
+  }
+  .p-about .about-edu .edu-list__pagination li button {
+    height: calc(var(--spacing) * 22.5);
+    width: calc(var(--spacing) * 22.5);
+    cursor: pointer;
+    border-radius: .9375rem;
+    background-color: #66612F;
+    font-family: var(--font-bebas);
+    font-size: 2.75rem;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, ease);
+    transition-duration: var(--tw-duration, 0s);
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  @media (hover: hover) {
+    .p-about .about-edu .edu-list__pagination li button:hover {
+      background-color: var(--color-primary);
+    }
+  }
+  .p-about .about-edu .edu-list__pagination li button {
+    -webkit-text-stroke: .0625rem var(--color-white);
+    -webkit-text-fill-color: transparent;
+  }
+  .p-about .about-edu .edu-list__pagination li button.is-active {
+    background-color: var(--color-primary);
+  }
+  .p-about .about-edu .edu-list__content {
+    visibility: hidden;
+    position: absolute;
+    top: calc(var(--spacing) * 0);
+    left: calc(var(--spacing) * 0);
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 2.8125rem;
+    border-bottom-left-radius: 2.8125rem;
+    opacity: 0%;
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, ease);
+    transition-duration: var(--tw-duration, 0s);
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .p-about .about-edu .edu-list__content:first-child {
+    position: relative;
+  }
+  .p-about .about-edu .edu-list__content img {
+    width: calc(var(--spacing) * 270);
+    scale: 1.001;
+  }
+  .p-about .about-edu .edu-list__content > div {
+    position: absolute;
+    bottom: calc(var(--spacing) * 0);
+    left: calc(var(--spacing) * 0);
+    width: 100%;
+    background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
+  }
+  .p-about .about-edu .edu-list__content.is-active {
+    visibility: visible;
+    opacity: 100%;
   }
   .p-post {
     padding-block: calc(var(--spacing) * 24);

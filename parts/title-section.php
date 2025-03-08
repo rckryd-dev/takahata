@@ -32,7 +32,7 @@ $menu_items = isset($args['menu_items']) ? $args['menu_items'] : null; // Anchor
             <?php foreach ($menu_items as $label => $item) : ?>
                 <li>
                     <a href="<?php echo esc_url($item['url']); ?>" 
-                       <?php echo !empty($item['target']) ? 'target="' . esc_attr($item['target']) . '"' : ''; ?>>
+                        <?php echo !empty($item['target']) ? 'target="' . esc_attr($item['target']) . '"' : ''; ?>>
                         <?php echo esc_html($label); ?>
                     </a>
                 </li>

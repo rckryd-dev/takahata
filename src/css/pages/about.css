@@ -44,7 +44,6 @@
 
         &__num {
           @apply font-bebas text-[5rem] max-md:text-[6.25rem] leading-[1] max-md:col-start-1 max-md:col-end-2 max-md:row-start-1 max-md:row-end-2;
-          font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
           -webkit-text-stroke: .0625rem var(--color-white);
           -webkit-text-fill-color: transparent;
         }
@@ -70,5 +69,74 @@
 
   .about-edu {
     @apply pt-24.5 pb-18 max-md:pt-20;
+
+    .wrapper {
+      @apply max-w-325 mx-auto;
+    }
+
+    .edu-desc {
+      @apply text-center mt-24;
+
+      p {
+        &:first-child {
+          @apply text-[2.25rem] font-bold tracking-[.04em] leading-[1.83];
+        }
+
+        &:nth-child(2) {
+          @apply text-2xl mt-4 font-bold leading-[2.3] tracking-[.04em];
+        }
+      }
+    }
+
+    .edu-list {
+      @apply flex gap-16 justify-end;
+
+      &__pagination {
+        @apply flex flex-col gap-2.5;
+
+        li {
+          button {
+            @apply w-22.5 h-22.5 rounded-[.9375rem] font-bebas text-[2.75rem] cursor-pointer bg-[#66612F] transition-colors duration-200 hover:bg-primary;
+            -webkit-text-stroke: .0625rem var(--color-white);
+            -webkit-text-fill-color: transparent;
+
+            &.is-active {
+              @apply bg-primary;
+            }
+          }
+        }
+      }
+
+      &__content {
+        @apply absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 rounded-l-[2.8125rem] overflow-hidden;
+
+        &:first-child {
+          @apply relative;
+        }
+        
+        img {
+          @apply w-270 scale-[1.001];
+        }
+
+        > div {
+            @apply absolute bottom-0 left-0 w-full bg-primary/10;
+
+          h3 {
+
+          }
+
+          p {
+
+          }
+        }
+
+        &.is-active {
+          @apply opacity-100 visible;
+
+          img {
+          }
+        }
+      }
+    }
   }
 }
