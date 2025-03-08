@@ -1,5 +1,5 @@
 .s-title {
-  @apply relative h-112.5 text-center pt-45;
+  @apply relative h-112.5 max-md:h-87.5 text-center pt-45 max-md:pt-44;
 
   h1 {
     @apply font-acumin-variable md:text-[7.8125rem] text-[4.375rem] text-primary leading-[1] tracking-[.02em];
@@ -7,7 +7,7 @@
   }
 
   .breadcrumb {
-    @apply absolute px-9.5 w-full bottom-0;
+    @apply absolute px-9.5 w-full bottom-0 max-md:hidden;
 
     ul {
       @apply flex gap-1 relative pl-4;
@@ -32,6 +32,32 @@
   
         span {
   
+        }
+      }
+    }
+  }
+}
+
+.anchor {
+  @apply max-w-237.5 mx-auto mt-7.5 max-md:mt-5 px-6.25;
+
+  ul {
+    @apply flex justify-center flex-wrap gap-13 gap-x-7.25 gap-y-6.5 relative bg-primary text-white py-6.25 rounded-[6rem] px-16 max-md:max-w-145 mx-auto;
+
+    li {
+      a {
+        @apply relative pl-6.5 transition-all duration-200;
+
+        &::before {
+          @apply absolute content-[''] w-3.5 h-3.5 border border-white  rounded-full left-0 top-1/2 -translate-y-1/2 transition-all duration-200;
+        }
+
+        &:hover {
+          @apply opacity-80;
+
+          &::before {
+            @apply bg-white;
+          }
         }
       }
     }

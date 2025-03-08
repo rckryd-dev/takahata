@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 @import "./components/_config.css";
 
@@ -28,6 +29,21 @@
       @apply content-[''] absolute top-full left-0 w-36.5 h-36.5;
       background-image: url('assets/img/orn-rounded.svg');
       background-size: 100% 100%;
+    }
+  }
+
+  .sc-title {
+    @apply text-center;
+
+    h2 {
+      @apply font-bebas text-[3.75rem] max-md:text-[4.6875rem] leading-[1];
+      font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+      -webkit-text-stroke: 0.021rem var(--color-white);
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      @apply text-lg max-md:text-2xl tracking-[-.04em] mt-2.5 max-md:mt-2 font-medium;
     }
   }
 

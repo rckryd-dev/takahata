@@ -9,6 +9,7 @@ License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: takahata
 *//*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -39,6 +40,7 @@ Text Domain: takahata
     --aspect-video: 16 / 9;
     --font-kozuka-gothic: "kozuka-gothic-pr6n", sans-serif;
     --font-acumin-variable: "acumin-variable", sans-serif;
+    --font-bebas: "Bebas Neue", sans-serif;
     --default-font-family: var(--font-kozuka-gothic);
     --color-black-dark: #191919;
     --color-primary: #A7A04F;
@@ -378,6 +380,9 @@ Text Domain: takahata
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
+  .pt-14 {
+    padding-top: calc(var(--spacing) * 14);
+  }
   .pl-18 {
     padding-left: calc(var(--spacing) * 18);
   }
@@ -484,6 +489,11 @@ Text Domain: takahata
     }
   }
   @media (width >= 48rem) {
+    .md\:pt-16 {
+      padding-top: calc(var(--spacing) * 16);
+    }
+  }
+  @media (width >= 48rem) {
     .md\:pl-12 {
       padding-left: calc(var(--spacing) * 12);
     }
@@ -543,6 +553,45 @@ Text Domain: takahata
     content: var(--tw-content);
     background-image: url('assets/img/orn-rounded.svg');
     background-size: 100% 100%;
+  }
+  .sc-title {
+    text-align: center;
+  }
+  .sc-title h2 {
+    font-family: var(--font-bebas);
+    font-size: 3.75rem;
+    --tw-leading: 1;
+    line-height: 1;
+  }
+  @media (width < 48rem) {
+    .sc-title h2 {
+      font-size: 4.6875rem;
+    }
+  }
+  .sc-title h2 {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+    -webkit-text-stroke: 0.021rem var(--color-white);
+    -webkit-text-fill-color: transparent;
+  }
+  .sc-title p {
+    margin-top: calc(var(--spacing) * 2.5);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    --tw-tracking: -.04em;
+    letter-spacing: -.04em;
+  }
+  @media (width < 48rem) {
+    .sc-title p {
+      margin-top: calc(var(--spacing) * 2);
+    }
+  }
+  @media (width < 48rem) {
+    .sc-title p {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
   }
   .btn {
     position: relative;
@@ -1141,6 +1190,16 @@ Text Domain: takahata
     padding-top: calc(var(--spacing) * 45);
     text-align: center;
   }
+  @media (width < 48rem) {
+    .s-title {
+      height: calc(var(--spacing) * 87.5);
+    }
+  }
+  @media (width < 48rem) {
+    .s-title {
+      padding-top: calc(var(--spacing) * 44);
+    }
+  }
   .s-title h1 {
     font-family: var(--font-acumin-variable);
     font-size: 4.375rem;
@@ -1163,6 +1222,11 @@ Text Domain: takahata
     bottom: calc(var(--spacing) * 0);
     width: 100%;
     padding-inline: calc(var(--spacing) * 9.5);
+  }
+  @media (width < 48rem) {
+    .s-title .breadcrumb {
+      display: none;
+    }
   }
   .s-title .breadcrumb ul {
     position: relative;
@@ -1196,6 +1260,72 @@ Text Domain: takahata
     .s-title .breadcrumb ul li a:hover {
       text-decoration-line: underline;
     }
+  }
+  .anchor {
+    margin-inline: auto;
+    margin-top: calc(var(--spacing) * 7.5);
+    max-width: calc(var(--spacing) * 237.5);
+    padding-inline: calc(var(--spacing) * 6.25);
+  }
+  @media (width < 48rem) {
+    .anchor {
+      margin-top: calc(var(--spacing) * 5);
+    }
+  }
+  .anchor ul {
+    position: relative;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(var(--spacing) * 13);
+    column-gap: calc(var(--spacing) * 7.25);
+    row-gap: calc(var(--spacing) * 6.5);
+    border-radius: 6rem;
+    background-color: var(--color-primary);
+    padding-inline: calc(var(--spacing) * 16);
+    padding-block: calc(var(--spacing) * 6.25);
+    color: var(--color-white);
+  }
+  @media (width < 48rem) {
+    .anchor ul {
+      max-width: calc(var(--spacing) * 145);
+    }
+  }
+  .anchor ul li a {
+    position: relative;
+    padding-left: calc(var(--spacing) * 6.5);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, ease);
+    transition-duration: var(--tw-duration, 0s);
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  .anchor ul li a::before {
+    position: absolute;
+    top: calc(1/2 * 100%);
+    left: calc(var(--spacing) * 0);
+    height: calc(var(--spacing) * 3.5);
+    width: calc(var(--spacing) * 3.5);
+    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    border-radius: calc(infinity * 1px);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-white);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, ease);
+    transition-duration: var(--tw-duration, 0s);
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+    --tw-content: '';
+    content: var(--tw-content);
+  }
+  .anchor ul li a:hover {
+    opacity: 80%;
+  }
+  .anchor ul li a:hover::before {
+    background-color: var(--color-white);
   }
   .p-home section {
     position: relative;
@@ -2108,7 +2238,7 @@ Text Domain: takahata
   }
   @media (width < 48rem) {
     .p-about .about-top {
-      padding-top: calc(var(--spacing) * 27.5);
+      padding-top: calc(var(--spacing) * 18.75);
     }
   }
   @media (width < 48rem) {
@@ -2191,6 +2321,219 @@ Text Domain: takahata
   @media (width < 48rem) {
     .p-about .about-top .wrapper #about-desc {
       font-size: 1.375rem;
+    }
+  }
+  .p-about .about-point {
+    background-color: var(--color-primary);
+    padding-top: calc(var(--spacing) * 24.5);
+    padding-bottom: calc(var(--spacing) * 18);
+  }
+  @media (width < 48rem) {
+    .p-about .about-point {
+      padding-top: calc(var(--spacing) * 20);
+    }
+  }
+  .p-about .about-point .wrapper {
+    margin-inline: auto;
+    max-width: calc(var(--spacing) * 325);
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper {
+      padding-inline: calc(var(--spacing) * 6.25);
+    }
+  }
+  .p-about .about-point .wrapper .point-list__item {
+    position: relative;
+    display: grid;
+    gap: calc(var(--spacing) * 8.5);
+    padding-top: calc(var(--spacing) * 6);
+    padding-top: calc(var(--spacing) * 9.5);
+    padding-bottom: calc(var(--spacing) * 21);
+    padding-left: calc(var(--spacing) * 22.5);
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__item {
+      flex-wrap: wrap;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__item {
+      gap: calc(var(--spacing) * 8);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__item {
+      column-gap: calc(var(--spacing) * 4);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__item {
+      padding-top: calc(var(--spacing) * 9);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__item {
+      padding-bottom: calc(var(--spacing) * 16);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__item {
+      padding-left: calc(var(--spacing) * 0);
+    }
+  }
+  @media (width >= 48rem) {
+    .p-about .about-point .wrapper .point-list__item {
+      display: flex;
+    }
+  }
+  .p-about .about-point .wrapper .point-list__item:not(:first-child)::before {
+    position: absolute;
+    top: calc(var(--spacing) * 0);
+    left: calc(1/2 * 100%);
+    height: .0625rem;
+    width: 100vw;
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    background-color: var(--color-white);
+    --tw-content: '';
+    content: var(--tw-content);
+  }
+  .p-about .about-point .wrapper .point-list__num {
+    font-family: var(--font-bebas);
+    font-size: 5rem;
+    --tw-leading: 1;
+    line-height: 1;
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__num {
+      grid-column-start: 1;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__num {
+      grid-column-end: 2;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__num {
+      grid-row-start: 1;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__num {
+      grid-row-end: 2;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__num {
+      font-size: 6.25rem;
+    }
+  }
+  .p-about .about-point .wrapper .point-list__num {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+    -webkit-text-stroke: .0625rem var(--color-white);
+    -webkit-text-fill-color: transparent;
+  }
+  .p-about .about-point .wrapper .point-list__desc {
+    max-width: calc(var(--spacing) * 185);
+    padding-top: calc(var(--spacing) * 2);
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__desc {
+      grid-column-start: 2;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__desc {
+      grid-column-end: 3;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__desc {
+      grid-row-start: 1;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__desc {
+      grid-row-end: 2;
+    }
+  }
+  .p-about .about-point .wrapper .point-list__desc h3 {
+    font-size: 2.25rem;
+    --tw-leading: 1.18;
+    line-height: 1.18;
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+    --tw-tracking: -.04em;
+    letter-spacing: -.04em;
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__desc h3 {
+      font-size: 2.375rem;
+    }
+  }
+  .p-about .about-point .wrapper .point-list__desc p {
+    margin-top: calc(var(--spacing) * 8);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-leading: 1.52;
+    line-height: 1.52;
+    --tw-leading: 1.78;
+    line-height: 1.78;
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list__desc p {
+      font-size: 1.3125rem;
+    }
+  }
+  .p-about .about-point .wrapper .point-list img {
+    margin-left: auto;
+    width: calc(var(--spacing) * 70.5);
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list img {
+      grid-column-start: 1;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list img {
+      grid-column-end: 3;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list img {
+      grid-row-start: 2;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-point .wrapper .point-list img {
+      grid-row-end: 3;
+    }
+  }
+  @media (width >= 48rem) {
+    .p-about .about-point .wrapper .point-list img {
+      position: absolute;
+    }
+  }
+  @media (width >= 48rem) {
+    .p-about .about-point .wrapper .point-list img {
+      top: calc(var(--spacing) * 10);
+    }
+  }
+  @media (width >= 48rem) {
+    .p-about .about-point .wrapper .point-list img {
+      right: calc(var(--spacing) * 0);
+    }
+  }
+  .p-about .about-edu {
+    padding-top: calc(var(--spacing) * 24.5);
+    padding-bottom: calc(var(--spacing) * 18);
+  }
+  @media (width < 48rem) {
+    .p-about .about-edu {
+      padding-top: calc(var(--spacing) * 20);
     }
   }
   .p-post {
@@ -2547,19 +2890,23 @@ Text Domain: takahata
   inherits: false;
   initial-value: "";
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
 }
 @property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -2619,10 +2966,6 @@ Text Domain: takahata
   syntax: "<length-percentage>";
   inherits: false;
   initial-value: 100%;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-scale-x {
   syntax: "*";
