@@ -1,0 +1,25 @@
+.p-about {
+
+  .about-top {
+    @apply pt-33 pb-24 max-md:pt-27.5 max-md:pb-20 text-center;
+
+    .wrapper {
+      @apply max-md:overflow-x-hidden;
+      h2 {
+        @apply w-fit mx-auto;
+
+        img {
+          @apply w-213 max-md:w-177.5 max-md:max-w-177.5 max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2;
+        }
+
+        span {
+          @apply block text-[4.6875rem] max-md:text-[4.0625rem] font-black tracking-[-.04em] text-center leading-none md:-mt-11 max-md:pt-15.5;
+        }
+      }
+
+      #about-desc {
+        @apply text-2xl max-md:text-[1.375rem] font-bold leading-[2.25];
+      }
+    }
+  }
+}

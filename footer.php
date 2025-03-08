@@ -1,4 +1,5 @@
-<!-- <button 
+<button 
+  id="scrollToTop"
   x-cloak
   x-data="{ show: false }" 
   x-on:scroll.window="show = window.scrollY > 300" 
@@ -8,7 +9,8 @@
   class="fixed bottom-5 right-5 p-3 bg-blue-500 text-white rounded-full shadow-lg cursor-pointer"
 >
   ⬆️
-</button> -->
+</button>
+
 <footer style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img-02.jpg')" class="footer">
   <div class="wrapper">
     <div class="md:flex md:justify-between">

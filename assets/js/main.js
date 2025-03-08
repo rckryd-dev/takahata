@@ -149,6 +149,28 @@ function initAnimations() {
     );
   }
 
+  const scrollToTopBtn = document.getElementById("scrollToTop");
+        const main = document.querySelector("main");
+        
+        ScrollTrigger.create({
+            trigger: main,
+            start: "top top",
+            onUpdate: (self) => {
+                if (self.scroll() > 100) {
+                    scrollToTopBtn.style.display = "block";
+                    gsap.to(scrollToTopBtn, { opacity: 1, duration: 0.3 });
+                } else {
+                    gsap.to(scrollToTopBtn, { opacity: 0, duration: 0.3, onComplete: () => {
+                        scrollToTopBtn.style.display = "none";
+                    }});
+                }
+            }
+        });
+        
+        scrollToTopBtn.addEventListener("click", () => {
+            gsap.to(window, { scrollY: 0, duration: 1, ease: "power2.out" });
+        });
+
   // Pages
   const mainElement = document.querySelector("main");
 
@@ -209,7 +231,6 @@ function initAnimations() {
         }
       });
     });
-    
 
     // Running Text
     const container = document.querySelector(".running-txt");
@@ -259,7 +280,11 @@ function initAnimations() {
         }
       );
     });
+  }
 
+  if (mainElement.classList.contains("p-about")) {
+    wrapTextWithSpan("#about-desc");
+    animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
   }
 }
 

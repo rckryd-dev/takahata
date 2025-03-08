@@ -1,0 +1,39 @@
+.s-title {
+  @apply relative h-112.5 text-center pt-45;
+
+  h1 {
+    @apply font-acumin-variable md:text-[7.8125rem] text-[4.375rem] text-primary leading-[1] tracking-[.02em];
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+  }
+
+  .breadcrumb {
+    @apply absolute px-9.5 w-full bottom-0;
+
+    ul {
+      @apply flex gap-1 relative pl-4;
+
+      &:before {
+        @apply absolute content-[''] w-1.5 h-1.5 bg-primary rounded-full left-0 top-1/2 -translate-y-1/2;
+      }
+
+      li {
+        @apply text-primary text-xs;
+
+        &:not(:first-child) {
+          
+          &::before {
+            @apply content-['＞']
+          }
+        }
+  
+        a {
+          @apply hover:underline;
+        }
+  
+        span {
+  
+        }
+      }
+    }
+  }
+}
