@@ -96,18 +96,19 @@
     }
 
     .edu-list {
-      @apply flex gap-16.5 justify-end mt-24 pl-16.5 max-md:gap-6.25 max-md:pl-6.25 max-md:mt-22;
+      @apply flex flex-row-reverse gap-16.5 justify-end items-start mt-24 pl-16.5 max-md:gap-6.25 max-md:pl-6.25 max-md:mt-22;
 
-      &__pagination {
-        @apply flex flex-col gap-2.5 !w-fit;
+      .splide__pagination {
+        @apply !relative !flex flex-col gap-2.5 !w-fit !px-0 !bottom-auto;
 
-        span {
+        button {
           @apply !grid place-content-center !w-22.5 !h-22.5 !rounded-[.9375rem] font-bebas text-[2.75rem] !bg-[#66612F] transition-colors duration-200 hover:!bg-primary/75 !opacity-100 !m-0;
           -webkit-text-stroke: .0625rem var(--color-white);
           -webkit-text-fill-color: transparent;
 
-          &.swiper-pagination-bullet-active {
+          &.is-active {
             @apply !bg-primary;
+            transform: scale(1) !important;
           }
         }
       }
@@ -152,36 +153,78 @@
   }
 
   .about-outline {
-    @apply pt-32 max-md:pt-22;
+    @apply relative pt-28.75 max-md:pt-22;
 
-    .sc-title {
-
-      h2 {
-        @apply max-md:text-[4.375rem];
-      }
+    .about-ornament {
+      @apply absolute w-254.25 -bottom-208 -left-60 select-none pointer-events-none max-md:w-340 max-md:max-w-340 max-md:-bottom-135 max-md:-left-152;
     }
 
     .wrapper {
-      @apply max-w-325 mx-auto;
+      @apply max-w-325 mx-auto relative;
     }
 
-    .edu-desc {
-      @apply text-center mt-24 max-md:mt-20;
+    .edu-table {
+      @apply text-center mt-18 max-md:mt-14 md:flex gap-15 items-start md:pl-27;
 
-      p {
-        &:first-child {
-          @apply text-[2.25rem] font-bold tracking-[-.04em] leading-[1.83] max-md:text-[2rem];
-        }
+      table {
+        @apply flex-1 max-md:w-[calc(100%_-_3.75rem)] max-md:mx-auto;
 
-        &:nth-child(2) {
-          @apply text-2xl mt-4 font-bold leading-[2.3] tracking-[-.04em] text-[1.375rem] max-md:mt-3;
+        tr {
+          th,td {
+            @apply h-25 text-lg max-md:text-[1.3125rem] text-left border-b border-primary max-md:block max-md:h-auto max-md:pb-6 leading-[1.2];
+          }
+
+          th {
+            @apply font-bold text-primary w-54 max-md:border-none max-md:pt-6;
+          }
         }
       }
-    }
 
-    .edu-banner {
-      @apply bg-cover bg-top w-full h-108.25 mt-27.5 max-md:h-54 max-md:mt-20;
-      background-image: url('assets/img/edu-banner.jpg');
+      img {
+        @apply rounded-l-[1.875rem] w-111.5 max-md:w-full max-md:rounded-l-none max-md:mt-19.5;
+      }
+    }
+  }
+
+  .about-staff {
+    @apply pt-37.5 max-md:pt-25;
+
+    /* .wrapper {
+    } */
+    
+    .staff-list {
+      @apply mt-13;
+      
+      .splide__slide {
+        @apply !w-104.25;
+      }
+      
+      &__item {
+
+        &__img {
+          @apply relative;
+          img {
+            @apply rounded-[2.8125rem];
+          }
+          span {
+            @apply absolute inline-block font-bebas text-[5rem] bottom-3 right-5 leading-[1];
+            -webkit-text-stroke: .0625rem var(--color-white);
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        &__desc {
+          @apply mt-6.5;
+
+          div {
+            @apply bg-primary rounded-4xl text-lg text-center font-medium py-3.25;
+          }
+
+          p {
+            @apply text-lg mt-24 text-center;
+          }
+        }
+      }
     }
   }
 }

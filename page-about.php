@@ -97,11 +97,10 @@ get_header();
         <p>タカハタは、コンシェルジュの心を持つ人材を育て続けます。</p>
       </div>
 
-      <div class="edu-list">
-        <div class="edu-list__pagination"></div>
-        <div class="swiper edu-list__slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+      <div class="splide edu-list">
+        <div class="splide__track">
+          <div class="splide__list">
+            <div class="splide__slide">
               <div class="edu-list__content">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-01.jpg" alt="教育事業の原点">
                 <div>
@@ -112,7 +111,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div class="splide__slide">
               <div class="edu-list__content">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-02.jpg" alt="コンシェルジュとしての心構え">
                 <div>
@@ -123,7 +122,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div class="splide__slide">
               <div class="edu-list__content">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-03.jpg" alt="お客様目線を磨く実践型プログラム">
                 <div>
@@ -134,7 +133,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div class="splide__slide">
               <div class="edu-list__content">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-04.jpg" alt="終わりのない挑戦">
                 <div>
@@ -148,26 +147,174 @@ get_header();
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="edu-banner"></div>
   </section>
 
   <section data-bg-color="black" class="about-outline">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-ornament.svg" class="about-ornament">
     <div class="wrapper">
       <div class="sc-title">
         <h2>OUTLINE</h2>
         <p>会社概要</p>
       </div>
-      <div class="edu-desc">
-        <p>
-        「お客様に最適な一台を、<br>一生のパートナーとしてご提案する。」
-        </p>
-        <p>タカハタは、コンシェルジュの心を持つ人材を育て続けます。</p>
+      <div class="edu-table">
+        <table>
+          <tr>
+            <th>会社名</th>
+            <td>株式会社タカハタ</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
+          </tr>
+          <tr>
+            <th>所在地</th>
+            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
+          </tr>
+          <tr>
+            <th>TEL</th>
+            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
+          </tr>
+          <tr>
+            <th>FAX</th>
+            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
+          </tr>
+          <tr>
+            <th>E -mail</th>
+            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
+          </tr>
+        </table>
+        <picture>
+          <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-outline_sp.jpg">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-outline.jpg">
+        </picture>
       </div>
     </div>
+  </section>
 
-    <div class="edu-banner"></div>
+  <section data-bg-color="black" class="about-staff">
+    <div class="wrapper">
+      <div class="sc-title">
+        <h2>STAFF</h2>
+        <p>スタッフ紹介</p>
+      </div>
+
+      <!-- <div class="swiper staff-list">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="staff-list__item">
+              <div class="staff-list__item__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-01.jpg" alt="◯◯◯◯◯">
+                <span>01</span>
+              </div>
+              <div class="staff-list__item__desc">
+                <div>スタッフ名</div>
+                <p>役職</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="staff-list__item">
+              <div class="staff-list__item__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-02.jpg" alt="◯◯◯◯◯">
+                <span>02</span>
+              </div>
+              <div class="staff-list__item__desc">
+                <div>スタッフ名</div>
+                <p>役職</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="staff-list__item">
+              <div class="staff-list__item__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-03.jpg" alt="◯◯◯◯◯">
+                <span>03</span>
+              </div>
+              <div class="staff-list__item__desc">
+                <div>スタッフ名</div>
+                <p>役職</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="splide staff-list">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="staff-list__item">
+                <div class="staff-list__item__img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-01.jpg" alt="◯◯◯◯◯">
+                  <span>01</span>
+                </div>
+                <div class="staff-list__item__desc">
+                  <div>スタッフ名</div>
+                  <p>役職</p>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="staff-list__item">
+                <div class="staff-list__item__img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-02.jpg" alt="◯◯◯◯◯">
+                  <span>02</span>
+                </div>
+                <div class="staff-list__item__desc">
+                  <div>スタッフ名</div>
+                  <p>役職</p>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="staff-list__item">
+                <div class="staff-list__item__img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-03.jpg" alt="◯◯◯◯◯">
+                  <span>03</span>
+                </div>
+                <div class="staff-list__item__desc">
+                  <div>スタッフ名</div>
+                  <p>役職</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
   </section>
 </main>
 <?php get_footer(); ?>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Splide(".edu-list", {
+      type: "fade",
+      pagination: true,
+      arrows: false,
+      perPage: 1,
+      speed: 600,
+      paginationKeyboard: true,
+    }).mount();
+
+    // Custom pagination numbering
+    const paginationItems = document.querySelectorAll(".splide__pagination button");
+    paginationItems.forEach((item, index) => {
+      item.innerHTML = "0" + (index + 1);
+    });
+
+    new Splide(".staff-list", {
+      type: "loop",
+    
+      perPage: "auto",
+      arrows: false,
+      focus: "center",
+      autoWidth: true,
+      gap: "3.375rem",
+    }).mount();
+  });
+</script>

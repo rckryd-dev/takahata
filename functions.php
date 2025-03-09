@@ -29,13 +29,6 @@ function custom_theme_enqueue_scripts() {
     );
     wp_add_inline_script('typekit', "try{Typekit.load({ async: true });}catch(e){}", 'after');
 
-    // wp_enqueue_script(
-    //     'swup',
-    //     get_template_directory_uri() . '/assets/js/Swup.umd.js',
-    //     array(), 
-    //     '4.8.1',
-    //     true
-    // );
     wp_enqueue_script(
         'gsap-core',
         get_template_directory_uri() . '/assets/js/gsap/gsap.min.js',
@@ -84,36 +77,22 @@ function custom_theme_enqueue_scripts() {
         }
         return $tag;
     }, 10, 2);
-}
-add_action('wp_enqueue_scripts', 'custom_theme_enqueue_scripts');
 
-
-function enqueue_swiper_on_specific_pages() {
-    if (is_page(array('about', 'contact'))) { 
-
+    if (is_page(array('about', 'service'))) {
         wp_enqueue_style(
-            'swipecss', 
-            get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', 
-            array(), 
-            null
+            'splide-css',
+            'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css',
+            array(),
+            '4.0.7'
         );
-
         wp_enqueue_script(
-            'swiper', 
-            get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',
-            array(), 
-            null, 
-            true
-        );
-
-        wp_enqueue_script(
-            'custom-swiper', 
-            get_template_directory_uri() . '/assets/js/custom-swiper.js',
-            array('swiper'), 
-            null, 
+            'splide-js',
+            'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js',
+            array(),
+            '4.0.7',
             true
         );
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_swiper_on_specific_pages');
+add_action('wp_enqueue_scripts', 'custom_theme_enqueue_scripts');
 ?>
