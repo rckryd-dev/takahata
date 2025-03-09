@@ -371,6 +371,9 @@ Text Domain: takahata
   .\!overflow-visible {
     overflow: visible !important;
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .rounded-\[\.9375rem\] {
     border-radius: .9375rem;
   }
@@ -1596,9 +1599,10 @@ Text Domain: takahata
     }
   }
   .p-home .home-virtual .running-txt {
+    pointer-events: none;
     position: absolute;
     top: 21.875rem;
-    z-index: calc(1 * -1);
+    z-index: 0;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -3158,23 +3162,82 @@ Text Domain: takahata
     }
   }
   .p-about .about-history {
+    position: relative;
     background-color: var(--color-primary);
-    padding-top: calc(var(--spacing) * 24.5);
-    padding-bottom: calc(var(--spacing) * 18);
+    padding-top: calc(var(--spacing) * 23);
+    padding-bottom: calc(var(--spacing) * 37.5);
   }
   @media (width < 48rem) {
     .p-about .about-history {
-      padding-top: calc(var(--spacing) * 20);
+      padding-top: calc(var(--spacing) * 21);
     }
+  }
+  @media (width < 48rem) {
+    .p-about .about-history {
+      padding-bottom: calc(var(--spacing) * 40);
+    }
+  }
+  .p-about .about-history .running-txt {
+    pointer-events: none;
+    position: absolute;
+    top: calc(var(--spacing) * -26);
+    z-index: 0;
+    display: flex;
+    height: calc(100% + 12.5rem);
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: center;
+    opacity: 25%;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .running-txt {
+      top: calc(var(--spacing) * -22);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .running-txt {
+      height: calc(100% + 10.5rem);
+    }
+  }
+  .p-about .about-history .running-txt > div {
+    font-family: var(--font-acumin-variable);
+    font-size: 10.625rem;
+    --tw-leading: 1.15;
+    line-height: 1.15;
+    --tw-tracking: .02em;
+    letter-spacing: .02em;
+    color: var(--color-white);
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .running-txt > div {
+      font-size: 8.75rem;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .running-txt > div {
+      --tw-leading: 1.2;
+      line-height: 1.2;
+    }
+  }
+  .p-about .about-history .running-txt > div {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+  }
+  .p-about .about-history .running-txt > div > span {
+    -webkit-text-stroke: .25rem var(--title-stroke, var(--color-white));
+    -webkit-text-fill-color: var(--title-fill, transparent);
   }
   .p-about .about-history .wrapper {
     margin-inline: auto;
     max-width: calc(var(--spacing) * 325);
-    padding-inline: calc(var(--spacing) * 27.5);
+    padding-inline: calc(var(--spacing) * 36.5);
   }
   @media (width < 48rem) {
     .p-about .about-history .wrapper {
-      padding-inline: calc(var(--spacing) * 6.25);
+      padding-inline: calc(var(--spacing) * 16.5);
     }
   }
   .p-about .about-history .history-list {
@@ -3183,9 +3246,32 @@ Text Domain: takahata
   .p-about .about-history .history-list .splide__slide {
     width: calc(var(--spacing) * 90);
   }
+  .p-about .about-history .history-list .splide__slide:first-child {
+    position: relative;
+  }
+  .p-about .about-history .history-list .splide__slide:first-child::before, .p-about .about-history .history-list .splide__slide:first-child::after {
+    position: absolute;
+    left: calc(var(--spacing) * 0);
+    height: 1px;
+    width: calc(var(--spacing) * 9);
+    --tw-translate-x: -100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    background-color: var(--color-white);
+    --tw-content: '';
+    content: var(--tw-content);
+  }
+  .p-about .about-history .history-list .splide__slide:first-child::before {
+    top: 0;
+  }
+  .p-about .about-history .history-list .splide__slide:first-child::after {
+    bottom: 0;
+  }
   .p-about .about-history .history-list .splide__slide:last-child .history-list__item {
     border-right-style: var(--tw-border-style);
     border-right-width: 1px;
+  }
+  .p-about .about-history .history-list .splide__slide:last-child .history-list__item img {
+    display: none;
   }
   .p-about .about-history .history-list__item {
     position: relative;
@@ -3224,18 +3310,56 @@ Text Domain: takahata
     translate: var(--tw-translate-x) var(--tw-translate-y);
     --tw-translate-y: calc(4.375rem * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+    font-family: var(--font-bebas);
     font-size: 2.25rem;
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .history-list__item span {
+      font-size: 2.625rem;
+    }
+  }
+  .p-about .about-history .history-list__item img {
+    position: absolute;
+    top: calc(var(--spacing) * -14);
+    left: calc(1/2 * 100%);
+    width: calc(var(--spacing) * 8);
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .history-list__item img {
+      top: calc(var(--spacing) * -13);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .history-list__item img {
+      width: calc(var(--spacing) * 9);
+    }
   }
   .p-about .about-history .history-list__item h3 {
     font-size: 1.3125rem;
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  @media (width < 48rem) {
+    .p-about .about-history .history-list__item h3 {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
   .p-about .about-history .history-list__item p {
+    margin-top: calc(var(--spacing) * 2);
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  @media (width < 48rem) {
+    .p-about .about-history .history-list__item p {
+      font-size: 1.3125rem;
+    }
   }
   .p-about .about-access {
     position: relative;

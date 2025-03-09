@@ -285,6 +285,32 @@ function initAnimations() {
   if (mainElement.classList.contains("p-about")) {
     wrapTextWithSpan("#about-desc");
     animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
+
+    // Running Text
+    const container = document.querySelector(".running-txt");
+    const elements = gsap.utils.toArray(".running-txt div");
+    elements.forEach((el, i) => {
+      const isLeft = i % 2 === 0; 
+      const moveOffset = el.offsetWidth * 1; 
+
+      const startX = isLeft ? -moveOffset : moveOffset;
+      const endX = isLeft ? moveOffset / 2 : -moveOffset / 2; 
+
+      gsap.fromTo(
+        el,
+        { x: startX },
+        {
+          x: endX,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container, 
+            start: "top bottom", 
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    });
   }
 }
 

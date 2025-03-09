@@ -372,52 +372,63 @@ get_header();
   </section>
 
   <section data-bg-color="yellow" class="about-history">
-    <div class="wrapper">
-      <div class="sc-title">
-        <h2>HISTORY</h2>
-        <p>タカハタの歴史</p>
-      </div>
+    <div class="running-txt">
+      <div>TAKAHATA<span>HISTORY</span></div>
+      <div>TAKAHATA<span>HISTORY</span></div>
+    </div>
 
-      <div class="splide history-list">
-        <div class="splide__track !overflow-visible">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <div class="history-list__item">
-                <span>1985</span>
-                <h3>1985年00月</h3>
-                <p>
-                  1985年に法人化し、お客様の要望に寄り添い続けて40年。<br>おかげさまで、自動車事業全般・保険代理店事業・レンタカー事業の3つのメイン事業を展開するに至りました。
-                </p>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="history-list__item">
-                <span>0000</span>
-                <h3>0000年00月</h3>
-                <p>
-                  内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
-                </p>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="history-list__item">
-                <span>0000</span>
-                <h3>0000年00月</h3>
-                <p>
-                  内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
-                </p>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="history-list__item">
-                <span>0000</span>
-                <h3>0000年00月</h3>
-                <p>
-                  内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
-                </p>
-              </div>
-            </li>
-          </ul>
+    <div class="overflow-x-hidden">
+      <div class="wrapper">
+        <div class="sc-title">
+          <h2>HISTORY</h2>
+          <p>タカハタの歴史</p>
+        </div>
+  
+        <div class="splide history-list">
+          <div class="splide__track !overflow-visible">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="history-list__item">
+                  <span>1985</span>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
+                  <h3>1985 年 00 月</h3>
+                  <p>
+                    1985年に法人化し、お客様の要望に寄り添い続けて40年。<br>おかげさまで、自動車事業全般・保険代理店事業・レンタカー事業の3つのメイン事業を展開するに至りました。
+                  </p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="history-list__item">
+                  <span>0000</span>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
+                  <h3>0000 年 00 月</h3>
+                  <p>
+                    内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
+                  </p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="history-list__item">
+                  <span>0000</span>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
+                  <h3>0000 年 00 月</h3>
+                  <p>
+                    内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
+                  </p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="history-list__item">
+                  <span>0000</span>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
+                  <h3>0000 年 00 月</h3>
+                  <p>
+                    内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -104,7 +104,7 @@
     @apply pt-33 pb-24 max-md:pt-26.5 relative;
 
     .running-txt {
-      @apply opacity-10 overflow-hidden absolute -z-[1] top-[21.875rem] select-none w-full text-center max-md:top-[14.5rem];
+      @apply opacity-10 overflow-hidden absolute z-[0] top-[21.875rem] select-none pointer-events-none w-full text-center max-md:top-[14.5rem];
 
       > div {
         @apply font-acumin-variable text-[10.625rem] max-md:text-[6.375rem] tracking-[.02em] leading-[1.15] max-md:leading-[1.2] text-primary;

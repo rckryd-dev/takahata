@@ -297,10 +297,30 @@
   }
 
   .about-history {
-    @apply bg-primary pt-24.5 pb-18 max-md:pt-20;
+    @apply relative bg-primary pt-23 pb-37.5 max-md:pt-21 max-md:pb-40;
+
+    .running-txt {
+      @apply opacity-25 absolute overflow-hidden z-[0] -top-26 select-none pointer-events-none w-full text-center h-[calc(100%_+_12.5rem)] flex flex-col justify-between max-md:-top-22 max-md:h-[calc(100%_+_10.5rem)];
+
+      > div {
+        @apply font-acumin-variable text-[10.625rem] max-md:text-[8.75rem] tracking-[.02em] leading-[1.15] max-md:leading-[1.2] text-white;
+        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+        > span {
+          -webkit-text-stroke: .25rem var(--title-stroke, var(--color-white));
+          -webkit-text-fill-color: var(--title-fill, transparent);
+        }
+
+        /* &:nth-child(1) {
+          @apply -translate-y-1/2;
+        }
+        &:nth-child(2) {
+          @apply translate-y-1/2;
+        } */
+      }
+    }
 
     .wrapper {
-      @apply px-27.5 max-md:px-6.25 max-w-325 mx-auto;
+      @apply px-36.5 max-md:px-16.5 max-w-325 mx-auto;
     }
 
     .history-list {
@@ -309,9 +329,29 @@
       .splide__slide {
         @apply w-90;
 
+        &:first-child {
+          @apply relative;
+
+          &::before,
+          &::after {
+            @apply absolute content-[''] h-[1px] w-9 left-0 -translate-x-full bg-white;
+          }
+
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
+        }
+
         &:last-child {
           .history-list__item {
-            @apply border-r
+            @apply border-r;
+
+            img {
+              @apply hidden;
+            }
           }
         }
       }
@@ -324,15 +364,19 @@
         }
 
         span {
-          @apply absolute text-[2.25rem] top-0 left-0 -translate-x-1/2 -translate-y-[4.375rem];
+          @apply absolute font-bebas font-medium text-[2.25rem] top-0 left-0 -translate-x-1/2 -translate-y-[4.375rem] max-md:text-[2.625rem];
+        }
+
+        img {
+          @apply w-8 absolute -top-14 left-1/2 -translate-x-1/2 max-md:w-9 max-md:-top-13;
         }
 
         h3 {
-          @apply text-[1.3125rem] font-bold;
+          @apply text-[1.3125rem] font-bold max-md:text-2xl;
         }
 
         p {
-          @apply text-lg font-medium;
+          @apply text-lg font-medium mt-2 max-md:text-[1.3125rem];
         }
       }
     }
