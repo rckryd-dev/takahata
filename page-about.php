@@ -370,6 +370,60 @@ get_header();
       </div>
     </div>
   </section>
+
+  <section data-bg-color="yellow" class="about-history">
+    <div class="wrapper">
+      <div class="sc-title">
+        <h2>HISTORY</h2>
+        <p>タカハタの歴史</p>
+      </div>
+
+      <div class="point-list pt-14 md:pt-16">
+        <div class="point-list__item">
+          <div class="point-list__num">01</div>
+          <div class="point-list__desc">
+            <h3>自動車・サービスの品質</h3>
+            <p>
+              安全性・機能・デザインすべてを兼ね備えた一台をご提案。<br>豊富な専門知識と熟練の経験を持つプロだけが在籍しており、お客様のご希望に合わせた<br class="max-md:hidden">最適な車選びをお手伝いします。
+            </p>
+          </div>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-point-01.svg" alt="Icon Point 01">
+        </div>
+        <div class="point-list__item">
+          <div class="point-list__num">02</div>
+          <div class="point-list__desc">
+            <h3>徹底的にニーズに寄り添う</h3>
+            <p>
+              車選び・保険・アフターサービスなどを、お客様一人に対して一人の担当が一貫して対応。<br>お客様のニーズに対して徹底的に耳を傾け、お客様が望むカーライフに沿ったご提案をい<br class="max-md:hidden">たします。
+            </p>
+          </div>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-point-02.svg" alt="Icon Point 02">
+        </div>
+        <div class="point-list__item">
+          <div class="point-list__num">03</div>
+          <div class="point-list__desc">
+            <h3>ホスピタリティを生む<br class="md:hidden">社員教育</h3>
+            <p>
+              お客様に信頼いただき最適なご提案ができるように、<br class="max-md:hidden">日々、サービススキルの向上に努めています。<br class="max-md:hidden">丁寧でわかりやすいご案内・ニーズを的確にとらえるヒアリング・細やかな心配りで、<br class="max-md:hidden">お客様一人ひとりに徹底したおもてなしをいたします。
+            </p>
+          </div>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-point-03.svg" alt="Icon Point 03">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-bg-color="black" class="about-access">
+    <div class="wrapper">
+      <div class="sc-title">
+        <h2>ACCESS</h2>
+        <p>アクセス</p>
+      </div>
+      <div class="access-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13053.171661092736!2d136.8348639!3d35.1243632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003779400fe4a5f%3A0x56028236d3891af5!2z44ix44K_44Kr44OP44K_!5e0!3m2!1sja!2sid!4v1741516165172!5m2!1sja!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
 </main>
 <?php get_footer(); ?>
 <script>

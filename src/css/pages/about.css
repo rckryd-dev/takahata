@@ -229,11 +229,11 @@
   }
 
   .about-qualification {
-    @apply relative pt-41 max-md:pt-46;
+    @apply relative pt-41 max-md:pt-46 pb-43.5 max-md:pb-37;
 
     .sc-title {
       h2 {
-        @apply leading-[.9];
+        @apply max-md:leading-[.9] max-md:text-[3.75rem];
       }
     }
 
@@ -260,7 +260,7 @@
 
           &:last-child {
             td {
-              @apply pb-0 border-b-transparent;
+              @apply max-md:pb-0 max-md:border-b-transparent;
             }
           }
 
@@ -292,6 +292,65 @@
 
       img {
         @apply rounded-r-[1.875rem] w-111.5 max-md:w-full max-md:rounded-r-none max-md:mt-19.5;
+      }
+    }
+  }
+
+  .about-history {
+    @apply bg-primary pt-24.5 pb-18 max-md:pt-20;
+
+    .wrapper {
+      @apply px-5 max-md:px-6.25 max-w-325 mx-auto;
+
+      .point-list {
+
+        &__item {
+          @apply relative grid md:flex gap-8.5 pl-22.5 pt-6 pb-21 pt-9.5 max-md:pl-0 max-md:gap-x-4 max-md:gap-8 max-md:pt-9 max-md:flex-wrap max-md:pb-16;
+
+          &:not(:first-child) {
+
+            &::before {
+              @apply absolute content-[''] w-screen h-[.0625rem] bg-white left-1/2 -translate-1/2 top-0;
+            }
+          }
+        }
+
+        &__num {
+          @apply font-bebas text-[5rem] max-md:text-[6.25rem] leading-[1] max-md:col-start-1 max-md:col-end-2 max-md:row-start-1 max-md:row-end-2;
+          -webkit-text-stroke: .0625rem var(--color-white);
+          -webkit-text-fill-color: transparent;
+        }
+
+        &__desc {
+          @apply max-w-185 pt-2 max-md:col-start-2 max-md:col-end-3 max-md:row-start-1 max-md:row-end-2;
+
+          h3 {
+            @apply font-black text-[2.25rem] tracking-[-.04em] leading-[1.18] max-md:text-[2.375rem];
+          }
+
+          p {
+            @apply text-lg leading-[1.78] mt-8 max-md:text-[1.3125rem] leading-[1.52];
+          }
+        }
+
+        img {
+          @apply md:absolute md:right-0 md:top-10 w-70.5 ml-auto max-md:col-start-1 max-md:col-end-3 max-md:row-start-2 max-md:row-end-3; 
+        }
+      }
+    }
+  }
+
+  .about-access {
+    @apply relative pt-16 max-md:pt-13 pb-21 max-md:pb-37;
+
+    .wrapper {
+      @apply max-w-325 mx-auto max-md:px-7.5;
+    }
+
+    .access-map {
+      @apply mt-6 max-md:mt-9.5;
+      iframe {
+        @apply h-125 rounded-[2.5rem] max-md:h-67;
       }
     }
   }
