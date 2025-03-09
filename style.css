@@ -2974,6 +2974,167 @@ Text Domain: takahata
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+  .p-about .about-qualification {
+    position: relative;
+    padding-top: calc(var(--spacing) * 41);
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification {
+      padding-top: calc(var(--spacing) * 46);
+    }
+  }
+  .p-about .about-qualification .sc-title h2 {
+    --tw-leading: .9;
+    line-height: .9;
+  }
+  .p-about .about-qualification .wrapper {
+    position: relative;
+    margin-inline: auto;
+    max-width: calc(var(--spacing) * 325);
+  }
+  .p-about .about-qualification .qualification-table {
+    margin-top: calc(var(--spacing) * 31);
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: calc(var(--spacing) * 15);
+    text-align: center;
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table {
+      margin-top: calc(var(--spacing) * 22);
+    }
+  }
+  @media (width >= 48rem) {
+    .p-about .about-qualification .qualification-table {
+      display: flex;
+    }
+  }
+  @media (width >= 48rem) {
+    .p-about .about-qualification .qualification-table {
+      padding-right: calc(var(--spacing) * 27);
+    }
+  }
+  .p-about .about-qualification .qualification-table table {
+    flex: 1;
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table {
+      margin-inline: auto;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table {
+      width: calc(100% - 3.75rem);
+    }
+  }
+  .p-about .about-qualification .qualification-table table tr th,.p-about .about-qualification .qualification-table table tr td {
+    height: calc(var(--spacing) * 25);
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-color: var(--color-primary);
+    padding-block: calc(var(--spacing) * 9);
+    text-align: left;
+    vertical-align: top;
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-leading: 1.2;
+    line-height: 1.2;
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr th,.p-about .about-qualification .qualification-table table tr td {
+      display: block;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr th,.p-about .about-qualification .qualification-table table tr td {
+      height: auto;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr th,.p-about .about-qualification .qualification-table table tr td {
+      padding-bottom: calc(var(--spacing) * 6);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr th,.p-about .about-qualification .qualification-table table tr td {
+      font-size: 1.3125rem;
+    }
+  }
+  .p-about .about-qualification .qualification-table table tr:first-child th,.p-about .about-qualification .qualification-table table tr:first-child td {
+    padding-top: calc(var(--spacing) * 0);
+  }
+  .p-about .about-qualification .qualification-table table tr:last-child td {
+    border-bottom-color: transparent;
+    padding-bottom: calc(var(--spacing) * 0);
+  }
+  .p-about .about-qualification .qualification-table table tr th {
+    width: calc(var(--spacing) * 79);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr th {
+      --tw-border-style: none;
+      border-style: none;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr th {
+      padding-top: calc(var(--spacing) * 8);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr th {
+      padding-bottom: calc(var(--spacing) * 6.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr td {
+      padding-top: calc(var(--spacing) * 0);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr td {
+      padding-bottom: calc(var(--spacing) * 11);
+    }
+  }
+  .p-about .about-qualification .qualification-table table tr td ._group {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+    padding-right: calc(var(--spacing) * 6.5);
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table table tr td ._group {
+      width: calc(var(--spacing) * 86);
+    }
+  }
+  .p-about .about-qualification .qualification-table table tr td ._group div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .p-about .about-qualification .qualification-table img {
+    width: calc(var(--spacing) * 111.5);
+    border-top-right-radius: 1.875rem;
+    border-bottom-right-radius: 1.875rem;
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table img {
+      margin-top: calc(var(--spacing) * 19.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table img {
+      width: 100%;
+    }
+  }
+  @media (width < 48rem) {
+    .p-about .about-qualification .qualification-table img {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
   .p-post {
     padding-block: calc(var(--spacing) * 24);
   }

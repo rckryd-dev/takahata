@@ -288,6 +288,88 @@ get_header();
 
     </div>
   </section>
+
+  <section data-bg-color="black" class="about-qualification">
+    <div class="wrapper">
+      <div class="sc-title">
+        <h2>TECHNICAL<span class="max-md:hidden">&nbsp;</span><br class="md:hidden">QUALIFICATION HOLDER</h2>
+        <p>技能資格取得者</p>
+      </div>
+      <div class="qualification-table">
+        <table>
+          <tr>
+            <th>2級自動車整備士</th>
+            <td>
+              <div class="_group">
+                <div>
+                  <span>2級自動車シャシ整備士</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>2級ガソリン自動車整備士</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>2級ジーゼル自動車整備士</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>2級二輪自動車整備士</span>
+                  <span>0名</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>3級自動車整備士</th>
+            <td>
+              <div class="_group">
+                <div>
+                  <span>2級自動車シャシ整備士</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>2級ガソリン自動車整備士</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>2級ジーゼル自動車整備士</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>2級二輪自動車整備士</span>
+                  <span>0名</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>保険資格</th>
+            <td>
+              <div class="_group">
+                <div>
+                  <span>◯◯◯◯◯◯◯◯</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>◯◯◯◯◯◯◯◯</span>
+                  <span>0名</span>
+                </div>
+                <div>
+                  <span>◯◯◯◯◯◯◯◯</span>
+                  <span>0名</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <picture>
+          <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-qualification_sp.jpg">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-qualification.jpg">
+        </picture>
+      </div>
+    </div>
+  </section>
 </main>
 <?php get_footer(); ?>
 <script>
