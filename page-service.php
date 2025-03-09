@@ -10,19 +10,21 @@ get_header();
     'title' => 'SERVICE',
     'breadcrumbs' => [
       ['label' => 'トップ', 'url' => home_url()],
-      ['label' => 'タカハタとは']
+      ['label' => 'サービス']
     ],
     'menu_items' => [
-        '3つの信念' => ['url' => '#', 'target' => ''],
-        '会社概要' => ['url' => '#', 'target' => ''],
-        'スタッフ紹介' => ['url' => '#', 'target' => ''],
-        'タカハタの歴史' => ['url' => '#', 'target' => ''],
-        'アクセス' => ['url' => '#', 'target' => '']
+        '車販売' => ['url' => '#', 'target' => ''],
+        '整備' => ['url' => '#', 'target' => ''],
+        '保険' => ['url' => '#', 'target' => ''],
+        'リース' => ['url' => '#', 'target' => ''],
+        'コーティング' => ['url' => '#', 'target' => ''],
+        '車検' => ['url' => '#', 'target' => ''],
+        'パーツ販売' => ['url' => '#', 'target' => '']
     ]
   ]);
   ?>
 
-  <section data-bg-color="black" class="about-top">
+  <section data-bg-color="black" class="service-top">
     <div class="wrapper">
       <h2 class="relative">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/who-is-takahata.svg" alt="WHO IS TAKAHATA" class="fadeUp">
@@ -42,7 +44,7 @@ get_header();
     </div>
   </section>
 
-  <section data-bg-color="yellow" class="about-point">
+  <section data-bg-color="yellow" class="service-menu">
     <div class="wrapper">
       <div class="sc-title fadeUp">
         <h2>POINT</h2>
@@ -84,316 +86,7 @@ get_header();
     </div>
   </section>
 
-  <section data-bg-color="black" class="about-edu">
-    <div class="wrapper">
-      <div class="sc-title fadeUp">
-        <h2>EDUCATION  BUSINESS</h2>
-        <p>教育事業</p>
-      </div>
-      <div class="edu-desc fadeUp">
-        <p>
-        「お客様に最適な一台を、<br>一生のパートナーとしてご提案する。」
-        </p>
-        <p>タカハタは、コンシェルジュの心を持つ人材を育て続けます。</p>
-      </div>
-
-      <div class="splide edu-list fadeUp">
-        <div class="splide__track">
-          <div class="splide__list">
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-01.jpg" alt="教育事業の原点">
-                <div>
-                  <h3>教育事業の原点</h3>
-                  <p>
-                    タカハタの教育事業は、日本中古車販売協会連合会愛知支部の役員を務めたことをきっかけに始まりました。業界を通して「お客様に本当に寄り添う接客」の大切さを実感し、その理念を次世代へ伝えるためにスタートしました。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-02.jpg" alt="コンシェルジュとしての心構え">
-                <div>
-                  <h3>コンシェルジュとしての心構え</h3>
-                  <p>
-                    タカハタが目指すのは、単なる販売員ではなく、お客様のカーライフ全体をサポートする<br>「自動車のコンシェルジュ」の育成です。<br>車選びからアフターサービスまで、お客様一人ひとりの想いに応えるホスピタリティを重視しています。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-03.jpg" alt="お客様目線を磨く実践型プログラム">
-                <div>
-                  <h3>お客様目線を磨く実践型プログラム</h3>
-                  <p>
-                    ニーズチェックの徹底：対話を通じて、お客様の潜在的な要望を引き出します。<br><span class="font-medium">心理動向を分析</span>：お客様の立場で考え、期待や不安を理解します。<br><span class="font-medium">提案力の向上</span>：ニーズに寄り添った、心を動かすプレゼンテーションを実践します。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-04.jpg" alt="終わりのない挑戦">
-                <div>
-                  <h3>終わりのない挑戦</h3>
-                  <p>
-                    この教育事業により、スタッフはコンシェルジュとしての接客力を磨き、結果としてお客様の満足度と売上向上にもつながっています。今後も「お客様に寄り添う心」を軸に、教育事業の価値を広め、終わりのない人材育成に取り組んでまいります。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="edu-banner"></div>
-  </section>
-
-  <section data-bg-color="black" class="about-outline">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-ornament.svg" class="about-ornament">
-    <div class="wrapper">
-      <div class="sc-title fadeUp">
-        <h2>OUTLINE</h2>
-        <p>会社概要</p>
-      </div>
-      <div class="edu-table">
-        <table class="fadeUp">
-          <tr>
-            <th>会社名</th>
-            <td>株式会社タカハタ</td>
-          </tr>
-          <tr>
-            <th>代表者</th>
-            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
-          </tr>
-          <tr>
-            <th>所在地</th>
-            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
-          </tr>
-          <tr>
-            <th>TEL</th>
-            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
-          </tr>
-          <tr>
-            <th>FAX</th>
-            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
-          </tr>
-          <tr>
-            <th>E -mail</th>
-            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td>
-          </tr>
-        </table>
-        <picture>
-          <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-outline_sp.jpg">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-outline.jpg">
-        </picture>
-      </div>
-    </div>
-  </section>
-
-  <section data-bg-color="black" class="about-staff">
-    <div class="wrapper">
-      <div class="sc-title fadeUp">
-        <h2>STAFF</h2>
-        <p>スタッフ紹介</p>
-      </div>
-
-      <div class="splide staff-list fadeUp">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <div class="staff-list__item">
-                <div class="staff-list__item__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-01.jpg" alt="◯◯◯◯◯">
-                  <span>01</span>
-                </div>
-                <div class="staff-list__item__desc">
-                  <div>スタッフ名</div>
-                  <p>役職</p>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="staff-list__item">
-                <div class="staff-list__item__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-02.jpg" alt="◯◯◯◯◯">
-                  <span>02</span>
-                </div>
-                <div class="staff-list__item__desc">
-                  <div>スタッフ名</div>
-                  <p>役職</p>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="staff-list__item">
-                <div class="staff-list__item__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-staff-03.jpg" alt="◯◯◯◯◯">
-                  <span>03</span>
-                </div>
-                <div class="staff-list__item__desc">
-                  <div>スタッフ名</div>
-                  <p>役職</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section data-bg-color="black" class="about-qualification">
-    <div class="wrapper">
-      <div class="sc-title fadeUp">
-        <h2>TECHNICAL<span class="max-md:hidden">&nbsp;</span><br class="md:hidden">QUALIFICATION HOLDER</h2>
-        <p>技能資格取得者</p>
-      </div>
-      <div class="qualification-table">
-        <table class="fadeUp">
-          <tr>
-            <th>2級自動車整備士</th>
-            <td>
-              <div class="_group">
-                <div>
-                  <span>2級自動車シャシ整備士</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>2級ガソリン自動車整備士</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>2級ジーゼル自動車整備士</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>2級二輪自動車整備士</span>
-                  <span>0名</span>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>3級自動車整備士</th>
-            <td>
-              <div class="_group">
-                <div>
-                  <span>2級自動車シャシ整備士</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>2級ガソリン自動車整備士</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>2級ジーゼル自動車整備士</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>2級二輪自動車整備士</span>
-                  <span>0名</span>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>保険資格</th>
-            <td>
-              <div class="_group">
-                <div>
-                  <span>◯◯◯◯◯◯◯◯</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>◯◯◯◯◯◯◯◯</span>
-                  <span>0名</span>
-                </div>
-                <div>
-                  <span>◯◯◯◯◯◯◯◯</span>
-                  <span>0名</span>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <picture>
-          <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-qualification_sp.jpg">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-qualification.jpg">
-        </picture>
-      </div>
-    </div>
-  </section>
-
-  <section data-bg-color="yellow" class="about-history">
-    <div class="running-txt">
-      <div>TAKAHATA<span>HISTORY</span></div>
-      <div>TAKAHATA<span>HISTORY</span></div>
-    </div>
-
-    <div class="overflow-x-hidden">
-      <div class="wrapper">
-        <div class="sc-title fadeUp">
-          <h2>HISTORY</h2>
-          <p>タカハタの歴史</p>
-        </div>
-  
-        <div class="splide history-list">
-          <div class="splide__track !overflow-visible">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <div class="history-list__item">
-                  <span>1985</span>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
-                  <h3>1985 年 00 月</h3>
-                  <p>
-                    1985年に法人化し、お客様の要望に寄り添い続けて40年。<br>おかげさまで、自動車事業全般・保険代理店事業・レンタカー事業の3つのメイン事業を展開するに至りました。
-                  </p>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="history-list__item">
-                  <span>0000</span>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
-                  <h3>0000 年 00 月</h3>
-                  <p>
-                    内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
-                  </p>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="history-list__item">
-                  <span>0000</span>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
-                  <h3>0000 年 00 月</h3>
-                  <p>
-                    内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
-                  </p>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="history-list__item">
-                  <span>0000</span>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-forward.svg" alt="">
-                  <h3>0000 年 00 月</h3>
-                  <p>
-                    内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section data-bg-color="black" class="about-access">
+  <section data-bg-color="black" class="service-virtual">
     <div class="wrapper">
       <div class="sc-title fadeUp">
         <h2>ACCESS</h2>

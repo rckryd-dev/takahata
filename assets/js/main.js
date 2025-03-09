@@ -7,17 +7,28 @@
 
 // Lenis Init
 document.addEventListener('DOMContentLoaded', function () {
-  const lenis = new Lenis();
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true, 
+    smoothTouch: true, 
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    wheelMultiplier: 1, 
+    touchMultiplier: 2, 
+    infinite: false 
+  });
 
   function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+    lenis.raf(time);
+    requestAnimationFrame(raf);
   }
 
   requestAnimationFrame(raf);
 
   window.lenis = lenis;
 });
+
 
 
 // ALPINE.JS
@@ -151,27 +162,6 @@ function initAnimations() {
     });
   }
   fadeUpAnimation();
-
-  // Parallax
-  function parallaxEffect(className = ".parallax", speed = 0.3) {
-    gsap.utils.toArray(className).forEach((el) => {
-      gsap.fromTo(el, 
-        { y: 0 }, 
-        { y: () => -(el.offsetHeight * speed), 
-          ease: "none",
-          scrollTrigger: {
-            trigger: el,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-          }
-        }
-      );
-    });
-  }
-  parallaxEffect();
-  
-  
   
   document.addEventListener("DOMContentLoaded", fadeUpAnimation);
 
@@ -334,6 +324,44 @@ function initAnimations() {
       );
     });
   }
+
+  if (mainElement.classList.contains("p-service")) {
+    wrapTextWithSpan("#about-desc");
+    animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
+    
+    wrapTextWithSpan(".edu-desc p");
+    animateTextColor(".edu-desc p", "#ffffff4d", "#ffffff");
+
+    // Running Text
+    // const container = document.querySelector(".running-txt");
+    // const elements = gsap.utils.toArray(".running-txt div");
+    // elements.forEach((el, i) => {
+    //   const isLeft = i % 2 === 0; 
+    //   const moveOffset = el.offsetWidth * 1; 
+
+    //   const startX = isLeft ? -moveOffset : moveOffset;
+    //   const endX = isLeft ? moveOffset / 2 : -moveOffset / 2; 
+
+    //   gsap.fromTo(
+    //     el,
+    //     { x: startX },
+    //     {
+    //       x: endX,
+    //       ease: "none",
+    //       scrollTrigger: {
+    //         trigger: container, 
+    //         start: "top bottom", 
+    //         end: "bottom top",
+    //         scrub: true,
+    //       },
+    //     }
+    //   );
+    // });
+  }
+
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 500);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

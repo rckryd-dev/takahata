@@ -182,7 +182,7 @@
     }
 
     &.is-open {
-      @apply -top-4 max-md:-top-7.5 -right-6 opacity-100 pt-26 max-md:pt-61.5 px-10 max-md:px-7.5 pb-10 w-100 max-md:w-screen h-100 max-md:h-[100svh] rounded-[1.25rem] max-md:rounded-[0];
+      @apply -top-4 max-md:-top-7.5 -right-6 opacity-100 pt-26 max-md:pt-61.5 px-10 max-md:px-7.5 pb-10 w-100 max-md:w-screen h-100 max-md:h-[100dvh] rounded-[1.25rem] max-md:rounded-[0];
       transition: all .4s .2s, opacity .3s;
 
       .navlinks {
