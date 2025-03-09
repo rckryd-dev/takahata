@@ -300,41 +300,39 @@
     @apply bg-primary pt-24.5 pb-18 max-md:pt-20;
 
     .wrapper {
-      @apply px-5 max-md:px-6.25 max-w-325 mx-auto;
+      @apply px-27.5 max-md:px-6.25 max-w-325 mx-auto;
+    }
 
-      .point-list {
+    .history-list {
+      @apply mt-30;
 
-        &__item {
-          @apply relative grid md:flex gap-8.5 pl-22.5 pt-6 pb-21 pt-9.5 max-md:pl-0 max-md:gap-x-4 max-md:gap-8 max-md:pt-9 max-md:flex-wrap max-md:pb-16;
+      .splide__slide {
+        @apply w-90;
 
-          &:not(:first-child) {
-
-            &::before {
-              @apply absolute content-[''] w-screen h-[.0625rem] bg-white left-1/2 -translate-1/2 top-0;
-            }
+        &:last-child {
+          .history-list__item {
+            @apply border-r
           }
         }
+      }
 
-        &__num {
-          @apply font-bebas text-[5rem] max-md:text-[6.25rem] leading-[1] max-md:col-start-1 max-md:col-end-2 max-md:row-start-1 max-md:row-end-2;
-          -webkit-text-stroke: .0625rem var(--color-white);
-          -webkit-text-fill-color: transparent;
+      &__item {
+        @apply relative border-t border-b border-white px-9 pt-10 pb-15 border-l h-full;
+
+        &::before {
+          @apply absolute content-[''] w-5.5 h-5.5 bg-white left-0 top-0 rounded-full -translate-x-1/2 -translate-y-1/2;
         }
 
-        &__desc {
-          @apply max-w-185 pt-2 max-md:col-start-2 max-md:col-end-3 max-md:row-start-1 max-md:row-end-2;
-
-          h3 {
-            @apply font-black text-[2.25rem] tracking-[-.04em] leading-[1.18] max-md:text-[2.375rem];
-          }
-
-          p {
-            @apply text-lg leading-[1.78] mt-8 max-md:text-[1.3125rem] leading-[1.52];
-          }
+        span {
+          @apply absolute text-[2.25rem] top-0 left-0 -translate-x-1/2 -translate-y-[4.375rem];
         }
 
-        img {
-          @apply md:absolute md:right-0 md:top-10 w-70.5 ml-auto max-md:col-start-1 max-md:col-end-3 max-md:row-start-2 max-md:row-end-3; 
+        h3 {
+          @apply text-[1.3125rem] font-bold;
+        }
+
+        p {
+          @apply text-lg font-medium;
         }
       }
     }
@@ -344,7 +342,7 @@
     @apply relative pt-16 max-md:pt-13 pb-21 max-md:pb-37;
 
     .wrapper {
-      @apply max-w-325 mx-auto max-md:px-7.5;
+      @apply max-w-325 mx-auto px-27.5 max-md:px-7.5;
     }
 
     .access-map {
