@@ -18,10 +18,10 @@ get_template_part('parts/scroll-down');
   <section data-bg-color="yellow" class="home-about" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img.jpg')">
     <div class="wrapper">
       <h2 class="relative">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/who-is-takahata.svg" alt="WHO IS TAKAHATA">
-        <span>タカハタとは何者だ</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/who-is-takahata.svg" alt="WHO IS TAKAHATA" class="fadeUp">
+        <span class="fadeUp">タカハタとは何者だ</span>
       </h2>
-      <p id="about-desc" class="mt-8 md:mt-11">
+      <p id="about-desc" class="mt-8 md:mt-11 fadeUp">
         私たちは、自動車販売と整備を通じて、<br class="md:hidden">お客様との対等な 50:50の関係を大切にし、<br>
         共に最適なカーライフを実現します。<br>
         思いやりを基にしたサービス種神と企業努力を惜します、<br>
@@ -183,7 +183,7 @@ get_template_part('parts/scroll-down');
 
       $jsonData = json_encode($items, JSON_UNESCAPED_UNICODE);
     ?>
-    <div class="wrapper mt-20 md:mt-12.5" x-data="{data: 0, showCard: false, selectedData: 0}">
+    <div class="wrapper fadeUp mt-20 md:mt-12.5" x-data="{data: 0, showCard: false, selectedData: 0}">
       <div class="content">
         <div class="content__img">
           <img :src="`<?php echo get_template_directory_uri(); ?>/assets/img/vr-img${data === 0 ? '' : `-${data}`}.png`" alt="VR Image">
@@ -383,7 +383,7 @@ get_template_part('parts/scroll-down');
       </picture>
     </h2>
     <div class="wrapper mt-15.5 md:mt-25">
-      <div id="company-desc">
+      <div id="company-desc" class="fadeUp">
         <p>
           最新の安全性能と洗練されたデザインを<br class="md:hidden">兼ね備えた車を厳選し、<br>
           安心して長く乗れるカーライフをサポート。<br>
@@ -398,7 +398,7 @@ get_template_part('parts/scroll-down');
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow.svg" alt="Arrrow" class="-abs">
       </a>
 
-      <img class="rounded-[.9375rem] mt-16 md:mt-24" src="<?php echo get_template_directory_uri(); ?>/assets/img/company.jpg" alt="Company Image">
+      <img class="rounded-[.9375rem] mt-16 md:mt-24 fadeUp" src="<?php echo get_template_directory_uri(); ?>/assets/img/company.jpg" alt="Company Image">
     </div>
     <div class="layer-shift">
       <div style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img-shift-03.jpg')"></div>

@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: About Page
+ * Template Name: Service Page
  */
 get_header();
 ?>
-<main class="p-about">
+<main class="p-service">
   <?php
   get_template_part('parts/title-section', null, [
-    'title' => 'ABOUT',
+    'title' => 'SERVICE',
     'breadcrumbs' => [
       ['label' => 'トップ', 'url' => home_url()],
       ['label' => 'タカハタとは']

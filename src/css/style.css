@@ -64,6 +64,7 @@
 
   @import "./pages/home.css";
   @import "./pages/about.css";
+  @import "./pages/service.css";
   @import "./pages/post.css";
   @import "./pages/contact.css";
 }

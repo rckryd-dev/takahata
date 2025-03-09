@@ -134,21 +134,48 @@ function initAnimations() {
   
 
   // **Animasi Fade Up**
-  function fadeUpAnimation(selector, delay = 0, duration = 1, distance = 50) {
-    gsap.fromTo(selector, 
-      { opacity: 0, y: distance },
-      { opacity: 1, y: 0, duration, delay, ease: "power2.out",
-        scrollTrigger: {
-          trigger: selector,
-          start: "top 80%",
-          end: "top 60%",
-          scrub: true,
-          toggleActions: "play none none reverse"
+  function fadeUpAnimation(className = ".fadeUp", delay = 0, duration = 8, distance = 20) {
+    gsap.utils.toArray(className).forEach((el) => {
+      gsap.fromTo(el, 
+        { opacity: 0, y: distance },
+        { opacity: 1, y: 0, duration, delay, ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            end: "top 60%",
+            scrub: true,
+            toggleActions: "play none none reverse"
+          }
         }
-      }
-    );
+      );
+    });
   }
+  fadeUpAnimation();
 
+  // Parallax
+  function parallaxEffect(className = ".parallax", speed = 0.3) {
+    gsap.utils.toArray(className).forEach((el) => {
+      gsap.fromTo(el, 
+        { y: 0 }, 
+        { y: () => -(el.offsetHeight * speed), 
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          }
+        }
+      );
+    });
+  }
+  parallaxEffect();
+  
+  
+  
+  document.addEventListener("DOMContentLoaded", fadeUpAnimation);
+
+  // **Animasi Scroll to Top**
   const scrollToTopBtn = document.getElementById("scrollToTop");
         const main = document.querySelector("main");
         
@@ -178,17 +205,10 @@ function initAnimations() {
   if (mainElement.classList.contains("p-home")) {
     wrapTextWithSpan("#about-desc");
     animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
-    fadeUpAnimation(".home-about h2 img", 0, 10, 50);
-    fadeUpAnimation(".home-about h2 span", 0, 10, 50);
-    fadeUpAnimation("#about-desc", 0, 10, 20);
-
-    fadeUpAnimation(".home-virtual .wrapper", 0, 10, 100);
 
     wrapTextWithSpan("#company-desc p:nth-child(1)");
     wrapTextWithSpan("#company-desc p:nth-child(2)");
     animateTextColor("#company-desc", "#ffffff4d", "#ffffff");
-    fadeUpAnimation("#company-desc", 0, 10, 20);
-    fadeUpAnimation(".home-company .wrapper > img", 0, 10, 20);
 
     wrapTextWithSpan("#attempt-desc");
     animateTextColor("#attempt-desc", "#ffffff4d", "#ffffff");
@@ -262,14 +282,13 @@ function initAnimations() {
     const images = gsap.utils.toArray(".imgs-wrapper img");
 
     images.forEach((img, i) => {
-      // Semakin besar index, semakin lambat geraknya (atau bisa dibalik)
-      const movement = (i + 1) * 30; // contoh: 30px, 60px, 90px, 120px
+      const movement = (i + 1) * 30;
 
       gsap.fromTo(
         img,
-        { y: -movement }, // mulai lebih naik sesuai index
+        { y: -movement },
         {
-          y: movement, // turun sesuai index pas scroll
+          y: movement,
           ease: "none",
           scrollTrigger: {
             trigger: img,
@@ -285,6 +304,9 @@ function initAnimations() {
   if (mainElement.classList.contains("p-about")) {
     wrapTextWithSpan("#about-desc");
     animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
+    
+    wrapTextWithSpan(".edu-desc p");
+    animateTextColor(".edu-desc p", "#ffffff4d", "#ffffff");
 
     // Running Text
     const container = document.querySelector(".running-txt");
