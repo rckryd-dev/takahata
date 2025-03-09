@@ -86,4 +86,34 @@ function custom_theme_enqueue_scripts() {
     }, 10, 2);
 }
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_scripts');
+
+
+function enqueue_swiper_on_specific_pages() {
+    if (is_page(array('about', 'contact'))) { 
+
+        wp_enqueue_style(
+            'swipecss', 
+            get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', 
+            array(), 
+            null
+        );
+
+        wp_enqueue_script(
+            'swiper', 
+            get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',
+            array(), 
+            null, 
+            true
+        );
+
+        wp_enqueue_script(
+            'custom-swiper', 
+            get_template_directory_uri() . '/assets/js/custom-swiper.js',
+            array('swiper'), 
+            null, 
+            true
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_swiper_on_specific_pages');
 ?>

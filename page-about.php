@@ -97,62 +97,77 @@ get_header();
         <p>タカハタは、コンシェルジュの心を持つ人材を育て続けます。</p>
       </div>
 
-      <div class="edu-list" x-data="{ activeTab: 1 }">
-        <ul class="edu-list__pagination">
-          <li>
-            <button class="is-active" :class="{ 'is-active': activeTab === 1 }" @click="activeTab = 1">01</button>
-          </li>
-          <li>
-            <button :class="{ 'is-active': activeTab === 2 }" @click="activeTab = 2">02</button>
-          </li>
-          <li>
-            <button :class="{ 'is-active': activeTab === 3 }" @click="activeTab = 3">03</button>
-          </li>
-          <li>
-            <button :class="{ 'is-active': activeTab === 4 }" @click="activeTab = 4">04</button>
-          </li>
-        </ul>
-
-        <div class="relative">
-          <div class="edu-list__content is-active" :class="{ 'is-active': activeTab === 1 }">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-01.jpg" alt="教育事業の原点">
-            <div>
-              <h3>教育事業の原点</h3>
-              <p>
-                タカハタの教育事業は、日本中古車販売協会連合会愛知支部の役員を務めたことをきっかけに始まりました。業界を通して「お客様に本当に寄り添う接客」の大切さを実感し、その理念を次世代へ伝えるためにスタートしました。
-              </p>
+      <div class="edu-list">
+        <div class="edu-list__pagination"></div>
+        <div class="swiper edu-list__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="edu-list__content">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-01.jpg" alt="教育事業の原点">
+                <div>
+                  <h3>教育事業の原点</h3>
+                  <p>
+                    タカハタの教育事業は、日本中古車販売協会連合会愛知支部の役員を務めたことをきっかけに始まりました。業界を通して「お客様に本当に寄り添う接客」の大切さを実感し、その理念を次世代へ伝えるためにスタートしました。
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="edu-list__content" :class="{ 'is-active': activeTab === 2 }">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-02.jpg" alt="コンシェルジュとしての心構え">
-            <div>
-              <h3>コンシェルジュとしての心構え</h3>
-              <p>
-                タカハタが目指すのは、単なる販売員ではなく、お客様のカーライフ全体をサポートする<br>「自動車のコンシェルジュ」の育成です。<br>車選びからアフターサービスまで、お客様一人ひとりの想いに応えるホスピタリティを重視しています。
-              </p>
+            <div class="swiper-slide">
+              <div class="edu-list__content">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-02.jpg" alt="コンシェルジュとしての心構え">
+                <div>
+                  <h3>コンシェルジュとしての心構え</h3>
+                  <p>
+                    タカハタが目指すのは、単なる販売員ではなく、お客様のカーライフ全体をサポートする<br>「自動車のコンシェルジュ」の育成です。<br>車選びからアフターサービスまで、お客様一人ひとりの想いに応えるホスピタリティを重視しています。
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="edu-list__content" :class="{ 'is-active': activeTab === 3 }">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-03.jpg" alt="お客様目線を磨く実践型プログラム">
-            <div>
-              <h3>お客様目線を磨く実践型プログラム</h3>
-              <p>
-                ニーズチェックの徹底：対話を通じて、お客様の潜在的な要望を引き出します。<br>心理動向を分析：お客様の立場で考え、期待や不安を理解します。<br>提案力の向上：ニーズに寄り添った、心を動かすプレゼンテーションを実践します。
-              </p>
+            <div class="swiper-slide">
+              <div class="edu-list__content">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-03.jpg" alt="お客様目線を磨く実践型プログラム">
+                <div>
+                  <h3>お客様目線を磨く実践型プログラム</h3>
+                  <p>
+                    ニーズチェックの徹底：対話を通じて、お客様の潜在的な要望を引き出します。<br><span class="font-medium">心理動向を分析</span>：お客様の立場で考え、期待や不安を理解します。<br><span class="font-medium">提案力の向上</span>：ニーズに寄り添った、心を動かすプレゼンテーションを実践します。
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="edu-list__content" :class="{ 'is-active': activeTab === 4 }">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-04.jpg" alt="終わりのない挑戦">
-            <div>
-              <h3>終わりのない挑戦</h3>
-              <p>
-                この教育事業により、スタッフはコンシェルジュとしての接客力を磨き、結果としてお客様の満足度と売上向上にもつながっています。今後も「お客様に寄り添う心」を軸に、教育事業の価値を広め、終わりのない人材育成に取り組んでまいります。
-              </p>
+            <div class="swiper-slide">
+              <div class="edu-list__content">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-04.jpg" alt="終わりのない挑戦">
+                <div>
+                  <h3>終わりのない挑戦</h3>
+                  <p>
+                    この教育事業により、スタッフはコンシェルジュとしての接客力を磨き、結果としてお客様の満足度と売上向上にもつながっています。今後も「お客様に寄り添う心」を軸に、教育事業の価値を広め、終わりのない人材育成に取り組んでまいります。
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="edu-banner"></div>
+  </section>
+
+  <section data-bg-color="black" class="about-outline">
+    <div class="wrapper">
+      <div class="sc-title">
+        <h2>OUTLINE</h2>
+        <p>会社概要</p>
+      </div>
+      <div class="edu-desc">
+        <p>
+        「お客様に最適な一台を、<br>一生のパートナーとしてご提案する。」
+        </p>
+        <p>タカハタは、コンシェルジュの心を持つ人材を育て続けます。</p>
+      </div>
+    </div>
+
+    <div class="edu-banner"></div>
   </section>
 </main>
 <?php get_footer(); ?>

@@ -68,75 +68,120 @@
   }
 
   .about-edu {
-    @apply pt-24.5 pb-18 max-md:pt-20;
+    @apply pt-32 max-md:pt-22;
+
+    .sc-title {
+
+      h2 {
+        @apply max-md:text-[4.375rem];
+      }
+    }
 
     .wrapper {
       @apply max-w-325 mx-auto;
     }
 
     .edu-desc {
-      @apply text-center mt-24;
+      @apply text-center mt-24 max-md:mt-20;
 
       p {
         &:first-child {
-          @apply text-[2.25rem] font-bold tracking-[.04em] leading-[1.83];
+          @apply text-[2.25rem] font-bold tracking-[-.04em] leading-[1.83] max-md:text-[2rem];
         }
 
         &:nth-child(2) {
-          @apply text-2xl mt-4 font-bold leading-[2.3] tracking-[.04em];
+          @apply text-2xl mt-4 font-bold leading-[2.3] tracking-[-.04em] text-[1.375rem] max-md:mt-3;
         }
       }
     }
 
     .edu-list {
-      @apply flex gap-16 justify-end;
+      @apply flex gap-16.5 justify-end mt-24 pl-16.5 max-md:gap-6.25 max-md:pl-6.25 max-md:mt-22;
 
       &__pagination {
-        @apply flex flex-col gap-2.5;
+        @apply flex flex-col gap-2.5 !w-fit;
 
-        li {
-          button {
-            @apply w-22.5 h-22.5 rounded-[.9375rem] font-bebas text-[2.75rem] cursor-pointer bg-[#66612F] transition-colors duration-200 hover:bg-primary;
-            -webkit-text-stroke: .0625rem var(--color-white);
-            -webkit-text-fill-color: transparent;
+        span {
+          @apply !grid place-content-center !w-22.5 !h-22.5 !rounded-[.9375rem] font-bebas text-[2.75rem] !bg-[#66612F] transition-colors duration-200 hover:!bg-primary/75 !opacity-100 !m-0;
+          -webkit-text-stroke: .0625rem var(--color-white);
+          -webkit-text-fill-color: transparent;
 
-            &.is-active {
-              @apply bg-primary;
-            }
+          &.swiper-pagination-bullet-active {
+            @apply !bg-primary;
           }
         }
       }
 
-      &__content {
-        @apply absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 rounded-l-[2.8125rem] overflow-hidden;
+      /* &__slider {
+        @apply !w-270;
+      } */
 
-        &:first-child {
-          @apply relative;
-        }
+      &__content {
+        @apply rounded-l-[2.8125rem] overflow-hidden max-md:h-178;
         
         img {
-          @apply w-270 scale-[1.001];
+          @apply scale-[1.001] max-md:h-full max-md:object-cover;
         }
 
         > div {
-            @apply absolute bottom-0 left-0 w-full bg-primary/10;
+            @apply absolute bottom-0 left-0 w-full py-10.5 pl-15 pr-27 rounded-bl-[2.8125rem] overflow-hidden max-md:pt-11 max-md:pl-5 max-md:pr-8.75 max-md:pb-17.5;
 
-          h3 {
+            &::before {
+              @apply absolute content-[''] w-full h-full bg-primary mix-blend-multiply bottom-0 left-0;
+            }
 
-          }
+            > * {
+              @apply relative;
+            }
 
-          p {
+            h3 {
+              @apply font-black text-[2.25rem] tracking-[-.04em] leading-[1.55] max-md:text-[2.375rem];
+            }
 
-          }
-        }
-
-        &.is-active {
-          @apply opacity-100 visible;
-
-          img {
-          }
+            p {
+              @apply text-lg leading-[1.78] mt-5 max-md:text-justify;
+            }
         }
       }
+    }
+
+    .edu-banner {
+      @apply bg-cover bg-top w-full h-108.25 mt-27.5 max-md:h-54 max-md:mt-20;
+      background-image: url('assets/img/edu-banner.jpg');
+    }
+  }
+
+  .about-outline {
+    @apply pt-32 max-md:pt-22;
+
+    .sc-title {
+
+      h2 {
+        @apply max-md:text-[4.375rem];
+      }
+    }
+
+    .wrapper {
+      @apply max-w-325 mx-auto;
+    }
+
+    .edu-desc {
+      @apply text-center mt-24 max-md:mt-20;
+
+      p {
+        &:first-child {
+          @apply text-[2.25rem] font-bold tracking-[-.04em] leading-[1.83] max-md:text-[2rem];
+        }
+
+        &:nth-child(2) {
+          @apply text-2xl mt-4 font-bold leading-[2.3] tracking-[-.04em] text-[1.375rem] max-md:mt-3;
+        }
+      }
+    }
+
+    .edu-banner {
+      @apply bg-cover bg-top w-full h-108.25 mt-27.5 max-md:h-54 max-md:mt-20;
+      background-image: url('assets/img/edu-banner.jpg');
     }
   }
 }
