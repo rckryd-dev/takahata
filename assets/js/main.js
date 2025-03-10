@@ -320,9 +320,6 @@ function initAnimations() {
   if (mainElement.classList.contains("p-service")) {
     wrapTextWithSpan("#service-desc");
     animateTextColor("#service-desc", "#ffffff4d", "#ffffff");
-    
-    wrapTextWithSpan(".edu-desc p");
-    animateTextColor(".edu-desc p", "#ffffff4d", "#ffffff");
 
     // Running Text
     const container = document.querySelector(".running-txt");

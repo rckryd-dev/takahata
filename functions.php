@@ -61,6 +61,13 @@ function custom_theme_enqueue_scripts() {
         '3.14.8',
         true // Load at footer
     );
+    wp_enqueue_script(
+        'alpine-collapse',
+        get_template_directory_uri() . '/assets/js/alpine.collapse.js',
+        array('alpinejs'), 
+        '3.14.8',
+        true 
+    );
 
     wp_enqueue_script(
         'custom-main-js',

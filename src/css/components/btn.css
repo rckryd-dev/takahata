@@ -20,4 +20,5 @@
   &--secondary {
     @apply bg-black text-primary hover:bg-black/75;
   }
+  
 }
