@@ -300,7 +300,7 @@
     @apply relative bg-primary pt-23 pb-37.5 max-md:pt-21 max-md:pb-40;
 
     .running-txt {
-      @apply opacity-25 absolute overflow-hidden z-[0] -top-26 select-none pointer-events-none w-full text-center h-[calc(100%_+_12.5rem)] flex flex-col justify-between max-md:-top-22 max-md:h-[calc(100%_+_10.5rem)];
+      @apply opacity-25 absolute overflow-hidden z-[0] -top-26 select-none pointer-events-none w-full text-center h-[calc(100%_+_10.8rem)] flex flex-col justify-between max-md:-top-22 max-md:h-[calc(100%_+_9.3rem)];
 
       > div {
         @apply font-acumin-variable text-[10.625rem] max-md:text-[8.75rem] tracking-[.02em] leading-[1.15] max-md:leading-[1.2] text-white;
