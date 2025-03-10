@@ -2087,10 +2087,12 @@ Text Domain: takahata
     transform-style: preserve-3d;
   }
   .p-home .home-service .wrapper .service-roll-text ul li {
+    top: calc(1/2 * 100%);
+    text-align: center;
     position: absolute;
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: translateY(200px) rotateX(-97deg);
+    transform: translate3d(0, 400px, -10px) rotateX(-80deg);
     width: 100%;
   }
   .p-home .home-company {

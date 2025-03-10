@@ -322,7 +322,7 @@ get_template_part('parts/scroll-down');
                   </div>
                 </a>
               </li>
-              <!-- <li>
+              <li>
                 <a href="<?php echo home_url(); ?>/service/maintenance">
                   <div>MAINTENANCE</div>
                   <div>
@@ -375,7 +375,7 @@ get_template_part('parts/scroll-down');
                     <span>自動車パーツ、アクセサリー販売など</span>
                   </div>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </div>
         </div>

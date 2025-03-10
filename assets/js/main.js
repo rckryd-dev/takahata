@@ -264,37 +264,19 @@ function initAnimations() {
     });
 
     // Service Roll
-    gsap.utils.toArray(".service-roll-text li").forEach((li, index) => {
-      gsap.fromTo(li, 
-        {
-          y: 200,
-          rotateX: -97, /* Mulai dari -97deg */
-          opacity: 1
-        }, 
-        {
-          scrollTrigger: {
-            trigger: ".service-roll-wrapper",
-            start: "top center+=100",
-            end: "bottom center",
-            scrub: 1,
-          },
-          y: -index * 40, /* Naik ke atas */
-          rotateX: 80, /* Akhirnya 80deg */
-          opacity: 1,
-          ease: "power3.out",
-          delay: index * 0.1
-        }
-      );
-      
-      gsap.to(li, {
-        scrollTrigger: {
-          trigger: ".service-roll-wrapper",
-          start: "top center",
-          end: "center center",
-          scrub: 1,
-        },
-        rotateX: 0, /* Di pertengahan 0 deg */
-      });
+    gsap.to(".service-roll-text li", {
+      scrollTrigger: {
+        trigger: ".service-roll-wrapper",
+        start: "top center-=100",
+        end: "bottom bottom+=400",
+        scrub: 1,
+        markers: true
+      },
+      keyframes: [
+        { y: 0, z: 0, rotateX: 0, ease: "none" },  
+        { y: -400, z: -10, rotateX: 80, ease: "none" } 
+      ],
+      stagger: (index) => index * 1.5 // Memberikan delay berdasarkan indeks
     });
 
     // Attempt Imgs Parallax
