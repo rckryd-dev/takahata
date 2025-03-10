@@ -60,6 +60,7 @@
   /* @import "./components/swup.css"; */
 
   @import "./components/btn.css";
+  @import "./components/animate.css";
   @import "./components/header.css";
   @import "./components/footer.css";
   @import "./components/title-section.css";

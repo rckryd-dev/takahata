@@ -26,25 +26,31 @@ get_header();
 
   <section data-bg-color="black" class="service-top">
     <div class="wrapper">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/speed-ornament.svg" class="speed-ornament">
       <h2 class="relative">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/who-is-takahata.svg" alt="WHO IS TAKAHATA" class="fadeUp">
-        <span class="fadeUp">タカハタとは何者だ</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-police.svg" alt="SERVICE POLICY" class="fadeUp">
+        <span class="fadeUp"><span class="text-primary mr-4">信頼</span>×<span class="text-primary ml-4">挑戦</span></span>
       </h2>
-      <p id="about-desc" class="mt-8 md:mt-11 fadeUp">
-        私たちは、自動車販売と整備を通じて、<br class="md:hidden">お客様との対等な 50:50の関係を大切にし、<br>
-        共に最適なカーライフを実現します。<br>
-        思いやりを基にしたサービス種神と企業努力を惜します、<br>
-        日々品質の向上に努めることで<br class="md:hidden">お客様との縁を繋いで来ました。<br>
-        <br>
-        急なトラブルにも即時対応できる体制を整え、<br>
-        お客様の安心と安全を最優先に考えたサービスをご提供。<br>
-        また、専任のコンセルジュが<br class="md:hidden">ご相談から購入後のサポートまで丁寧に対応し、<br>
-        快適なドライブ体験をお約束します。
+      <p id="service-desc" class="mt-8 md:mt-11 fadeUp">
+        タカハタの使命は、<br class="md:hidden">徹底したお客様目線のサービスを通してご縁を広げ、<br>ご縁ある全ての人々にご満足いただくこと。<br>これからも単なる自動車の販売ではなく、<br>お客様一人ひとりのライフスタイルに<br class="md:hidden">寄り添う自動車をお届けします。
       </p>
+
+      <a href="#service-menu" class="relative block w-37.5 h-37.5 mx-auto mt-27.75">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/circle-scroll-down.svg"
+          alt=""
+          class="spin w-full h-full"
+        />
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-double-arrow-down.svg"
+          alt=""
+          class="w-full h-full absolute top-0 left-0"
+        />
+      </a>
     </div>
   </section>
 
-  <section data-bg-color="yellow" class="service-menu">
+  <section data-bg-color="yellow" class="service-menu" id="service-menu">
     <div class="wrapper">
       <div class="sc-title fadeUp">
         <h2>POINT</h2>
@@ -87,52 +93,23 @@ get_header();
   </section>
 
   <section data-bg-color="black" class="service-virtual">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tire-ornament.svg" class="tire-ornament">
+
+    <div class="running-txt">
+      <div>TAKAHATA<span>VIRTUAL</span></div>
+      <div>TAKAHATA<span>VIRTUAL</span></div>
+      <div>TAKAHATA<span>VIRTUAL</span></div>
+    </div>
+
     <div class="wrapper">
       <div class="sc-title fadeUp">
-        <h2>ACCESS</h2>
-        <p>アクセス</p>
+        <h2>VIRTUAL</h2>
+        <p>バーチャル工場見学</p>
       </div>
-      <div class="access-map fadeUp">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13053.171661092736!2d136.8348639!3d35.1243632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003779400fe4a5f%3A0x56028236d3891af5!2z44ix44K_44Kr44OP44K_!5e0!3m2!1sja!2sid!4v1741516165172!5m2!1sja!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="vr-content fadeUp">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.svg" alt="">
       </div>
     </div>
   </section>
 </main>
 <?php get_footer(); ?>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    new Splide(".edu-list", {
-      type: "fade",
-      pagination: true,
-      arrows: false,
-      perPage: 1,
-      speed: 600,
-      paginationKeyboard: true,
-    }).mount();
-
-    // Custom pagination numbering
-    const paginationItems = document.querySelectorAll(".splide__pagination button");
-    paginationItems.forEach((item, index) => {
-      item.innerHTML = "0" + (index + 1);
-    });
-
-    new Splide(".staff-list", {
-      type: "loop",
-    
-      perPage: "auto",
-      arrows: false,
-      focus: "center",
-      autoWidth: true,
-      gap: "3.375rem",
-    }).mount();
-    
-    new Splide(".history-list", {
-      perPage: "auto",
-      drag: 'free',
-      focus  : 0,
-      omitEnd: true,
-      pagination: false,
-      arrows: false,
-    }).mount();
-  });
-</script>

@@ -25,14 +25,6 @@
 
   setInitialPosition();
 
-  // Spin animasi di child .spin
-  gsap.to(pointerScrollDownSpin, {
-    rotation: 360,
-    repeat: -1,
-    ease: "linear",
-    duration: 10
-  });
-
   // Mouse follow hanya di desktop (>767px)
   function handleMouseMove(e) {
     if (window.innerWidth > 767) {

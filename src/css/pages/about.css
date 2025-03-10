@@ -155,7 +155,7 @@
   .about-outline {
     @apply relative pt-28.75 max-md:pt-22 overflow-x-clip;
 
-    .about-ornament {
+    .speed-ornament {
       @apply absolute w-254.25 -bottom-208 -left-60 select-none pointer-events-none max-md:w-340 max-md:max-w-340 max-md:-bottom-135 max-md:-left-152;
     }
 

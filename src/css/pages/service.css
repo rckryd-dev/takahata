@@ -1,7 +1,11 @@
 .p-service {
 
   .service-top {
-    @apply pt-33 pb-24 max-md:pt-18.75 max-md:pb-20 text-center;
+    @apply relative overflow-hidden pt-33 pb-24 max-md:pt-18.75 max-md:pb-20 text-center;
+
+    .speed-ornament {
+      @apply absolute w-254.25 -bottom-103 -left-35 select-none pointer-events-none max-md:w-340 max-md:max-w-340 max-md:-bottom-135 max-md:-left-152;
+    }
 
     .wrapper {
       @apply max-md:overflow-x-hidden;
@@ -9,15 +13,15 @@
         @apply w-fit mx-auto;
 
         img {
-          @apply w-213 max-md:w-177.5 max-md:max-w-177.5 max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2;
+          @apply w-185.75 max-md:w-154.75 max-md:max-w-154.75 max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2;
         }
 
-        span {
+        > span {
           @apply block text-[4.6875rem] max-md:text-[4.0625rem] font-black tracking-[-.04em] text-center leading-none md:-mt-11 max-md:pt-15.5;
         }
       }
 
-      #about-desc {
+      #service-desc {
         @apply text-2xl max-md:text-[1.375rem] font-bold leading-[2.25];
       }
     }
@@ -68,16 +72,33 @@
   }
 
   .service-virtual {
-    @apply relative pt-16 max-md:pt-13 pb-21 max-md:pb-37;
+    @apply overflow-hidden relative pt-18 max-md:pt-18.75 pb-40.5 max-md:pb-42.5;
+
+    .tire-ornament {
+      @apply absolute w-222.5 -bottom-22 -right-59 select-none pointer-events-none max-md:w-150.75 max-md:max-w-150.75 max-md:-bottom-5 max-md:-right-66;
+    }
+
+    .running-txt {
+      @apply overflow-hidden absolute z-[0] top-[13.5rem] select-none pointer-events-none w-full text-center max-md:top-[12rem];
+
+      > div {
+        @apply font-acumin-variable text-[10.625rem] max-md:text-[6.375rem] tracking-[.02em] leading-[1.15] max-md:leading-[1.2] text-primary;
+        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
+        > span {
+          -webkit-text-stroke: .25rem var(--title-stroke, var(--color-primary));
+          -webkit-text-fill-color: var(--title-fill, transparent);
+        }
+      }
+    }
 
     .wrapper {
       @apply max-w-325 mx-auto px-27.5 max-md:px-7.5;
     }
 
-    .access-map {
-      @apply mt-6 max-md:mt-9.5;
-      iframe {
-        @apply h-125 rounded-[2.5rem] max-md:h-67;
+    .vr-content {
+      @apply mt-12.5 max-md:mt-15;
+      img {
+        @apply h-150 rounded-[3.75rem] max-md:rounded-[.9375rem] max-md:h-80.5;
       }
     }
   }

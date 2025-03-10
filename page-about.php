@@ -154,7 +154,7 @@ get_header();
   </section>
 
   <section data-bg-color="black" class="about-outline">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-ornament.svg" class="about-ornament">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/speed-ornament.svg" class="speed-ornament">
     <div class="wrapper">
       <div class="sc-title fadeUp">
         <h2>OUTLINE</h2>

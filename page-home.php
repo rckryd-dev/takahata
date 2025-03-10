@@ -15,7 +15,7 @@ get_template_part('parts/scroll-down');
     </div>
   </section>
 
-  <section data-bg-color="yellow" class="home-about" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img.jpg')">
+  <section data-bg-color="yellow" id="after-top" class="home-about" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img.jpg')">
     <div class="wrapper">
       <h2 class="relative">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/who-is-takahata.svg" alt="WHO IS TAKAHATA" class="fadeUp">
@@ -398,7 +398,7 @@ get_template_part('parts/scroll-down');
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow.svg" alt="Arrrow" class="-abs">
       </a>
 
-      <img class="rounded-[.9375rem] mt-16 md:mt-24 fadeUp" src="<?php echo get_template_directory_uri(); ?>/assets/img/company.jpg" alt="Company Image">
+      <img class="rounded-[.9375rem] mt-16 md:mt-24" src="<?php echo get_template_directory_uri(); ?>/assets/img/company.jpg" alt="Company Image">
     </div>
     <div class="layer-shift">
       <div style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img-shift-03.jpg')"></div>

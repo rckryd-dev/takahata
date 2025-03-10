@@ -41,6 +41,6 @@
     }
   }
   &__copy {
-      @apply max-md:text-[1.3125rem] font-bold text-black tracking-[.04em] text-right mt-22.5;
+      @apply max-md:text-[1.3125rem] font-bold text-black tracking-[-.04em] text-right mt-22.5;
   }
 }

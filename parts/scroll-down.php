@@ -1,4 +1,4 @@
-<div id="pointerScrollDown" class="fixed left-0 top-0 w-40 h-40 md:w-30 md:h-30 pointer-events-none origin-center z-40">
+<a href="#after-top" id="pointerScrollDown" class="block fixed left-0 top-0 w-37.5 h-37.5 md:pointer-events-none origin-center z-40">
   <img
     src="<?php echo get_template_directory_uri(); ?>/assets/img/circle-scroll-down.svg"
     alt=""
@@ -9,4 +9,4 @@
     alt=""
     class="w-full h-full absolute top-0 left-0 md:hidden"
   />
-</div>
+</a>

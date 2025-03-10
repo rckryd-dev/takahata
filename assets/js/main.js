@@ -27,6 +27,24 @@ document.addEventListener('DOMContentLoaded', function () {
   requestAnimationFrame(raf);
 
   window.lenis = lenis;
+
+  // Smooth Scroll for Anchor Links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        lenis.scrollTo(targetElement, {
+          offset: 0, // Sesuaikan offset jika ada navbar
+          duration: 1.5,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
+        });
+      }
+    });
+  });
 });
 
 
@@ -165,29 +183,6 @@ function initAnimations() {
   
   document.addEventListener("DOMContentLoaded", fadeUpAnimation);
 
-  // **Animasi Scroll to Top**
-  const scrollToTopBtn = document.getElementById("scrollToTop");
-        const main = document.querySelector("main");
-        
-        ScrollTrigger.create({
-            trigger: main,
-            start: "top top",
-            onUpdate: (self) => {
-                if (self.scroll() > 100) {
-                    scrollToTopBtn.style.display = "block";
-                    gsap.to(scrollToTopBtn, { opacity: 1, duration: 0.3 });
-                } else {
-                    gsap.to(scrollToTopBtn, { opacity: 0, duration: 0.3, onComplete: () => {
-                        scrollToTopBtn.style.display = "none";
-                    }});
-                }
-            }
-        });
-        
-        scrollToTopBtn.addEventListener("click", () => {
-            gsap.to(window, { scrollY: 0, duration: 1, ease: "power2.out" });
-        });
-
   // Pages
   const mainElement = document.querySelector("main");
 
@@ -294,9 +289,6 @@ function initAnimations() {
   if (mainElement.classList.contains("p-about")) {
     wrapTextWithSpan("#about-desc");
     animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
-    
-    wrapTextWithSpan(".edu-desc p");
-    animateTextColor(".edu-desc p", "#ffffff4d", "#ffffff");
 
     // Running Text
     const container = document.querySelector(".running-txt");
@@ -326,37 +318,37 @@ function initAnimations() {
   }
 
   if (mainElement.classList.contains("p-service")) {
-    wrapTextWithSpan("#about-desc");
-    animateTextColor("#about-desc", "#ffffff4d", "#ffffff");
+    wrapTextWithSpan("#service-desc");
+    animateTextColor("#service-desc", "#ffffff4d", "#ffffff");
     
     wrapTextWithSpan(".edu-desc p");
     animateTextColor(".edu-desc p", "#ffffff4d", "#ffffff");
 
     // Running Text
-    // const container = document.querySelector(".running-txt");
-    // const elements = gsap.utils.toArray(".running-txt div");
-    // elements.forEach((el, i) => {
-    //   const isLeft = i % 2 === 0; 
-    //   const moveOffset = el.offsetWidth * 1; 
+    const container = document.querySelector(".running-txt");
+    const elements = gsap.utils.toArray(".running-txt div");
+    elements.forEach((el, i) => {
+      const isLeft = i % 2 === 0; 
+      const moveOffset = el.offsetWidth * 0.4; 
 
-    //   const startX = isLeft ? -moveOffset : moveOffset;
-    //   const endX = isLeft ? moveOffset / 2 : -moveOffset / 2; 
+      const startX = isLeft ? -moveOffset : moveOffset;
+      const endX = isLeft ? moveOffset / 2 : -moveOffset / 2; 
 
-    //   gsap.fromTo(
-    //     el,
-    //     { x: startX },
-    //     {
-    //       x: endX,
-    //       ease: "none",
-    //       scrollTrigger: {
-    //         trigger: container, 
-    //         start: "top bottom", 
-    //         end: "bottom top",
-    //         scrub: true,
-    //       },
-    //     }
-    //   );
-    // });
+      gsap.fromTo(
+        el,
+        { x: startX },
+        {
+          x: endX,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container, 
+            start: "top bottom", 
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    });
   }
 
   setTimeout(() => {
