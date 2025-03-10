@@ -2034,37 +2034,15 @@ Text Domain: takahata
     margin-top: calc(var(--spacing) * 40);
     padding-inline: calc(var(--spacing) * 7.5);
   }
-  .p-home .home-service .wrapper .service {
-    margin-inline: auto;
-    display: flex;
-    max-width: calc(var(--spacing) * 270);
-    flex-direction: column;
-    gap: calc(var(--spacing) * 10);
+  .p-home .home-service .wrapper .service-roll {
+    display: grid;
+    height: 300vh;
   }
-  .p-home .home-service .wrapper .service__list {
-    position: relative;
-    display: flex;
-    height: calc(var(--spacing) * 50);
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-  }
-  .p-home .home-service .wrapper .service__list::before {
-    position: absolute;
+  .p-home .home-service .wrapper .service-roll canvas {
+    position: sticky;
     top: calc(var(--spacing) * 0);
     left: calc(var(--spacing) * 0);
-    height: 100%;
-    width: 100%;
-    background-color: color-mix(in oklab, #3E3A39 50%, transparent);
-    --tw-content: '';
-    content: var(--tw-content);
-  }
-  .p-home .home-service .wrapper .service__list > * {
-    position: relative;
+    display: block;
   }
   .p-home .home-company {
     --title-stroke: var(--color-white);

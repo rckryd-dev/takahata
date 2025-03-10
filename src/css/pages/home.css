@@ -279,28 +279,11 @@
     .wrapper {
       @apply px-7.5 mt-40;
 
-      .service {
-        @apply max-w-270 mx-auto flex flex-col gap-10;
+      .service-roll {
+        @apply h-[300vh] grid;
 
-        &__list {
-          @apply w-full h-50 bg-cover bg-center text-center flex flex-col justify-center items-center relative;
-
-          &::before {
-            @apply absolute content-[''] w-full h-full top-0 left-0 bg-[#3E3A39]/50;
-          }
-
-          > * {
-            @apply relative;
-          }
-
-
-          &__title {
-
-          }
-
-          &__desc {
-
-          }
+        canvas {
+          @apply block sticky top-0 left-0;
         }
       }
     }

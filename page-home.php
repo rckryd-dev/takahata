@@ -296,7 +296,7 @@ get_template_part('parts/scroll-down');
     </div>
   </section>
 
-  <!-- <section data-bg-color="black" class="home-service sec-title">
+  <section data-bg-color="black" class="home-service sec-title">
     <h2 class="relative">
       <picture>
         <source media="(max-width: 47.9375rem)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/title-orn-left_sp.svg">
@@ -308,67 +308,12 @@ get_template_part('parts/scroll-down');
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-orn-right.svg" alt="Title Ornament Right">
       </picture>
     </h2>
-    <div class="wrapper">
-      <div class="service">
-        <a href="<?php echo home_url(); ?>/service/car" class="service__list" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg')">
-          <div class="service__list__title">
-            <div>CAR</div>
-            <div>車販売</div>
-          </div>
-          <p class="service__list__desc">新車販売・中古車販売</p>
-        </a>
-
-        <a href="<?php echo home_url(); ?>/service/maintenance" class="service__list" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg')">
-          <div class="service__list__title">
-            <div>MAINTENANCE</div>
-            <div>整備</div>
-          </div>
-          <p class="service__list__desc">新車販売・中古車販売</p>
-        </a>
-
-        <a href="<?php echo home_url(); ?>/service/insurance" class="service__list" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg')">
-          <div class="service__list__title">
-            <div>INSURANCE</div>
-            <div>保険</div>
-          </div>
-          <p class="service__list__desc">新車販売・中古車販売</p>
-        </a>
-
-        <a href="<?php echo home_url(); ?>/service/lease" class="service__list" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg')">
-          <div class="service__list__title">
-            <div>LEASE</div>
-            <div>リース</div>
-          </div>
-          <p class="service__list__desc">新車販売・中古車販売</p>
-        </a>
-
-        <a href="<?php echo home_url(); ?>/service/coating" class="service__list" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg')">
-          <div class="service__list__title">
-            <div>COATING</div>
-            <div>コーティング</div>
-          </div>
-          <p class="service__list__desc">新車販売・中古車販売</p>
-        </a>
-
-        <a href="<?php echo home_url(); ?>/service/mot" class="service__list" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg')">
-          <div class="service__list__title">
-            <div>MOT</div>
-            <div>車検</div>
-          </div>
-          <p class="service__list__desc">新車販売・中古車販売</p>
-        </a>
-
-        <a href="<?php echo home_url(); ?>/service/parts" class="service__list" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg')">
-          <div class="service__list__title">
-            <div>PARTS</div>
-            <div>パーツ販売</div>
-          </div>
-          <p class="service__list__desc">新車販売・中古車販売</p>
-        </a>
+    <div class="wrapper fadeUp">
+      <div class="service-roll">
 
       </div>
     </div>
-  </section> -->
+  </section>
 
   <section data-bg-color="yellow" class="home-company sec-title" data-stroke="#fff" data-fill="#fff" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/bg-img-02.jpg')">
     <h2 class="relative">
@@ -467,4 +412,74 @@ get_template_part('parts/scroll-down');
 ?>
 <script>
   const vrData = <?= $jsonData ?>;
+</script>
+<script src="https://unpkg.com/three@0.142.0/build/three.min.js"></script>
+
+<script>
+  let maxRotation = 1; // Akan diatur setelah tekstur dimuat
+
+  // Scene setup
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 500);
+  camera.position.set(0, 0, 3);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  // Pastikan elemen .service-roll ada
+  const serviceRoll = document.querySelector('.service-roll');
+  if (serviceRoll) {
+      serviceRoll.appendChild(renderer.domElement);
+  }
+
+  // Load texture
+  const textureLoader = new THREE.TextureLoader();
+  textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/service-list.jpg', function(texture) {
+    texture.wrapS = THREE.ClampToEdgeWrapping;
+    texture.wrapT = THREE.ClampToEdgeWrapping;
+    texture.repeat.set(1, 1); // Tidak diulang
+
+    // Pastikan gambar sudah termuat sebelum mendapatkan dimensinya
+    const img = new Image();
+    img.src = texture.image.src;
+    img.onload = function () {
+      const imgWidth = img.width;
+      const imgHeight = img.height;
+
+      // Hitung rasio antara tinggi scroll dan lebar tekstur
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      maxRotation = (imgWidth / imgHeight) * Math.PI; // Rotasi maksimal berdasarkan aspek rasio gambar
+
+      console.log("Max Rotation:", maxRotation);
+
+      // Buat objek silinder
+      const geometry = new THREE.CylinderGeometry(1, 1, 1.5, 50, 1, false);
+      const material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
+      const cylinder = new THREE.Mesh(geometry, material);
+      cylinder.rotation.z = Math.PI / 2; // Posisi horizontal
+      scene.add(cylinder);
+
+      // Efek scroll menggulung tanpa looping
+      window.addEventListener('scroll', function() {
+          const scrollY = window.scrollY;
+          const rotation = -(scrollY / scrollHeight) * maxRotation;
+          cylinder.rotation.x = rotation;
+      });
+
+      animate();
+    };
+  });
+
+  // Animation loop
+  function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+  }
+
+  // Handle resize
+  window.addEventListener('resize', function() {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
 </script>
