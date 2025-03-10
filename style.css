@@ -350,33 +350,6 @@ Text Domain: takahata
   .h-130 {
     height: calc(var(--spacing) * 130);
   }
-  .h-400 {
-    height: calc(var(--spacing) * 400);
-  }
-  .h-500 {
-    height: calc(var(--spacing) * 500);
-  }
-  .h-600 {
-    height: calc(var(--spacing) * 600);
-  }
-  .h-700 {
-    height: calc(var(--spacing) * 700);
-  }
-  .h-800 {
-    height: calc(var(--spacing) * 800);
-  }
-  .h-7000 {
-    height: calc(var(--spacing) * 7000);
-  }
-  .h-\[300dvh\] {
-    height: 300dvh;
-  }
-  .h-\[300svh\] {
-    height: 300svh;
-  }
-  .h-\[300vh\] {
-    height: 300vh;
-  }
   .h-full {
     height: 100%;
   }
@@ -441,14 +414,8 @@ Text Domain: takahata
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
   }
-  .pt-100 {
-    padding-top: calc(var(--spacing) * 100);
-  }
   .pr-18 {
     padding-right: calc(var(--spacing) * 18);
-  }
-  .pb-100 {
-    padding-bottom: calc(var(--spacing) * 100);
   }
   .pl-18 {
     padding-left: calc(var(--spacing) * 18);
@@ -2053,7 +2020,10 @@ Text Domain: takahata
     --title-fill: transparent;
     position: relative;
     padding-top: calc(var(--spacing) * 33);
-    padding-bottom: calc(var(--spacing) * 24);
+    padding-bottom: calc(var(--spacing) * 50);
+  }
+  .p-home .home-service > h2 {
+    z-index: 1;
   }
   .p-home .home-service > h2 picture:first-child img {
     top: calc(var(--spacing) * 5);
@@ -2070,13 +2040,57 @@ Text Domain: takahata
     max-width: calc(var(--spacing) * 325);
     padding-inline: calc(var(--spacing) * 7.5);
   }
+  .p-home .home-service .wrapper .service-roll-wrapper {
+    display: grid;
+    height: 400svh;
+  }
   .p-home .home-service .wrapper .service-roll {
+    position: relative;
     position: sticky;
-    top: calc(var(--spacing) * 40);
+    top: calc(1/2 * 100%);
     height: 30rem;
     width: 100%;
+    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  @media (width < 48rem) {
+    .p-home .home-service .wrapper .service-roll {
+      height: 17rem;
+    }
+  }
+  .p-home .home-service .wrapper .service-roll::after {
+    position: absolute;
+    top: calc(var(--spacing) * 0);
+    left: calc(var(--spacing) * 0);
+    height: 100%;
+    width: 100%;
+    background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    --tw-content: '';
+    content: var(--tw-content);
   }
   .p-home .home-service .wrapper .service-roll canvas {
+    width: 100%;
+  }
+  .p-home .home-service .wrapper .service-roll-text {
+    position: absolute;
+    top: calc(var(--spacing) * 0);
+    left: calc(var(--spacing) * 0);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  .p-home .home-service .wrapper .service-roll-text ul {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  .p-home .home-service .wrapper .service-roll-text ul li {
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: translateY(200px) rotateX(-97deg);
     width: 100%;
   }
   .p-home .home-company {

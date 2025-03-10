@@ -259,9 +259,11 @@
   .home-service {
     --title-stroke: var(--color-primary);
     --title-fill: transparent;
-    @apply pt-33 pb-24 relative;
+    @apply pt-33 pb-50 relative;
 
     & > h2 {
+      @apply z-[1];
+
       picture {
         &:first-child {
           img {
@@ -279,11 +281,35 @@
     .wrapper {
       @apply relative px-7.5 max-w-325 mx-auto mt-40;
 
+      .service-roll-wrapper {
+        @apply grid h-[400svh];
+      }
       .service-roll {
-        @apply h-[30rem] w-full sticky top-40;
+        @apply h-[30rem] max-md:h-[17rem] w-full sticky top-1/2 -translate-y-1/2 relative;
+
+        &::after {
+          @apply absolute top-0 left-0 w-full h-full content-[''] bg-black/50;
+        }
         
         canvas {
           @apply w-full;
+        }
+      }
+      .service-roll-text {
+        @apply absolute top-0 left-0 w-full h-full z-[1];
+        
+        ul {
+          @apply absolute w-full h-full;
+          perspective: 1000px;
+          transform-style: preserve-3d;
+
+          li {
+            position: absolute;
+            transform-style: preserve-3d;
+            transform-origin: center;
+            transform: translateY(200px) rotateX(-97deg); /* Mulai dari bawah */
+            width: 100%;
+          }
         }
       }
     }

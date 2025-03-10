@@ -309,9 +309,83 @@ get_template_part('parts/scroll-down');
       </picture>
     </h2>
     <div class="wrapper fadeUp">
-      <div class="grid h-[300svh]">
-        <div class="service-roll"></div>
+      <div class="service-roll-wrapper">
+        <div class="service-roll">
+          <div class="service-roll-text">
+            <ul>
+              <li>
+                <a href="<?php echo home_url(); ?>/service/car">
+                  <div>CAR SALES</div>
+                  <div>
+                    <h3>車販売</h3>
+                    <span>新車販売・中古車販売</span>
+                  </div>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="<?php echo home_url(); ?>/service/maintenance">
+                  <div>MAINTENANCE</div>
+                  <div>
+                    <h3>整備</h3>
+                    <span>修理、鈑金、塗装</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo home_url(); ?>/service/insurance">
+                  <div>INSURANCE</div>
+                  <div>
+                    <h3>保険</h3>
+                    <span>自動車保険、生命保険、各種保険取り扱い</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo home_url(); ?>/service/lease">
+                  <div>LEASE</div>
+                  <div>
+                    <h3>リース</h3>
+                    <span>新車・中古車リース、レンタカー事業</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo home_url(); ?>/service/coating">
+                  <div>COATING</div>
+                  <div>
+                    <h3>コーティング</h3>
+                    <span>キーパーコーティング認定工場</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo home_url(); ?>/service/mot">
+                  <div>CAR INSPECTION</div>
+                  <div>
+                    <h3>車検</h3>
+                    <span>車検申請、整備</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo home_url(); ?>/service/parts">
+                  <div>CAR PARTS</div>
+                  <div>
+                    <h3>パーツ販売</h3>
+                    <span>自動車パーツ、アクセサリー販売など</span>
+                  </div>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="layer-shift">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </section>
 
@@ -416,19 +490,25 @@ get_template_part('parts/scroll-down');
 <script src="https://unpkg.com/three@0.142.0/build/three.min.js"></script>
 
 <script>
+// Import GSAP & ScrollTrigger jika pakai module
+gsap.registerPlugin(ScrollTrigger);
+
 let maxRotation = 1;
 
+// Buat scene Three.js
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 500);
 camera.position.set(0, 0, 1.8);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
+// Tambahkan renderer ke dalam elemen .service-roll
 const serviceRoll = document.querySelector('.service-roll');
 if (serviceRoll) {
     serviceRoll.appendChild(renderer.domElement);
 }
 
+// Update ukuran renderer
 function updateSize() {
     if (serviceRoll) {
         const { clientWidth, clientHeight } = serviceRoll;
@@ -441,6 +521,7 @@ function updateSize() {
 updateSize();
 window.addEventListener('resize', updateSize);
 
+// Load tekstur gambar
 const textureLoader = new THREE.TextureLoader();
 textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/service-list.jpg', function(texture) {
     texture.wrapS = THREE.ClampToEdgeWrapping;
@@ -452,33 +533,35 @@ textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/servi
     img.onload = function () {
         const imgWidth = img.width;
         const imgHeight = img.height;
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         maxRotation = (imgWidth / imgHeight) * Math.PI;
 
+        // Buat geometri silinder
         const geometry = new THREE.CylinderGeometry(1, 1, 1.2, 50, 1, false);
         const material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
         const cylinder = new THREE.Mesh(geometry, material);
         cylinder.rotation.z = Math.PI / 2;
         scene.add(cylinder);
 
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            let rotation = -(scrollY / scrollHeight) * maxRotation;
-
-            // Batasi rotasi antara 0 (awal) dan -maxRotation (akhir)
-            if (rotation < -maxRotation) rotation = -maxRotation;
-            if (rotation > 0) rotation = 0;
-
-            cylinder.rotation.x = rotation;
+        // 🔥 GSAP ScrollTrigger untuk mengontrol rotasi saat scroll
+        gsap.to(cylinder.rotation, {
+            x: -maxRotation / 2.7, // Target rotasi
+            scrollTrigger: {
+                trigger: ".service-roll-wrapper", // Elemen yang memicu animasi
+                start: "top center", // Mulai saat elemen masuk viewport
+                end: "bottom center", // Selesai saat elemen keluar viewport
+                scrub: true, // Animasi mengikuti scroll
+                markers: false // Ganti true jika ingin melihat indikator
+            }
         });
-
 
         animate();
     };
 });
 
+// Loop animasi Three.js
 function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
 }
+
 </script>
