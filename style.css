@@ -350,6 +350,33 @@ Text Domain: takahata
   .h-130 {
     height: calc(var(--spacing) * 130);
   }
+  .h-400 {
+    height: calc(var(--spacing) * 400);
+  }
+  .h-500 {
+    height: calc(var(--spacing) * 500);
+  }
+  .h-600 {
+    height: calc(var(--spacing) * 600);
+  }
+  .h-700 {
+    height: calc(var(--spacing) * 700);
+  }
+  .h-800 {
+    height: calc(var(--spacing) * 800);
+  }
+  .h-7000 {
+    height: calc(var(--spacing) * 7000);
+  }
+  .h-\[300dvh\] {
+    height: 300dvh;
+  }
+  .h-\[300svh\] {
+    height: 300svh;
+  }
+  .h-\[300vh\] {
+    height: 300vh;
+  }
   .h-full {
     height: 100%;
   }
@@ -414,8 +441,14 @@ Text Domain: takahata
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
   }
+  .pt-100 {
+    padding-top: calc(var(--spacing) * 100);
+  }
   .pr-18 {
     padding-right: calc(var(--spacing) * 18);
+  }
+  .pb-100 {
+    padding-bottom: calc(var(--spacing) * 100);
   }
   .pl-18 {
     padding-left: calc(var(--spacing) * 18);
@@ -2031,18 +2064,20 @@ Text Domain: takahata
     bottom: calc(var(--spacing) * -3.5);
   }
   .p-home .home-service .wrapper {
+    position: relative;
+    margin-inline: auto;
     margin-top: calc(var(--spacing) * 40);
+    max-width: calc(var(--spacing) * 325);
     padding-inline: calc(var(--spacing) * 7.5);
   }
   .p-home .home-service .wrapper .service-roll {
-    display: grid;
-    height: 300vh;
+    position: sticky;
+    top: calc(var(--spacing) * 40);
+    height: 30rem;
+    width: 100%;
   }
   .p-home .home-service .wrapper .service-roll canvas {
-    position: sticky;
-    top: calc(var(--spacing) * 0);
-    left: calc(var(--spacing) * 0);
-    display: block;
+    width: 100%;
   }
   .p-home .home-company {
     --title-stroke: var(--color-white);

@@ -277,13 +277,13 @@
     }  
     
     .wrapper {
-      @apply px-7.5 mt-40;
+      @apply relative px-7.5 max-w-325 mx-auto mt-40;
 
       .service-roll {
-        @apply h-[300vh] grid;
-
+        @apply h-[30rem] w-full sticky top-40;
+        
         canvas {
-          @apply block sticky top-0 left-0;
+          @apply w-full;
         }
       }
     }
