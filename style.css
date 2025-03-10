@@ -3230,7 +3230,7 @@ Text Domain: takahata
     top: calc(var(--spacing) * -26);
     z-index: 0;
     display: flex;
-    height: calc(100% + 12.5rem);
+    height: calc(100% + 10.8rem);
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
@@ -3247,7 +3247,7 @@ Text Domain: takahata
   }
   @media (width < 48rem) {
     .p-about .about-history .running-txt {
-      height: calc(100% + 10.5rem);
+      height: calc(100% + 9.3rem);
     }
   }
   .p-about .about-history .running-txt > div {
