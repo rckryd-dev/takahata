@@ -310,7 +310,9 @@ get_template_part('parts/scroll-down');
     </h2>
     <div class="wrapper fadeUp">
       <div class="service-roll-wrapper">
+        <div class="service-roll-text-track"></div>
         <div class="service-roll">
+          <div class="service-roll-canvas-container"></div>
           <div class="service-roll-text">
             <ul>
               <li>
@@ -378,8 +380,87 @@ get_template_part('parts/scroll-down');
               </li>
             </ul>
           </div>
+          <div class="service-roll-text-container"></div>
         </div>
       </div>
+
+      <div class="menu-list -mt-80">
+
+        <div class="menu-list__item fadeUp" :class="{'is-open': open}" x-data="{ open: false }">
+          <div class="menu-list__item__head">
+            <div class="menu-list__item__head__num">01</div>
+            <div>
+              <h3>車販売</h3>
+              <span>新車販売・中古車販売</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-list__item fadeUp" :class="{'is-open': open}" x-data="{ open: false }">
+          <div class="menu-list__item__head">
+            <div class="menu-list__item__head__num">02</div>
+            <div>
+              <h3>整備</h3>
+              <span>修理、鈑金、塗装</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-list__item fadeUp" :class="{'is-open': open}" x-data="{ open: false }">
+          <div class="menu-list__item__head">
+            <div class="menu-list__item__head__num">03</div>
+            <div>
+              <h3>保険</h3>
+              <span>自動車保険、生命保険、各種保険取り扱い</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-list__item fadeUp" :class="{'is-open': open}" x-data="{ open: false }">
+          <div class="menu-list__item__head">
+            <div class="menu-list__item__head__num">04</div>
+            <div>
+              <h3>リース</h3>
+              <span>新車・中古車リース、レンタカー事業</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-list__item fadeUp" :class="{'is-open': open}" x-data="{ open: false }">
+          <div class="menu-list__item__head">
+            <div class="menu-list__item__head__num">05</div>
+            <div>
+              <h3>コーティング</h3>
+              <span>キーパーコーティング認定工場</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-list__item fadeUp" :class="{'is-open': open}" x-data="{ open: false }">
+          <div class="menu-list__item__head">
+            <div class="menu-list__item__head__num">06</div>
+            <div>
+              <h3>車検</h3>
+              <span>車検申請、整備</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-list__item fadeUp" :class="{'is-open': open}" x-data="{ open: false }">
+          <div class="menu-list__item__head">
+            <div class="menu-list__item__head__num">07</div>
+            <div>
+              <h3>パーツ販売</h3>
+              <span>自動車パーツ、アクセサリー販売など</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a class="btn btn--primary group mx-auto mt-11 md:mt-20" href="<?php echo home_url(); ?>/service">
+        <span>VIEW MORE</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow-black.svg" alt="Arrrow" class="-abs">
+      </a>
     </div>
     <div class="layer-shift">
       <div></div>

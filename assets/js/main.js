@@ -31,20 +31,30 @@ document.addEventListener('DOMContentLoaded', function () {
   // Smooth Scroll for Anchor Links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
+        e.preventDefault();
+        
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
-        lenis.scrollTo(targetElement, {
-          offset: 0, // Sesuaikan offset jika ada navbar
-          duration: 1.5,
-          easing: (t) => 1 - Math.pow(1 - t, 4),
-        });
-      }
+        if (targetElement) {
+            const currentPosition = window.scrollY;
+            const targetPosition = targetElement.getBoundingClientRect().top + currentPosition;
+            const distance = Math.abs(targetPosition - currentPosition);
+
+            const baseSpeed = 1000;
+            const minDuration = 0.5; 
+            const maxDuration = 5;
+
+            const duration = Math.min(maxDuration, Math.max(minDuration, distance / baseSpeed));
+
+            lenis.scrollTo(targetElement, {
+                offset: 0,
+                duration: duration,
+            });
+        }
     });
   });
+
 });
 
 
@@ -183,6 +193,43 @@ function initAnimations() {
   
   document.addEventListener("DOMContentLoaded", fadeUpAnimation);
 
+  function bounceText(className = ".bounceText", duration = 0.5, stagger = 0.1) {
+    gsap.registerPlugin(ScrollTrigger);
+  
+    gsap.utils.toArray(className).forEach((el) => {
+      const spans = el.querySelectorAll("h3 span"); // Pastikan hanya <span> dalam <h3> yang dianimasikan
+  
+      if (spans.length === 0) return; // Jika tidak ada <span>, keluar
+  
+      gsap.set(spans, { transformOrigin: "bottom center", scaleY: 0 });
+  
+      // Animasi saat elemen muncul di viewport dengan efek stagger
+      gsap.to(spans, {
+        scaleY: 1,
+        duration,
+        ease: "power2.out",
+        stagger: stagger,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        }
+      });
+  
+      // Animasi saat hover dengan efek stagger
+      el.addEventListener("mouseenter", () => {
+        gsap.to(spans, { scaleY: 1.2, duration, ease: "power2.out", stagger: stagger });
+      });
+  
+      el.addEventListener("mouseleave", () => {
+        gsap.to(spans, { scaleY: 1, duration, ease: "power2.out", stagger: stagger });
+      });
+    });
+  }
+  
+  bounceText();
+  document.addEventListener("DOMContentLoaded", bounceText);
+
   // Pages
   const mainElement = document.querySelector("main");
 
@@ -197,6 +244,8 @@ function initAnimations() {
 
     wrapTextWithSpan("#attempt-desc");
     animateTextColor("#attempt-desc", "#ffffff4d", "#ffffff");
+
+    wrapTextWithSpan(".menu-list__item h3");
 
     // Layer Shift
     gsap.utils.toArray(".layer-shift").forEach((layer) => {
@@ -264,19 +313,40 @@ function initAnimations() {
     });
 
     // Service Roll
-    gsap.to(".service-roll-text li", {
-      scrollTrigger: {
-        trigger: ".service-roll-wrapper",
-        start: "top center-=100",
-        end: "bottom bottom+=400",
-        scrub: 1,
-        markers: true
-      },
-      keyframes: [
-        { y: 0, z: 0, rotateX: 0, ease: "none" },  
-        { y: -400, z: -10, rotateX: 80, ease: "none" } 
-      ],
-      stagger: (index) => index * 1.5 // Memberikan delay berdasarkan indeks
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+      gsap.to(".service-roll-text li", {
+        scrollTrigger: {
+          trigger: ".service-roll-text-track",
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: 1,
+          markers: false
+        },
+        keyframes: [
+          { y: 0, z: 0, rotateX: 0, ease: "none" },  
+          { y: '-23rem', z: '-10rem', rotateX: 74, ease: "none" } 
+        ],
+        stagger: 0.5 
+      });
+    });
+
+    mm.add("(max-width: 767px)", () => {
+      gsap.to(".service-roll-text li", {
+        scrollTrigger: {
+          trigger: ".service-roll-text-track",
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: 1,
+          markers: false
+        },
+        keyframes: [
+          { y: 0, z: 0, rotateX: 0, ease: "none" },  
+          { y: '-220%', z: '-10rem', rotateX: 74, ease: "none" } 
+        ],
+        stagger: 0.5 
+      });
     });
 
     // Attempt Imgs Parallax

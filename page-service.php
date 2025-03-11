@@ -118,7 +118,8 @@ get_header();
           <div class="menu-list__item__content" x-show="open" x-collapse.duration.400ms x-cloak>
             <div class="max-md:px-7.5">
               <p>
-                日本中古自動車販売協会連合会が認定する、<br>安心と信頼のJU適正販売店です。<br>中古車販売における多くの法令・ルールに則った<br>営業をいたします。
+              認証整備工場での法定点検・分解整備を行い、<br>自動車整備に関するトータルサポートが可能です。<br>豊富な設備環境で丁寧に仕上げます。
+
               </p>
               <a class="btn text-primary group mt-30 mb-6 md:mb-12 !w-max pr-18" href="<?php echo home_url(); ?>/service/maintenance">
                 <span>VIEW MORE</span>
@@ -127,7 +128,7 @@ get_header();
             </div>
 
             <div class="max-md:pb-13">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg" class="_main-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-02.jpg" class="_main-img">
             </div>
           </div>
         </div>
@@ -154,7 +155,8 @@ get_header();
           <div class="menu-list__item__content" x-show="open" x-collapse.duration.400ms x-cloak>
             <div class="max-md:px-7.5">
               <p>
-                日本中古自動車販売協会連合会が認定する、<br>安心と信頼のJU適正販売店です。<br>中古車販売における多くの法令・ルールに則った<br>営業をいたします。
+              保険代理店認証制度である「エクセレント<br>ゴールドエージェント」の認証を<br>いただいております。<br>すべてのお客様に安心できる<br>カーライフをご提供します。
+
               </p>
               <a class="btn text-primary group mt-30 mb-6 md:mb-12 !w-max pr-18" href="<?php echo home_url(); ?>/service/insurance">
                 <span>VIEW MORE</span>
@@ -163,7 +165,7 @@ get_header();
             </div>
 
             <div class="max-md:pb-13">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg" class="_main-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-03.jpg" class="_main-img">
             </div>
           </div>
         </div>
@@ -190,7 +192,8 @@ get_header();
           <div class="menu-list__item__content" x-show="open" x-collapse.duration.400ms x-cloak>
             <div class="max-md:px-7.5">
               <p>
-                日本中古自動車販売協会連合会が認定する、<br>安心と信頼のJU適正販売店です。<br>中古車販売における多くの法令・ルールに則った<br>営業をいたします。
+              お客様のライフスタイルの変化や<br>ご予算の都合に合わせて、自動車の<br>販売だけでなくリース提案も可能です。
+
               </p>
               <a class="btn text-primary group mt-30 mb-6 md:mb-12 !w-max pr-18" href="<?php echo home_url(); ?>/service/lease">
                 <span>VIEW MORE</span>
@@ -199,7 +202,7 @@ get_header();
             </div>
 
             <div class="max-md:pb-13">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg" class="_main-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-04.jpg" class="_main-img">
             </div>
           </div>
         </div>
@@ -226,7 +229,8 @@ get_header();
           <div class="menu-list__item__content" x-show="open" x-collapse.duration.400ms x-cloak>
             <div class="max-md:px-7.5">
               <p>
-                日本中古自動車販売協会連合会が認定する、<br>安心と信頼のJU適正販売店です。<br>中古車販売における多くの法令・ルールに則った<br>営業をいたします。
+              キーパープロショップの代理店として、<br>キーパーコーティング技術の認定を受けています。<br>コーティングいただくことで、ご愛車に<br>キレイな状態で長くご乗車いただけます。
+
               </p>
               <a class="btn text-primary group mt-30 mb-6 md:mb-12 !w-max pr-18" href="<?php echo home_url(); ?>/service/coating">
                 <span>VIEW MORE</span>
@@ -235,7 +239,7 @@ get_header();
             </div>
 
             <div class="max-md:pb-13">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg" class="_main-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-05.jpg" class="_main-img">
             </div>
           </div>
         </div>
@@ -262,7 +266,8 @@ get_header();
           <div class="menu-list__item__content" x-show="open" x-collapse.duration.400ms x-cloak>
             <div class="max-md:px-7.5">
               <p>
-                日本中古自動車販売協会連合会が認定する、<br>安心と信頼のJU適正販売店です。<br>中古車販売における多くの法令・ルールに則った<br>営業をいたします。
+              中部運輸局認証車検工場として、<br>地方運輸局より自動車特定整備事業の<br>認証を受けた安心の事業者です。
+
               </p>
               <a class="btn text-primary group mt-30 mb-6 md:mb-12 !w-max pr-18" href="<?php echo home_url(); ?>/service/mot">
                 <span>VIEW MORE</span>
@@ -271,7 +276,7 @@ get_header();
             </div>
 
             <div class="max-md:pb-13">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg" class="_main-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-06.jpg" class="_main-img">
             </div>
           </div>
         </div>
@@ -298,7 +303,8 @@ get_header();
           <div class="menu-list__item__content" x-show="open" x-collapse.duration.400ms x-cloak>
             <div class="max-md:px-7.5">
               <p>
-                日本中古自動車販売協会連合会が認定する、<br>安心と信頼のJU適正販売店です。<br>中古車販売における多くの法令・ルールに則った<br>営業をいたします。
+              車検・メンテナンスなどで必要になった<br>パーツは、お客様のご希望に合わせて<br>すべて取り寄せが可能です。
+
               </p>
               <a class="btn text-primary group mt-30 mb-6 md:mb-12 !w-max pr-18" href="<?php echo home_url(); ?>/service/parts">
                 <span>VIEW MORE</span>
@@ -307,7 +313,7 @@ get_header();
             </div>
 
             <div class="max-md:pb-13">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-01.jpg" class="_main-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-07.jpg" class="_main-img">
             </div>
           </div>
         </div>

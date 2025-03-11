@@ -13,11 +13,11 @@ get_header();
       ['label' => 'タカハタとは']
     ],
     'menu_items' => [
-        '3つの信念' => ['url' => '#', 'target' => ''],
-        '会社概要' => ['url' => '#', 'target' => ''],
-        'スタッフ紹介' => ['url' => '#', 'target' => ''],
-        'タカハタの歴史' => ['url' => '#', 'target' => ''],
-        'アクセス' => ['url' => '#', 'target' => '']
+        '3つの信念' => ['url' => '#about-point', 'target' => ''],
+        '会社概要' => ['url' => '#about-outline', 'target' => ''],
+        'スタッフ紹介' => ['url' => '#about-staff', 'target' => ''],
+        'タカハタの歴史' => ['url' => '#about-history', 'target' => ''],
+        'アクセス' => ['url' => '#about-access', 'target' => '']
     ]
   ]);
   ?>
@@ -42,7 +42,7 @@ get_header();
     </div>
   </section>
 
-  <section data-bg-color="yellow" class="about-point">
+  <section data-bg-color="yellow" class="about-point" id="about-point">
     <div class="wrapper">
       <div class="sc-title fadeUp">
         <h2>POINT</h2>
@@ -97,50 +97,54 @@ get_header();
         <p>タカハタは、コンシェルジュの心を持つ人材を育て続けます。</p>
       </div>
 
-      <div class="splide edu-list fadeUp">
-        <div class="splide__track">
-          <div class="splide__list">
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-01.jpg" alt="教育事業の原点">
-                <div>
-                  <h3>教育事業の原点</h3>
-                  <p>
-                    タカハタの教育事業は、日本中古車販売協会連合会愛知支部の役員を務めたことをきっかけに始まりました。業界を通して「お客様に本当に寄り添う接客」の大切さを実感し、その理念を次世代へ伝えるためにスタートしました。
-                  </p>
+      <div class="edu-list-wrapper">
+        <div class="edu-list-sticky">
+          <div class="splide edu-list fadeUp">
+            <div class="splide__track">
+              <div class="splide__list">
+                <div class="splide__slide">
+                  <div class="edu-list__content">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-01.jpg" alt="教育事業の原点">
+                    <div>
+                      <h3>教育事業の原点</h3>
+                      <p>
+                        タカハタの教育事業は、日本中古車販売協会連合会愛知支部の役員を務めたことをきっかけに始まりました。業界を通して「お客様に本当に寄り添う接客」の大切さを実感し、その理念を次世代へ伝えるためにスタートしました。
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-02.jpg" alt="コンシェルジュとしての心構え">
-                <div>
-                  <h3>コンシェルジュとしての心構え</h3>
-                  <p>
-                    タカハタが目指すのは、単なる販売員ではなく、お客様のカーライフ全体をサポートする<br>「自動車のコンシェルジュ」の育成です。<br>車選びからアフターサービスまで、お客様一人ひとりの想いに応えるホスピタリティを重視しています。
-                  </p>
+                <div class="splide__slide">
+                  <div class="edu-list__content">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-02.jpg" alt="コンシェルジュとしての心構え">
+                    <div>
+                      <h3>コンシェルジュとしての心構え</h3>
+                      <p>
+                        タカハタが目指すのは、単なる販売員ではなく、お客様のカーライフ全体をサポートする<br>「自動車のコンシェルジュ」の育成です。<br>車選びからアフターサービスまで、お客様一人ひとりの想いに応えるホスピタリティを重視しています。
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-03.jpg" alt="お客様目線を磨く実践型プログラム">
-                <div>
-                  <h3>お客様目線を磨く実践型プログラム</h3>
-                  <p>
-                    ニーズチェックの徹底：対話を通じて、お客様の潜在的な要望を引き出します。<br><span class="font-medium">心理動向を分析</span>：お客様の立場で考え、期待や不安を理解します。<br><span class="font-medium">提案力の向上</span>：ニーズに寄り添った、心を動かすプレゼンテーションを実践します。
-                  </p>
+                <div class="splide__slide">
+                  <div class="edu-list__content">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-03.jpg" alt="お客様目線を磨く実践型プログラム">
+                    <div>
+                      <h3>お客様目線を磨く実践型プログラム</h3>
+                      <p>
+                        ニーズチェックの徹底：対話を通じて、お客様の潜在的な要望を引き出します。<br><span class="font-medium">心理動向を分析</span>：お客様の立場で考え、期待や不安を理解します。<br><span class="font-medium">提案力の向上</span>：ニーズに寄り添った、心を動かすプレゼンテーションを実践します。
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="splide__slide">
-              <div class="edu-list__content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-04.jpg" alt="終わりのない挑戦">
-                <div>
-                  <h3>終わりのない挑戦</h3>
-                  <p>
-                    この教育事業により、スタッフはコンシェルジュとしての接客力を磨き、結果としてお客様の満足度と売上向上にもつながっています。今後も「お客様に寄り添う心」を軸に、教育事業の価値を広め、終わりのない人材育成に取り組んでまいります。
-                  </p>
+                <div class="splide__slide">
+                  <div class="edu-list__content">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edu-04.jpg" alt="終わりのない挑戦">
+                    <div>
+                      <h3>終わりのない挑戦</h3>
+                      <p>
+                        この教育事業により、スタッフはコンシェルジュとしての接客力を磨き、結果としてお客様の満足度と売上向上にもつながっています。今後も「お客様に寄り添う心」を軸に、教育事業の価値を広め、終わりのない人材育成に取り組んでまいります。
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -153,7 +157,7 @@ get_header();
     <div class="edu-banner"></div>
   </section>
 
-  <section data-bg-color="black" class="about-outline">
+  <section data-bg-color="black" class="about-outline" id="about-outline">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/speed-ornament.svg" class="speed-ornament">
     <div class="wrapper">
       <div class="sc-title fadeUp">
@@ -195,7 +199,7 @@ get_header();
     </div>
   </section>
 
-  <section data-bg-color="black" class="about-staff">
+  <section data-bg-color="black" class="about-staff" id="about-staff">
     <div class="wrapper">
       <div class="sc-title fadeUp">
         <h2>STAFF</h2>
@@ -330,7 +334,7 @@ get_header();
     </div>
   </section>
 
-  <section data-bg-color="yellow" class="about-history">
+  <section data-bg-color="yellow" class="about-history" id="about-history">
     <div class="running-txt">
       <div>TAKAHATA<span>HISTORY</span></div>
       <div>TAKAHATA<span>HISTORY</span></div>
@@ -393,7 +397,7 @@ get_header();
     </div>
   </section>
 
-  <section data-bg-color="black" class="about-access">
+  <section data-bg-color="black" class="about-access" id="about-access">
     <div class="wrapper">
       <div class="sc-title fadeUp">
         <h2>ACCESS</h2>
@@ -406,9 +410,10 @@ get_header();
   </section>
 </main>
 <?php get_footer(); ?>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    new Splide(".edu-list", {
+    const splide = new Splide(".edu-list", {
       type: "fade",
       pagination: true,
       arrows: false,
@@ -423,14 +428,41 @@ get_header();
       item.innerHTML = "0" + (index + 1);
     });
 
+    let lastScrollY = window.scrollY;
+
+    ScrollTrigger.create({
+      trigger: ".edu-list-wrapper",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      onUpdate: () => {
+        const currentScrollY = window.scrollY;
+        const scrollDiff = currentScrollY - lastScrollY; 
+
+        if (Math.abs(scrollDiff) >= 500) {
+          if (scrollDiff > 0) {
+            splide.go("+1"); 
+          } else {
+            splide.go("-1"); 
+          }
+          lastScrollY = currentScrollY;
+        }
+      },
+    });
+
     new Splide(".staff-list", {
       type: "loop",
-    
-      perPage: "auto",
-      arrows: false,
+      // perPage: "auto",
       focus: "center",
       autoWidth: true,
+      arrows: false,
+      pagination: false,
       gap: "3.375rem",
+      autoplay: true,
+      interval: 2800,
+      speed: 800,
+      pauseOnHover: true, 
+      pauseOnFocus: true 
     }).mount();
     
     new Splide(".history-list", {
