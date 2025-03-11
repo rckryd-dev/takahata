@@ -14,9 +14,9 @@
         $current_category = get_queried_object();
         
         // Skip "Uncategorized"
-        if ($category->term_id === 1) {
-          return $menu;
-        }
+        // if ($category->term_id === 1) {
+        //   return $menu;
+        // }
 
         $menu[$category->name] = [
           'url' => get_category_link($category->term_id),

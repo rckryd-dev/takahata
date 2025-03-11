@@ -1,30 +1,44 @@
 .p-post {
   @apply py-24;
 
+  .anchor ul {
+    @apply w-fit;
+  }
+
   &__list {
-    @apply grid grid-cols-1 lg:grid-cols-3 gap-10;
+    @apply w-270 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 mt-24;
   }
   &__card {
     
     &__thumb {
+      @apply aspect-336/214 rounded-[1.5rem] overflow-hidden;
       img {
-        @apply aspect-video object-cover;
+        @apply w-full h-full object-cover;
       }
     }
 
     &__body {
-      @apply mt-2;
+      @apply text-primary mt-5.5;
 
-      span {
+      &__props {
+        @apply flex gap-3 items-center min-h-5.5;
 
+        span {
+          @apply text-xs font-bold leading-[1] pt-1.5;
+        }
+
+        a {
+          @apply bg-primary text-white font-bold text-[.5rem] leading-[1] w-35 h-5.5 grid place-content-center rounded-xl;
+        }
       }
 
-      h2 {
-        @apply font-medium mt-2;
-      }
 
-      p {
-        @apply line-clamp-2 text-sm mt-1;
+      &__title {
+        @apply mt-3.5;
+
+        h2 {
+          @apply font-bold line-clamp-2 leading-[1.78] mt-2;
+        }
       }
     }
   }
