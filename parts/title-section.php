@@ -30,7 +30,7 @@ $menu_items = isset($args['menu_items']) ? $args['menu_items'] : null; // Anchor
     <div class="anchor">
         <ul>
             <?php foreach ($menu_items as $label => $item) : ?>
-                <li>
+                <li <?php echo !empty($item['this_page']) ? 'class="is-active"' : ''; ?>>
                     <a href="<?php echo esc_url($item['url']); ?>" 
                         <?php echo !empty($item['target']) ? 'target="' . esc_attr($item['target']) . '"' : ''; ?>>
                         <?php echo esc_html($label); ?>

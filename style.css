@@ -1399,6 +1399,9 @@ Text Domain: takahata
   .anchor ul li a:hover::before {
     background-color: var(--color-white);
   }
+  .anchor ul li.is-active a::before {
+    background-color: var(--color-white);
+  }
   .p-home section {
     position: relative;
   }

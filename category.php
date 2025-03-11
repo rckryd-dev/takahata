@@ -1,22 +1,34 @@
 <?php get_header(); ?>
 <main class="p-post">
-    <div class="container">
+  <?php
+  get_template_part('parts/title-section', null, [
+    'title' => 'NEWS',
+    'breadcrumbs' => [
+      ['label' => 'トップ', 'url' => home_url()],
+      ['label' => 'お知らせ']
+    ],
+    'menu_items' => array_merge(
+      ['All' => ['url' => esc_url(get_permalink(get_page_by_path('news'))), 'target' => '', 'this_page' => false]],
+      
+      array_reduce(get_categories(), function ($menu, $category) {
+        $current_category = get_queried_object();
+        
+        // Skip "Uncategorized"
+        if ($category->term_id === 1) {
+          return $menu;
+        }
 
-        <!-- Navigasi Kategori -->
-        <nav class="p-post__categories">
-            <ul>
-                <?php 
-                $categories = get_categories();
-                foreach ($categories as $category) :
-                ?>
-                    <li>
-                        <a href="<?php echo get_category_link($category->term_id); ?>">
-                            <?php echo esc_html($category->name); ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
+        $menu[$category->name] = [
+          'url' => get_category_link($category->term_id),
+          'target' => '',
+          'this_page' => (isset($current_category->name) && $current_category->name === $category->name)
+        ];
+        return $menu;
+      }, [])
+    )
+  ]);
+  ?>
+    <div class="container">
 
         <div class="p-post__list">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

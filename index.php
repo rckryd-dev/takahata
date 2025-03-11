@@ -8,11 +8,20 @@
       ['label' => 'お知らせ']
     ],
     'menu_items' => array_merge(
-      ['All' => ['url' => esc_url(get_permalink(get_page_by_path('news'))), 'target' => '']],
-      array_reduce(get_categories(), function($menu, $category) {
+      ['All' => ['url' => esc_url(get_permalink(get_page_by_path('news'))), 'target' => '', 'this_page' => true]],
+
+      array_reduce(get_categories(), function ($menu, $category) {
+        $current_category = get_queried_object();
+        
+        // Skip "Uncategorized"
+        if ($category->term_id === 1) {
+          return $menu;
+        }
+
         $menu[$category->name] = [
           'url' => get_category_link($category->term_id),
-          'target' => ''
+          'target' => '',
+          'this_page' => (isset($current_category->name) && $current_category->name === $category->name)
         ];
         return $menu;
       }, [])
@@ -36,6 +45,9 @@
             $post_categories = get_the_category();
             if (!empty($post_categories)) :
               foreach ($post_categories as $post_category) :
+                if ($post_category->term_id === 1) {
+                  continue;
+                }            
             ?>
               <a href="<?php echo get_category_link($post_category->term_id); ?>" class="p-post__card__category">
                 <?php echo esc_html($post_category->name); ?>
