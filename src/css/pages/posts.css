@@ -18,7 +18,8 @@
     @apply flex justify-center gap-3 max-md:gap-5 mt-10 max-md:mt-24;
 
     .page-numbers {
-      @apply grid place-content-center min-w-10 h-10 rounded-lg px-3 bg-[#66612F] font-semibold pt-0.5 max-md:pt-1.5 text-lg hover:bg-primary/75 transition-all duration-200 max-md:min-w-14 max-md:h-14 max-md:text-2xl;
+      @apply grid place-content-center min-w-10 h-10 rounded-lg px-3 bg-[#66612F] font-acumin-variable pt-0.5 max-md:pt-1.5 text-lg hover:bg-primary/75 transition-all duration-200 max-md:min-w-14 max-md:h-14 max-md:text-2xl;
+      font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
 
       &.current {
         @apply bg-primary;

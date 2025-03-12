@@ -29,11 +29,11 @@
   ]);
   ?>
 
-  <section>
+  <section class="fadeUp">
     <div class="wrapper">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <article class="post-card">
-        <div class="post-card__thumb">
+        <div class="post-card__thumb fadeUp">
           <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('thumbnail'); ?>
           <?php else : ?>

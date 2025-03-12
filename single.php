@@ -32,7 +32,7 @@
         <h1><?php the_title(); ?></h1>
       </div>
 
-      <div class="max-w-270 mx-auto mb-20 max-md:mb-14.5">
+      <div class="mb-20 max-md:mb-14.5">
         <?php
         $gallery = get_post_gallery(get_the_ID(), false);
         
@@ -51,8 +51,10 @@
               </div>
           </div>
         <?php elseif (has_post_thumbnail()): ?>
-          <div class="post-thumbnail">
-            <?php the_post_thumbnail('full'); ?>
+          <div class="max-w-270 mx-auto ">
+            <div class="post-content__thumb">
+              <?php the_post_thumbnail('full'); ?>
+            </div>
           </div>
         <?php endif; ?>
       </div>
@@ -91,7 +93,7 @@
           $related_posts = new WP_Query($args);
           if ($related_posts->have_posts()) :
             while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
-              <article class="post-card">
+              <article class="post-card fadeUp">
                 <div class="post-card__thumb">
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('thumbnail'); ?>
@@ -137,9 +139,22 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Splide('#post-slider', {
-      type: 'loop',
-      perPage: 1,
+      type: "loop",
+      focus: "center",
+      autoWidth: true,
+      arrows: false,
+      pagination: false,
+      gap: "2.8125rem",
       autoplay: true,
+      interval: 2800,
+      speed: 800,
+      pauseOnHover: false, 
+      pauseOnFocus: false,
+      breakpoints: {
+        767: {
+          gap: "1.5rem"
+        },
+      }
     }).mount();
   });
 </script>

@@ -461,8 +461,8 @@ get_header();
       autoplay: true,
       interval: 2800,
       speed: 800,
-      pauseOnHover: true, 
-      pauseOnFocus: true 
+      pauseOnHover: false, 
+      pauseOnFocus: false 
     }).mount();
     
     new Splide(".history-list", {

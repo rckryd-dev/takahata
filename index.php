@@ -32,7 +32,7 @@
   <section>
     <div class="wrapper">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <article class="post-card">
+      <article class="post-card fadeUp">
         <div class="post-card__thumb">
           <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('thumbnail'); ?>

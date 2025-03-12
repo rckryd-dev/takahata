@@ -29,7 +29,6 @@ Text Domain: takahata
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-black: 900;
     --tracking-normal: 0em;
@@ -4580,10 +4579,9 @@ Text Domain: takahata
     background-color: #66612F;
     padding-inline: calc(var(--spacing) * 3);
     padding-top: calc(var(--spacing) * 0.5);
+    font-family: var(--font-acumin-variable);
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
     transition-property: all;
     transition-timing-function: var(--tw-ease, ease);
     transition-duration: var(--tw-duration, 0s);
@@ -4615,6 +4613,9 @@ Text Domain: takahata
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
+  }
+  .p-posts__pagination .page-numbers {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
   }
   .p-posts__pagination .page-numbers.current {
     background-color: var(--color-primary);
@@ -4653,6 +4654,31 @@ Text Domain: takahata
     .p-post .post-content {
       padding-bottom: calc(var(--spacing) * 21.5);
     }
+  }
+  .p-post .post-content #post-slider .splide__slide {
+    aspect-ratio: 420/268;
+    width: calc(var(--spacing) * 193.75);
+    overflow: hidden;
+    border-radius: 1.4375rem;
+  }
+  @media (width < 48rem) {
+    .p-post .post-content #post-slider .splide__slide {
+      width: calc(var(--spacing) * 105);
+    }
+  }
+  .p-post .post-content #post-slider .splide__slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .p-post .post-content__thumb {
+    overflow: hidden;
+    border-radius: 1.4375rem;
+  }
+  .p-post .post-content__thumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   .p-post .post-content .wrapper {
     margin-inline: auto;
