@@ -33,7 +33,24 @@
       </div>
 
       <div class="max-w-270 mx-auto mb-20 max-md:mb-14.5">
-        <?php if (has_post_thumbnail()) : ?>
+        <?php
+        $gallery = get_post_gallery(get_the_ID(), false);
+        
+        if (!empty($gallery['ids'])): 
+            $image_ids = explode(',', $gallery['ids']);
+        ?>
+          <div class="splide" id="post-slider">
+              <div class="splide__track">
+                  <ul class="splide__list">
+                    <?php foreach ($image_ids as $id): ?>
+                      <li class="splide__slide">
+                        <img src="<?php echo esc_url(wp_get_attachment_url($id)); ?>" alt="Gallery Image">
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+              </div>
+          </div>
+        <?php elseif (has_post_thumbnail()): ?>
           <div class="post-thumbnail">
             <?php the_post_thumbnail('full'); ?>
           </div>
@@ -43,6 +60,7 @@
       <div class="wrapper">
 
         <?php the_content(); ?>
+        
 
         <a class="btn btn--primary group mx-auto mt-15 md:mt-24" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
           <span>BACK</span>
@@ -116,3 +134,12 @@
   <?php endwhile; endif; ?>
 </main>
 <?php get_footer(); ?>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#post-slider', {
+      type: 'loop',
+      perPage: 1,
+      autoplay: true,
+    }).mount();
+  });
+</script>

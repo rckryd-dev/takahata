@@ -19,6 +19,10 @@
       h1 {
         @apply bg-primary rounded-4xl px-8.5 py-2.75 max-md:px-4 font-bold;
       }
+
+      figure.wp-block-gallery {
+        @apply !hidden;
+      }
     }
 
     &__props {
