@@ -1,0 +1,39 @@
+.post-card {
+  @apply relative;
+
+  &__thumb {
+    @apply aspect-336/214 rounded-[1.5rem] overflow-hidden;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__body {
+    @apply text-primary mt-5.5;
+
+    &__props {
+      @apply flex gap-3 items-center min-h-5.5;
+
+      span {
+        @apply text-xs font-bold leading-[1] pt-1 md:pt-1.5 max-md:text-lg;
+      }
+
+      a {
+        @apply bg-primary text-white font-bold text-[.5rem] leading-[1] w-35 h-5.5 grid place-content-center rounded-2xl z-10 pt-0.5 hover:opacity-75 transition-all duration-200 max-md:text-lg max-md:h-7;
+      }
+    }
+
+    &__title {
+      @apply mt-3.5;
+
+      h2 {
+        @apply font-bold line-clamp-2 leading-[1.78] mt-2 max-md:mt-4 max-md:text-[1.3125rem] max-md:leading-[1.52];
+      }
+
+      span {
+        @apply absolute rounded -inset-4 rounded-t-[2rem] rounded-b-[1.5rem] block transition-all duration-100 hover:bg-white/10;
+      }
+    }
+  }
+}

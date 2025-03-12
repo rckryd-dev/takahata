@@ -1,43 +1,50 @@
 .p-post {
-  @apply py-24;
+  @apply bg-no-repeat bg-[63rem_auto] bg-[bottom_-21rem_right_-10rem] max-md:bg-[bottom_-3.5rem_right_-31rem];
+  background-image: url('assets/img/circle-ornament.png');
 
   .anchor ul {
     @apply w-fit;
   }
 
-  &__list {
-    @apply w-270 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 mt-24;
-  }
-  &__card {
-    
-    &__thumb {
-      @apply aspect-336/214 rounded-[1.5rem] overflow-hidden;
-      img {
-        @apply w-full h-full object-cover;
+  .post-content {
+    @apply pt-24 max-md:pt-25.5 pb-23 max-md:px-7.5 max-md:pb-21.5;
+
+    .wrapper {
+      @apply max-w-270 mx-auto;
+    }
+
+    article {
+      @apply text-lg max-md:text-[1.3125rem] leading-[1.78] max-md:leading-[1.52];
+
+      h1 {
+        @apply bg-primary rounded-4xl px-8.5 py-2.75 max-md:px-4 font-bold;
       }
     }
 
-    &__body {
-      @apply text-primary mt-5.5;
+    &__props {
+      @apply flex mb-6.5 max-md:mb-4 gap-3.5 max-md:gap-4.5 text-primary;
 
-      &__props {
-        @apply flex gap-3 items-center min-h-5.5;
-
-        span {
-          @apply text-xs font-bold leading-[1] pt-1.5;
-        }
-
-        a {
-          @apply bg-primary text-white font-bold text-[.5rem] leading-[1] w-35 h-5.5 grid place-content-center rounded-xl;
-        }
+      span {
+        @apply text-xs font-bold leading-[1] pt-1 md:pt-1.5 max-md:text-lg;
       }
 
+      a {
+        @apply border border-primary text-white font-bold text-[.5rem] leading-[1] w-35 h-5.5 grid place-content-center rounded-2xl z-10 pt-0.5 hover:opacity-75 transition-all duration-200 max-md:text-lg max-md:h-7;
+      }
+    }
+  }
 
-      &__title {
-        @apply mt-3.5;
+  .post-related {
+    @apply pt-23 max-md:pt-21 pb-54 max-md:px-7.5 max-md:pb-48;
 
-        h2 {
-          @apply font-bold line-clamp-2 leading-[1.78] mt-2;
+    &__list {
+      @apply max-w-270 mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-9 gap-y-14 max-md:gap-x-7.5 max-md:gap-y-11.5 mt-10 max-md:mt-14.25;
+    }
+
+    .wrapper {
+      .post-card {
+        &:nth-child(4) {
+          @apply md:hidden;
         }
       }
     }

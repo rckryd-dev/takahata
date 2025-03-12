@@ -2,7 +2,7 @@
   @apply flex justify-between items-center px-12 pt-8 max-md:px-6 max-md:pt-7.5;
 
   &__logo {
-    @apply w-[6.6875rem];
+    @apply w-[6.6875rem] pointer-events-auto;
 
     [data-apply-color="yellow"] & {
       @apply grayscale brightness-200;
@@ -11,7 +11,7 @@
 }
 
 .drawer {
-  @apply relative text-[10px];
+  @apply relative text-[10px] pointer-events-auto;
 
   &__txt-btn {
     @apply font-acumin-variable tracking-[.02em] text-xl max-md:text-3xl text-primary z-[1];

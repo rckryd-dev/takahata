@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="p-post">
+<main class="p-posts">
   <?php
   get_template_part('parts/title-section', null, [
     'title' => 'NEWS',
@@ -8,7 +8,7 @@
       ['label' => 'お知らせ']
     ],
     'menu_items' => array_merge(
-      ['All' => ['url' => esc_url(get_permalink(get_page_by_path('news'))), 'target' => '', 'this_page' => true]],
+      ['All' => ['url' => get_permalink(get_option('page_for_posts')), 'target' => '', 'this_page' => true]],
 
       array_reduce(get_categories(), function ($menu, $category) {
         $current_category = get_queried_object();
@@ -30,16 +30,18 @@
   ?>
 
   <section>
-    <div class="p-post__list">
+    <div class="wrapper">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <article class="p-post__card">
-        <?php if (has_post_thumbnail()) : ?>
-          <div class="p-post__card__thumb">
-            <?php the_post_thumbnail(); ?>
-          </div>
-        <?php endif; ?>
-        <div class="p-post__card__body">
-          <div class="p-post__card__body__props">
+      <article class="post-card">
+        <div class="post-card__thumb">
+          <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
+          <?php else : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.svg" alt="">
+          <?php endif; ?>
+        </div>
+        <div class="post-card__body">
+          <div class="post-card__body__props">
             <span><?php echo get_the_date('Y.m.d'); ?></span>
             <?php
             $post_categories = get_the_category();
@@ -57,14 +59,25 @@
             endif;
             ?>
           </div>
-          <a href="<?php the_permalink(); ?>" class="p-post__card__body__title">
+          <a href="<?php the_permalink(); ?>" class="post-card__body__title">
             <h2><?php the_title(); ?></h2>
+            <span></span>
           </a>
         </div>
       </article>
       <?php endwhile; else : ?>
         <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
       <?php endif; ?>
+    </div>
+
+    <div class="p-posts__pagination">
+      <?php
+      echo paginate_links(array(
+        'total' => $wp_query->max_num_pages,
+        'prev_text' => 'Prev',
+        'next_text' => 'Next ',
+      ));
+      ?>
     </div>
   </section>
 </main>

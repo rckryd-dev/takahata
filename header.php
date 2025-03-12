@@ -7,7 +7,7 @@
 </head>
 <body <?php body_class(); ?>>
 <header 
-    class="fixed top-0 w-full z-50">
+    class="fixed top-0 w-full z-50 pointer-events-none">
     <div class="navbar">
         <a href="<?php echo home_url(); ?>" class="z-10">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/takahata-logo.svg" alt="<?php bloginfo('name'); ?> Logo" class="navbar__logo">
