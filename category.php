@@ -35,7 +35,7 @@
       <article class="post-card">
         <div class="post-card__thumb fadeUp">
           <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('thumbnail'); ?>
+            <?php the_post_thumbnail(); ?>
           <?php else : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.svg" alt="">
           <?php endif; ?>

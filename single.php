@@ -96,7 +96,7 @@
               <article class="post-card fadeUp">
                 <div class="post-card__thumb">
                   <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail('thumbnail'); ?>
+                    <?php the_post_thumbnail(); ?>
                   <?php else : ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.svg" alt="">
                   <?php endif; ?>
@@ -126,7 +126,7 @@
             <?php endwhile;
             wp_reset_postdata();
           else :
-            echo '<p>No related posts found.</p>';
+            echo '<p class="col-start-1 col-end-3 text-center">関連する投稿が見つかりませんでした。</p>';
           endif;
         }
         ?>
