@@ -51,7 +51,7 @@
               </div>
           </div>
         <?php elseif (has_post_thumbnail()): ?>
-          <div class="max-w-270 mx-auto ">
+          <div class="max-w-270 mx-auto max-md:px-7.5">
             <div class="post-content__thumb">
               <?php the_post_thumbnail('full'); ?>
             </div>
@@ -136,25 +136,31 @@
   <?php endwhile; endif; ?>
 </main>
 <?php get_footer(); ?>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#post-slider', {
-      type: "loop",
-      focus: "center",
-      autoWidth: true,
-      arrows: false,
-      pagination: false,
-      gap: "2.8125rem",
-      autoplay: true,
-      interval: 2800,
-      speed: 800,
-      pauseOnHover: false, 
-      pauseOnFocus: false,
-      breakpoints: {
-        767: {
-          gap: "1.5rem"
-        },
-      }
-    }).mount();
-  });
-</script>
+
+<?php 
+if (!empty($gallery['ids'])): 
+  $image_ids = explode(',', $gallery['ids']);
+?>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#post-slider', {
+        type: "loop",
+        focus: "center",
+        autoWidth: true,
+        arrows: false,
+        pagination: false,
+        gap: "2.8125rem",
+        autoplay: true,
+        interval: 2800,
+        speed: 800,
+        pauseOnHover: false, 
+        pauseOnFocus: false,
+        breakpoints: {
+          767: {
+            gap: "1.5rem"
+          },
+        }
+      }).mount();
+    });
+  </script>
+<?php endif; ?>

@@ -4686,11 +4686,6 @@ Text Domain: takahata
   }
   @media (width < 48rem) {
     .p-post .post-content {
-      padding-inline: calc(var(--spacing) * 7.5);
-    }
-  }
-  @media (width < 48rem) {
-    .p-post .post-content {
       padding-top: calc(var(--spacing) * 25.5);
     }
   }
@@ -4727,6 +4722,11 @@ Text Domain: takahata
   .p-post .post-content .wrapper {
     margin-inline: auto;
     max-width: calc(var(--spacing) * 270);
+  }
+  @media (width < 48rem) {
+    .p-post .post-content .wrapper {
+      padding-inline: calc(var(--spacing) * 7.5);
+    }
   }
   .p-post .post-content article {
     font-size: var(--text-lg);
