@@ -438,11 +438,11 @@ Text Domain: takahata
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
   }
-  .py-1\.5 {
-    padding-block: calc(var(--spacing) * 1.5);
+  .py-2\.25 {
+    padding-block: calc(var(--spacing) * 2.25);
   }
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
@@ -456,9 +456,8 @@ Text Domain: takahata
   .text-center {
     text-align: center;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  .text-\[1\.75rem\] {
+    font-size: 1.75rem;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -591,6 +590,16 @@ Text Domain: takahata
     }
   }
   @media (width >= 48rem) {
+    .md\:px-2 {
+      padding-inline: calc(var(--spacing) * 2);
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:py-1\.5 {
+      padding-block: calc(var(--spacing) * 1.5);
+    }
+  }
+  @media (width >= 48rem) {
     .md\:pt-16 {
       padding-top: calc(var(--spacing) * 16);
     }
@@ -598,6 +607,12 @@ Text Domain: takahata
   @media (width >= 48rem) {
     .md\:pl-12 {
       padding-left: calc(var(--spacing) * 12);
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:text-2xl {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
 }
@@ -4874,13 +4889,13 @@ Text Domain: takahata
       display: none;
     }
   }
-  .p-contact {
-    padding-block: calc(var(--spacing) * 24);
-  }
   .p-contact .anchor ul {
     width: fit-content;
   }
   .p-contact__content {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-color: var(--color-white);
     background-size: 63.5625rem auto;
     background-position: top -5.9375rem left -8.3125rem;
     background-repeat: no-repeat;
@@ -4888,7 +4903,7 @@ Text Domain: takahata
   }
   @media (width < 48rem) {
     .p-contact__content {
-      background-position: bottom -3.5rem right -31rem;
+      background-position: top -5rem left -29.5rem;
     }
   }
   @media (width < 48rem) {
@@ -4902,6 +4917,11 @@ Text Domain: takahata
   .p-contact__content .wrapper {
     margin-inline: auto;
     max-width: calc(var(--spacing) * 270);
+  }
+  @media (width < 48rem) {
+    .p-contact__content .wrapper {
+      padding-inline: calc(var(--spacing) * 7.5);
+    }
   }
   .p-contact__content__head__tel {
     margin-top: calc(var(--spacing) * 10);
@@ -4922,12 +4942,22 @@ Text Domain: takahata
     --tw-tracking: .125rem;
     letter-spacing: .125rem;
   }
+  @media (width < 48rem) {
+    .p-contact__content__head__tel__info a {
+      font-size: 6.2rem;
+    }
+  }
   .p-contact__content__head__tel__hours {
     text-align: center;
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  @media (width < 48rem) {
+    .p-contact__content__head__tel__hours {
+      font-size: 2rem;
+    }
   }
   .p-contact__content__head__text {
     margin-top: calc(var(--spacing) * 13.5);
@@ -4936,6 +4966,16 @@ Text Domain: takahata
     line-height: var(--tw-leading, var(--text-lg--line-height));
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  @media (width < 48rem) {
+    .p-contact__content__head__text {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content__head__text {
+      font-size: 1.3125rem;
+    }
   }
   .p-contact__content__head__steps {
     margin-top: calc(var(--spacing) * 32);
@@ -4958,6 +4998,21 @@ Text Domain: takahata
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
+  }
+  @media (width < 48rem) {
+    .p-contact__content__head__steps li {
+      height: calc(var(--spacing) * 22.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content__head__steps li {
+      width: calc(var(--spacing) * 22.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content__head__steps li {
+      font-size: 21px;
+    }
   }
   .p-contact__content__head__steps li:not(:first-child)::before {
     position: absolute;
@@ -4996,19 +5051,39 @@ Text Domain: takahata
     display: flex;
     width: calc(var(--spacing) * 74);
     align-items: center;
-    gap: calc(var(--spacing) * 3);
+    gap: calc(var(--spacing) * 8);
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr th {
+      margin-bottom: calc(var(--spacing) * 5.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr th {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
   .p-contact__content .mw_wp_form table tr th ._label {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
+    font-size: 1.3125rem;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr th ._label {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
   }
   .p-contact__content .mw_wp_form table tr th ._require {
+    margin-top: calc(var(--spacing) * -0.5);
+    display: block;
     display: inline-block;
-    border-radius: 0.25rem;
-    background-color: #9F0F0C;
-    padding: calc(var(--spacing) * 2.5);
+    background-color: var(--color-primary);
+    padding-inline: calc(var(--spacing) * 2);
+    padding-block: calc(var(--spacing) * 1);
+    font-size: .625rem;
     --tw-leading: 1;
     line-height: 1;
     --tw-tracking: var(--tracking-normal);
@@ -5016,11 +5091,47 @@ Text Domain: takahata
     white-space: nowrap;
     color: var(--color-white);
   }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr th ._require {
+      padding-block: calc(var(--spacing) * 1.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr th ._require {
+      font-size: .75rem;
+    }
+  }
   .p-contact__content .mw_wp_form table tr td {
+    width: 100%;
     padding-bottom: calc(var(--spacing) * 8);
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td {
+      display: block;
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td {
+      padding-bottom: calc(var(--spacing) * 14.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td.md-reset {
+      padding-bottom: calc(var(--spacing) * 0);
+    }
   }
   .p-contact__content .mw_wp_form table tr td .flex {
     gap: calc(var(--spacing) * 7.5);
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td .flex {
+      flex-direction: column;
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td .flex {
+      gap: calc(var(--spacing) * 5);
+    }
   }
   .p-contact__content .mw_wp_form table tr td .flex > p:last-child {
     display: none;
@@ -5048,24 +5159,48 @@ Text Domain: takahata
   .p-contact__content .mw_wp_form table tr td ._input input:not([type="radio"]):not([type="checkbox"]):focus, .p-contact__content .mw_wp_form table tr td ._input textarea:focus {
     outline-color: var(--color-primary);
   }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input input:not([type="radio"]):not([type="checkbox"]), .p-contact__content .mw_wp_form table tr td ._input textarea {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
   .p-contact__content .mw_wp_form table tr td ._input input:not([type="radio"]):not([type="checkbox"]) {
     height: calc(var(--spacing) * 12.5);
     border-radius: var(--radius-4xl);
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input input:not([type="radio"]):not([type="checkbox"]) {
+      height: calc(var(--spacing) * 16.25);
+    }
   }
   .p-contact__content .mw_wp_form table tr td ._input .horizontal-item + .horizontal-item {
     margin-left: calc(var(--spacing) * 0) !important;
   }
   .p-contact__content .mw_wp_form table tr td ._input._radio {
     display: flex;
-    width: 80%;
     flex-wrap: wrap;
     column-gap: calc(var(--spacing) * 45);
     row-gap: calc(var(--spacing) * 6);
   }
-  .p-contact__content .mw_wp_form table tr td ._input input[type=radio] {
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input._radio {
+      margin-top: calc(var(--spacing) * 13.25);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input._radio {
+      gap: calc(var(--spacing) * 5);
+    }
+  }
+  @media (width >= 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input._radio {
+      width: 80%;
+    }
+  }
+  .p-contact__content .mw_wp_form table tr td ._input input[type=radio], .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox] {
     display: none;
   }
-  .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span {
+  .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span, .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox] + span {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -5078,7 +5213,18 @@ Text Domain: takahata
     --tw-tracking: .1em;
     letter-spacing: .1em;
   }
-  .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span::before {
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span, .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox] + span {
+      padding-left: calc(var(--spacing) * 10);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span, .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox] + span {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span::before, .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox] + span::before {
     position: absolute;
     top: calc(1/2 * 100%);
     left: calc(var(--spacing) * 0);
@@ -5094,32 +5240,25 @@ Text Domain: takahata
     --tw-content: '';
     content: var(--tw-content);
   }
-  .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span::after {
-    position: absolute;
-    top: calc(1/2 * 100%);
-    left: calc(var(--spacing) * 1);
-    aspect-ratio: 1 / 1;
-    width: 1.125rem;
-    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-    border-radius: calc(infinity * 1px);
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    border-color: transparent;
-    background-image: linear-gradient(318.61deg,#5F9EA0 -20.87%,#4682B4 81.02%,#B0E0E6 114.98%);
-    opacity: 0%;
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, ease);
-    transition-duration: var(--tw-duration, 0s);
-    --tw-content: '';
-    content: var(--tw-content);
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input input[type=radio] + span::before, .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox] + span::before {
+      width: calc(var(--spacing) * 5.5);
+    }
   }
-  .p-contact__content .mw_wp_form table tr td ._input input[type=radio]:checked + span::after {
-    opacity: 100%;
+  .p-contact__content .mw_wp_form table tr td ._input input[type=radio]:hover + span::before, .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox]:hover + span::before {
+    background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+  }
+  .p-contact__content .mw_wp_form table tr td ._input input[type=radio]:checked + span::before, .p-contact__content .mw_wp_form table tr td ._input input[type=checkbox]:checked + span::before {
+    background-color: var(--color-white);
   }
   .p-contact__content .mw_wp_form table tr td ._input textarea {
     field-sizing: content;
-    min-height: calc(var(--spacing) * 50);
+    min-height: calc(var(--spacing) * 74.5);
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form table tr td ._input textarea {
+      min-height: calc(var(--spacing) * 94);
+    }
   }
   .p-contact__content .mw_wp_form table tr td small {
     margin-top: calc(var(--spacing) * 4);
@@ -5137,6 +5276,39 @@ Text Domain: takahata
   }
   .p-contact__content .mw_wp_form table tr td ._zip input {
     max-width: calc(var(--spacing) * 50) !important;
+  }
+  .p-contact__content .mw_wp_form .btn {
+    margin-inline: auto;
+    margin-top: calc(var(--spacing) * 18);
+    height: calc(var(--spacing) * 15);
+    width: calc(var(--spacing) * 88);
+    border-radius: calc(infinity * 1px);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form .btn {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form .btn {
+      height: calc(var(--spacing) * 18.75);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form .btn {
+      width: calc(var(--spacing) * 86.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-contact__content .mw_wp_form .btn {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
   }
 }
 @property --tw-rotate-x {

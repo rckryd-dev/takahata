@@ -1,16 +1,15 @@
 .p-contact {
-  @apply py-24;
 
   .anchor ul {
     @apply w-fit;
   }
 
   &__content {
-    @apply py-20 max-md:py-22 bg-no-repeat bg-[63.5625rem_auto] bg-[top_-5.9375rem_left_-8.3125rem] max-md:bg-[bottom_-3.5rem_right_-31rem];
+    @apply py-20 max-md:py-22 bg-no-repeat bg-[63.5625rem_auto] bg-[top_-5.9375rem_left_-8.3125rem] max-md:bg-[top_-5rem_left_-29.5rem] border-b border-white;
   background-image: url('assets/img/speed-ornament.svg');
 
     .wrapper {
-      @apply max-w-270 mx-auto;
+      @apply max-w-270 mx-auto max-md:px-7.5;
     }
 
     &__head {
@@ -22,24 +21,24 @@
           @apply flex gap-8 justify-center text-[2rem] mb-1;
 
           a {
-            @apply font-bebas text-[4.7813rem] tracking-[.125rem] leading-[1];
+            @apply font-bebas text-[4.7813rem] tracking-[.125rem] leading-[1] max-md:text-[6.2rem];
           }
         }
 
         &__hours {
-          @apply text-2xl font-bold text-center;
+          @apply text-2xl font-bold text-center max-md:text-[2rem];
         }
       }
 
       &__text {
-        @apply text-lg text-center font-medium mt-13.5;
+        @apply text-lg text-center font-medium mt-13.5 max-md:text-[1.3125rem] max-md:mt-10;
       }
 
       &__steps {
         @apply flex justify-center gap-37.75 mt-32;
 
         li {
-          @apply relative w-20 h-20 grid place-content-center text-xl border border-primary font-bold rounded-full text-primary;
+          @apply relative w-20 h-20 grid place-content-center text-xl border border-primary font-bold rounded-full text-primary max-md:w-22.5 max-md:h-22.5 max-md:text-[21px];
 
           &:not(:first-child) {
             &::before {
@@ -75,22 +74,26 @@
           }
 
           th {
-            @apply flex items-center gap-3 w-74 font-normal;
+            @apply flex items-center gap-8 w-74 font-normal max-md:gap-4 max-md:mb-5.5;
 
             ._label {
-              @apply text-xl;
+              @apply text-[1.3125rem] font-bold max-md:text-2xl;
             }
 
             ._require {
-              @apply bg-[#9F0F0C] text-white inline-block leading-none p-2.5 whitespace-nowrap tracking-normal rounded;
+              @apply block -mt-0.5 bg-primary text-white inline-block leading-none text-[.625rem] py-1 px-2 whitespace-nowrap tracking-normal max-md:text-[.75rem] max-md:py-1.5;
             }
           }
 
           td {
-            @apply pb-8;
+            @apply pb-8 max-md:block max-md:pb-14.5 w-full;
+            
+            &.md-reset {
+              @apply max-md:pb-0;
+            }
 
             .flex {
-              @apply gap-7.5;
+              @apply gap-7.5 max-md:flex-col max-md:gap-5;
 
               > p:last-child {
                 @apply hidden;
@@ -100,11 +103,11 @@
             ._input {
               input:not([type="radio"]):not([type="checkbox"]),
               textarea {
-                @apply border border-[#c4c3c3] bg-white rounded-[1.0625rem] text-lg w-full px-5 py-3 placeholder:text-[#ABACAC] text-[1.3125rem] font-medium text-black focus:outline-primary outline-offset-1;
+                @apply border border-[#c4c3c3] bg-white rounded-[1.0625rem] text-lg w-full px-5 py-3 placeholder:text-[#ABACAC] text-[1.3125rem] font-medium text-black focus:outline-primary outline-offset-1 max-md:px-6;
               }
 
               input:not([type="radio"]):not([type="checkbox"]) {
-                @apply h-12.5 rounded-4xl;
+                @apply h-12.5 rounded-4xl max-md:h-16.25;
               }
 
               .horizontal-item {
@@ -114,35 +117,44 @@
               }
 
               &._radio {
-                @apply flex gap-x-45 gap-y-6 flex-wrap w-[80%];
+                @apply flex gap-x-45 gap-y-6 max-md:gap-5 flex-wrap md:w-[80%] max-md:mt-13.25;
               }
 
-              input[type=radio] {
+              input[type=radio],
+              input[type=checkbox] {
                 @apply hidden;
                 
                 + span {
-                  @apply text-[1.3125rem] cursor-pointer inline-block leading-none pl-7 relative tracking-[.1em] font-medium;
+                  @apply text-[1.3125rem] cursor-pointer inline-block leading-none pl-7 relative tracking-[.1em] font-medium max-md:text-2xl max-md:pl-10;
 
                   &::before {
-                    @apply aspect-square border rounded-full content-[''] block left-0 absolute top-1/2 -translate-y-1/2 w-3.25 border-white;
+                    @apply aspect-square border rounded-full content-[''] block left-0 absolute top-1/2 -translate-y-1/2 w-3.25 border-white max-md:w-5.5;
                   }
 
-                  &::after {
+                  /* &::after {
                     @apply aspect-square border border-transparent rounded-full content-[''] left-1 opacity-0 absolute top-1/2 -translate-y-1/2 w-[1.125rem] transition-all bg-[linear-gradient(318.61deg,#5F9EA0_-20.87%,#4682B4_81.02%,#B0E0E6_114.98%)];
+                  } */
+                }
+
+                &:hover {
+                  + span {
+                    &::before {
+                      @apply bg-white/30;
+                    }
                   }
                 }
 
                 &:checked {
                   + span {
-                    &::after {
-                      @apply opacity-100;
+                    &::before {
+                      @apply bg-white;
                     }
                   }
                 }
               }
 
               textarea {
-                @apply min-h-50 field-sizing-content;
+                @apply min-h-74.5 max-md:min-h-94 field-sizing-content;
               }
             }
             
@@ -163,6 +175,10 @@
             }
           }
         }
+      }
+
+      .btn {
+        @apply mt-18 mx-auto rounded-full h-15 text-lg text-white font-bold w-88 max-md:mt-10 max-md:h-18.75 max-md:w-86.5 max-md:text-2xl;
       }
     }
   }

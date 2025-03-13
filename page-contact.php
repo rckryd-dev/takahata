@@ -21,14 +21,14 @@ get_header();
   <section class="p-contact__content" id="contact-form">
     <div class="wrapper">
         <div class="p-contact__content__head">
-          <p class="text-2xl font-bold bg-primary px-2 py-1.5 w-fit mx-auto">お電話でのお問い合わせ</p>
+          <p class="text-[1.75rem] md:text-2xl font-bold bg-primary px-4 md:px-2 py-2.25 md:py-1.5 w-fit mx-auto">お電話でのお問い合わせ</p>
           <div class="p-contact__content__head__tel">
             <div class="p-contact__content__head__tel__info">
 							<a href="tel:052-352-7700">052-352-7700</a>
 						</div>
 						<p class="p-contact__content__head__tel__hours">受付時間　09:00～19:00</p>
 					</div>
-          <p class="text-2xl font-bold bg-primary px-2 py-1.5 w-fit mx-auto">フォームでのお問い合わせ</p>
+          <p class="text-[1.75rem] md:text-2xl font-bold bg-primary px-4 md:px-2 py-2.25 md:py-1.5 w-fit mx-auto">フォームでのお問い合わせ</p>
 
           <p class="p-contact__content__head__text">弊社へのお問い合わせ・エントリーは、<br>下記のお問い合わせフォームよりお問い合わせください。</p>
 
