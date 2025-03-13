@@ -1,24 +1,43 @@
-<?php /* Template Name: Contact Page */ ?>
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Contact Page
+ */
+get_header();
+?>
 <main class="p-contact">
-  <section class="p-contact__content">
-    <div class="c-container">
+  <?php
+  get_template_part('parts/title-section', null, [
+    'title' => 'CONTACT',
+    'breadcrumbs' => [
+      ['label' => 'トップ', 'url' => home_url()],
+      ['label' => 'お問い合わせ']
+    ],
+    'menu_items' => [
+      'お問い合わせ' => ['url' => '#contact-form', 'target' => ''],
+      'よくある質問' => ['url' => '#contact-qna', 'target' => '']
+    ]
+  ]);
+  ?>
+  <section class="p-contact__content" id="contact-form">
+    <div class="wrapper">
         <div class="p-contact__content__head">
-          <p class="p-contact__content__head__txt">コーエイリーフ株式会社にご興味を持っていただきありがとうございます。<br>お電話または下記お問い合わせフォームより、お気軽にお問い合わせください。</p>
-          <!-- <div class="p-contact__content__head__tel">
-						<div class="p-contact__content__head__tel__info">
-							<h3>TEL・FAX</h3>
-							<a href="tel:0564-52-3636">(059)347-5231</a>
+          <p class="text-2xl font-bold bg-primary px-2 py-1.5 w-fit mx-auto">お電話でのお問い合わせ</p>
+          <div class="p-contact__content__head__tel">
+            <div class="p-contact__content__head__tel__info">
+							<a href="tel:052-352-7700">052-352-7700</a>
 						</div>
-						<p class="p-contact__content__head__tel__hours">受付時間 : 8:30 ～ 17:00(土日祝を除く)</p>
-					</div> -->
+						<p class="p-contact__content__head__tel__hours">受付時間　09:00～19:00</p>
+					</div>
+          <p class="text-2xl font-bold bg-primary px-2 py-1.5 w-fit mx-auto">フォームでのお問い合わせ</p>
+
+          <p class="p-contact__content__head__text">弊社へのお問い合わせ・エントリーは、<br>下記のお問い合わせフォームよりお問い合わせください。</p>
 
           <?php
             $current_url = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             $steps = [
-              "contact" => "項目の入力",
-              "confirm" => "確認画面",
-              "complete" => "送信完了",
+              "contact" => "入力",
+              "confirm" => "確認",
+              "complete" => "完了",
             ];
           ?>
 
@@ -33,7 +52,6 @@
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <?php the_content(); ?>
         <?php endwhile; endif; ?>
-
     </div>
   </section>
 </main>

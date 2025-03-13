@@ -1,44 +1,54 @@
 .p-contact {
   @apply py-24;
 
-  &__content {
+  .anchor ul {
+    @apply w-fit;
+  }
 
-    .c-container {
-      @apply max-w-[calc(70rem_+_3rem)];
+  &__content {
+    @apply py-20 max-md:py-22 bg-no-repeat bg-[63.5625rem_auto] bg-[top_-5.9375rem_left_-8.3125rem] max-md:bg-[bottom_-3.5rem_right_-31rem];
+  background-image: url('assets/img/speed-ornament.svg');
+
+    .wrapper {
+      @apply max-w-270 mx-auto;
     }
 
     &__head {
-      &__txt {
-        @apply text-center text-xl mb-8;
-      }
 
       &__tel {
-        @apply border rounded-2xl text-center py-14 px-4 max-w-148 mx-auto;
+        @apply mt-10 mb-28;
 
         &__info {
-          @apply flex gap-8 justify-center text-[2rem];
+          @apply flex gap-8 justify-center text-[2rem] mb-1;
 
-          h3 {
-
-          }
           a {
-            @apply font-medium;
+            @apply font-bebas text-[4.7813rem] tracking-[.125rem] leading-[1];
           }
         }
 
         &__hours {
-          @apply mt-8
+          @apply text-2xl font-bold text-center;
         }
       }
 
+      &__text {
+        @apply text-lg text-center font-medium mt-13.5;
+      }
+
       &__steps {
-        @apply grid grid-cols-3 gap-3 mt-32;
+        @apply flex justify-center gap-37.75 mt-32;
 
         li {
-          @apply h-24 grid place-content-center text-2xl border;
+          @apply relative w-20 h-20 grid place-content-center text-xl border border-primary font-bold rounded-full text-primary;
+
+          &:not(:first-child) {
+            &::before {
+              @apply absolute content-[''] w-37.75 h-[.0625rem] bg-primary left-0 top-1/2 translate-y-1/2 -translate-x-full;
+            }
+          }
 
           &.is-current {
-            @apply bg-black text-white;
+            @apply bg-primary text-white;
           }
         }
 
@@ -46,7 +56,7 @@
     }
 
     .mw_wp_form {
-      @apply mt-20;
+      @apply mt-13.5;
 
       .vertical-item {
         @apply block;
@@ -65,7 +75,7 @@
           }
 
           th {
-            @apply flex items-center gap-3 max-w-88 font-normal;
+            @apply flex items-center gap-3 w-74 font-normal;
 
             ._label {
               @apply text-xl;
@@ -77,26 +87,44 @@
           }
 
           td {
-            @apply pb-10;
+            @apply pb-8;
+
+            .flex {
+              @apply gap-7.5;
+
+              > p:last-child {
+                @apply hidden;
+              }
+            }
 
             ._input {
               input:not([type="radio"]):not([type="checkbox"]),
               textarea {
-                @apply border border-[#c4c3c3] bg-[#f2f2f2] rounded-lg text-lg w-full max-w-130 p-5;
+                @apply border border-[#c4c3c3] bg-white rounded-[1.0625rem] text-lg w-full px-5 py-3 placeholder:text-[#ABACAC] text-[1.3125rem] font-medium text-black focus:outline-primary outline-offset-1;
               }
 
               input:not([type="radio"]):not([type="checkbox"]) {
-                @apply h-17.5;
+                @apply h-12.5 rounded-4xl;
+              }
+
+              .horizontal-item {
+                + .horizontal-item {
+                  @apply !ml-0;
+                }
+              }
+
+              &._radio {
+                @apply flex gap-x-45 gap-y-6 flex-wrap w-[80%];
               }
 
               input[type=radio] {
                 @apply hidden;
                 
                 + span {
-                  @apply text-xl cursor-pointer inline-block leading-none pl-12 relative;
+                  @apply text-[1.3125rem] cursor-pointer inline-block leading-none pl-7 relative tracking-[.1em] font-medium;
 
                   &::before {
-                    @apply aspect-square bg-white border rounded-full content-[''] block left-0 absolute top-1/2 -translate-y-1/2 w-6.5;
+                    @apply aspect-square border rounded-full content-[''] block left-0 absolute top-1/2 -translate-y-1/2 w-3.25 border-white;
                   }
 
                   &::after {
