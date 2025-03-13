@@ -172,7 +172,7 @@ function initAnimations() {
   }
   
 
-  // **Animasi Fade Up**
+  // **Animate: Fade Up**
   function fadeUpAnimation(className = ".fadeUp", delay = 0, duration = 8, distance = 20) {
     gsap.utils.toArray(className).forEach((el) => {
       gsap.fromTo(el, 
@@ -193,42 +193,14 @@ function initAnimations() {
   
   document.addEventListener("DOMContentLoaded", fadeUpAnimation);
 
-  function bounceText(className = ".bounceText", duration = 0.5, stagger = 0.1) {
-    gsap.registerPlugin(ScrollTrigger);
-  
-    gsap.utils.toArray(className).forEach((el) => {
-      const spans = el.querySelectorAll("h3 span"); // Pastikan hanya <span> dalam <h3> yang dianimasikan
-  
-      if (spans.length === 0) return; // Jika tidak ada <span>, keluar
-  
-      gsap.set(spans, { transformOrigin: "bottom center", scaleY: 0 });
-  
-      // Animasi saat elemen muncul di viewport dengan efek stagger
-      gsap.to(spans, {
-        scaleY: 1,
-        duration,
-        ease: "power2.out",
-        stagger: stagger,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%",
-          toggleActions: "play none none reverse"
-        }
-      });
-  
-      // Animasi saat hover dengan efek stagger
-      el.addEventListener("mouseenter", () => {
-        gsap.to(spans, { scaleY: 1.2, duration, ease: "power2.out", stagger: stagger });
-      });
-  
-      el.addEventListener("mouseleave", () => {
-        gsap.to(spans, { scaleY: 1, duration, ease: "power2.out", stagger: stagger });
-      });
+  // Animate: Slide BG Text
+  gsap.utils.toArray(".slide-bg-text").forEach((element) => {
+    ScrollTrigger.create({
+      trigger: element,
+      start: "top 90%",
+      toggleClass: "animated",
     });
-  }
-  
-  bounceText();
-  document.addEventListener("DOMContentLoaded", bounceText);
+  });
 
   // Pages
   const mainElement = document.querySelector("main");
@@ -432,6 +404,11 @@ function initAnimations() {
         }
       );
     });
+  }
+
+  if (mainElement.classList.contains("p-contact")) {
+    wrapTextWithSpan(".p-contact__content__head__text");
+    animateTextColor(".p-contact__content__head__text", "#ffffff4d", "#ffffff");
   }
 
   setTimeout(() => {

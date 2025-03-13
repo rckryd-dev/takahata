@@ -4,13 +4,13 @@
     @apply w-fit;
   }
 
+  .wrapper {
+    @apply max-w-270 mx-auto max-md:px-7.5;
+  }
+
   &__content {
     @apply py-20 max-md:py-22 bg-no-repeat bg-[63.5625rem_auto] bg-[top_-5.9375rem_left_-8.3125rem] max-md:bg-[top_-5rem_left_-29.5rem] border-b border-white;
-  background-image: url('assets/img/speed-ornament.svg');
-
-    .wrapper {
-      @apply max-w-270 mx-auto max-md:px-7.5;
-    }
+    background-image: url('assets/img/speed-ornament.svg');
 
     &__head {
 
@@ -178,7 +178,95 @@
       }
 
       .btn {
-        @apply mt-18 mx-auto rounded-full h-15 text-lg text-white font-bold w-88 max-md:mt-10 max-md:h-18.75 max-md:w-86.5 max-md:text-2xl;
+        @apply cursor-pointer mx-auto rounded-full h-15 text-lg text-white font-bold w-88 max-md:mt-10 max-md:h-18.75 max-md:w-86.5 max-md:text-2xl;
+      }
+    }
+  }
+
+  &__qna {
+    @apply relative pt-20.5 pb-28 bg-no-repeat bg-[63rem_auto] bg-[bottom_-21rem_right_-10rem] max-md:bg-[bottom_-9rem_right_-34rem] max-md:pb-44 max-md:pt-25.5;
+    background-image: url('assets/img/circle-ornament.png');
+
+    h2 {
+      @apply w-fit mx-auto text-primary;
+
+      img {
+        @apply w-213 max-md:w-153.75 max-md:max-w-153.75 max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2;
+      }
+
+      span {
+        @apply block text-[4.6875rem] max-md:text-[4.0625rem] font-black tracking-[-.04em] text-center leading-none md:-mt-11 max-md:pt-15.5;
+      }
+    }
+
+    .anchor {
+      ul {
+        @apply bg-white text-primary max-md:px-11;
+
+        li {
+          a {
+            @apply cursor-pointer;
+
+            &::before {
+              @apply border-primary;
+            }
+
+            &:hover {
+    
+              &::before {
+                @apply bg-primary;
+              }
+            }
+          }
+          &.is-active {
+            a {
+              &::before {
+                @apply bg-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .qna {
+      @apply flex flex-col gap-5 mt-8.5 max-md:mt-12;
+
+      &__item {
+        @apply bg-primary rounded-[1.5625rem] max-md:rounded-[1.5625rem];
+
+        &__head {
+          @apply py-8.75 px-10 flex justify-between items-center max-md:py-7 max-md:px-8.5;
+          
+          h3 {
+            @apply text-2xl font-black;
+          }
+
+          button {
+            @apply cursor-pointer transition-all duration-300;
+
+            img {
+              @apply w-10.5 h-10.5;
+            }
+          }
+        }
+        &__body {
+          .inner {
+            @apply px-10 pb-16 text-lg max-md:text-[1.3125rem] leading-[1.78] max-md:leading-[1.52] max-md:px-8.5 max-md:pb-8.5;
+          }
+        }
+
+        &.is-open {
+          .qna {
+            &__item {
+              &__head {
+                button {
+                  @apply rotate-180;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

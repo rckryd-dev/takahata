@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.47 42.47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #232323;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #a7a04f;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_2" data-name="レイヤー 2">
+    <g>
+      <circle class="cls-1" cx="21.23" cy="21.23" r="21.23"/>
+      <polyline class="cls-2" points="26.94 18.38 21.23 24.09 15.53 18.38"/>
+    </g>
+  </g>
+</svg>

@@ -46,7 +46,7 @@
 
     li {
       a {
-        @apply relative pl-6.5 transition-all duration-200 max-md:text-2xl;
+        @apply relative pl-6.5 transition-all duration-200 max-md:text-2xl font-bold;
 
         &::before {
           @apply absolute content-[''] w-3.5 h-3.5 border border-white rounded-full left-0 top-1/2 -translate-y-1/2 transition-all duration-200;

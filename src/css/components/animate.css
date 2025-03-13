@@ -10,3 +10,41 @@
 .spin {
 animation: spin 10s linear infinite;
 }
+
+.slide-bg-text {
+  &__item {
+    @apply relative px-4 md:px-2 py-2.25 md:py-1.5 w-fit;
+
+    span {
+      @apply text-[1.75rem] md:text-2xl font-bold;
+      -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+
+    &::before {
+      @apply absolute content-[''] w-full h-full bg-primary top-0 left-0;
+      transform: scaleX(0);
+      transform-origin: center left;
+      will-change: transform;
+    }
+  }
+
+  &.animated {
+    .slide-bg-text {
+      &__item {
+        span {
+          transition: .5s -webkit-clip-path .65s;
+          transition: .5s clip-path .65s;
+          transition: .5s clip-path .65s, .5s -webkit-clip-path .65s;
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+  
+        &::before {
+          transition: .5s transform .5s;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
