@@ -199,6 +199,7 @@ function initAnimations() {
       trigger: element,
       start: "top 90%",
       toggleClass: "animated",
+      once: true
     });
   });
 
@@ -375,7 +376,7 @@ function initAnimations() {
     });
   }
 
-  if (mainElement.classList.contains("p-service")) {
+  if (mainElement.classList.contains("p-services")) {
     wrapTextWithSpan("#service-desc");
     animateTextColor("#service-desc", "#ffffff4d", "#ffffff");
 

@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-<main class="p-service">
+<main class="p-services">
   <?php
   get_template_part('parts/title-section', null, [
     'title' => 'SERVICE',

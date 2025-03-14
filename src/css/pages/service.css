@@ -1,155 +1,75 @@
 .p-service {
+  &#service-car {
+    @apply bg-no-repeat bg-[85.625rem_auto] bg-[top_24rem_right_-11.75rem] max-md:bg-[top_23rem_right_-35.5rem];
+    background-image: url('assets/img/car-ornament.svg');
+  }
 
-  .service-top {
-    @apply relative overflow-hidden pt-33 pb-24 max-md:pt-18.75 max-md:pb-20 text-center;
-
-    .speed-ornament {
-      @apply absolute w-254.25 -bottom-103 -left-35 select-none pointer-events-none max-md:w-340 max-md:max-w-340 max-md:-bottom-135 max-md:-left-152;
-    }
-
-    .wrapper {
-      @apply max-md:overflow-x-hidden;
-      h2 {
-        @apply w-fit mx-auto;
-
-        img {
-          @apply w-185.75 max-md:w-154.75 max-md:max-w-154.75 max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2;
-        }
-
-        > span {
-          @apply block text-[4.6875rem] max-md:text-[4.0625rem] font-black tracking-[-.04em] text-center leading-none md:-mt-11 max-md:pt-15.5;
-        }
-      }
-
-      #service-desc {
-        @apply text-2xl max-md:text-[1.375rem] font-bold leading-[2.25];
-      }
+  .anchor {
+    ul {
+      @apply w-fit mx-auto;
     }
   }
 
-  .service-menu {
-    @apply bg-primary pt-22 max-md:pb-32.5 max-md:pt-18.75;
+  .main-point {
+    @apply flex max-md:flex-col max-md:items-start gap-9 max-md:gap-12 items-center max-md:pr-7.5;
+    img {
+      @apply w-150 rounded-r-[5rem] max-md:w-153;
+    }
+    p {
+      @apply font-bold text-[1.3125rem] leading-[2] max-md:pl-7.5;
+    }
+  }
 
-    .wrapper {
-      @apply px-7.5 max-w-325 mx-auto;
+  .point-list {
 
-      .menu-list {
-        @apply relative;
+    &__item {
+      @apply relative grid md:flex md:gap-8.5 pl-22.5 pt-6 pb-21 pt-9.5 max-md:pl-0 max-md:pt-9 max-md:flex-wrap max-md:pb-16;
+
+      &:not(:first-child) {
 
         &::before {
-          @apply absolute content-[''] w-screen h-[.0625rem] bg-white left-1/2 -translate-1/2 bottom-0;
-        }
-
-        &__item {
-          @apply relative;
-          &::before {
-            @apply absolute content-[''] w-screen h-[.0625rem] bg-white left-1/2 -translate-1/2 top-0;
-          }
-          &::after {
-            @apply absolute content-[''] w-screen h-full bg-transparent left-1/2 -translate-x-1/2 top-0 z-[-1] transition-all duration-400;
-          }
-
-          &__head {
-            @apply relative flex items-center gap-3 md:gap-8.5 py-5.5 md:pl-20.5 md:pr-5;
-
-            &__num {
-              @apply font-bebas text-[5rem] max-md:text-[6.25rem] leading-[1] mt-1;
-              -webkit-text-stroke: .0625rem var(--color-white);
-              -webkit-text-fill-color: transparent;
-            }
-            
-            h3 {
-              @apply font-black text-[3rem] tracking-[-.04em] leading-[1.18] max-md:text-[2.375rem];
-            }
-
-            span {
-              @apply text-lg font-medium;
-            }
-  
-            ._menu-button {
-              @apply absolute top-1/2 right-5 max-md:right-0 -translate-y-1/2 w-14.25 h-14.25 cursor-pointer hover:opacity-60;
-    
-              &::before,
-              &::after {
-                @apply absolute content-[''] bg-black top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 transition-all duration-300;
-              }
-    
-              &::before {
-                @apply w-14.25 h-1.5;
-              }
-              &::after {
-                @apply h-14.25 w-1.5;
-              }
-            }
-          }
-
-          &__content {
-            @apply md:flex items-start justify-between w-full md:pl-20.5 md:pr-5;
-  
-            p {
-              @apply text-lg leading-[1.78] max-md:text-[1.3125rem] leading-[1.52];
-            }
-  
-            ._main-img {
-              @apply rounded-[2.5rem] w-120 max-md:w-[calc(100%_-_6rem)] max-md:mx-auto;
-            }
-          }
-          
-          &.is-open {
-            &::after {
-              @apply bg-black;
-            }
-
-            .menu-list__item {
-              &__head {
-                &__num {
-                  -webkit-text-fill-color: var(--color-white);
-                }
-
-                ._menu-button {
-                  
-                  &::before,
-                  &::after {
-                    @apply bg-primary rotate-45;
-                  }
-                }
-              }
-            }
-          }
+          @apply absolute content-[''] w-screen h-[.0625rem] bg-white left-1/2 -translate-1/2 top-0;
         }
       }
+    }
+
+    &__num {
+      @apply font-bebas text-[5rem] max-md:text-[6.25rem] leading-[1] max-md:row-start-1 max-md:row-end-2 max-md:text-center;
+      -webkit-text-stroke: .0625rem var(--color-white);
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__desc {
+      @apply max-w-185 pt-2 max-md:row-start-3 max-md:row-end-4 max-md:text-center max-md:pt-3;
+
+      h3 {
+        @apply font-black text-[2.25rem] tracking-[-.04em] leading-[1.18] max-md:text-[2.375rem];
+      }
+
+      p {
+        @apply font-medium text-lg leading-[1.78] mt-8 max-md:text-[1.3125rem] max-md:leading-[1.52] max-md:mt-6;
+      }
+    }
+
+    img {
+      @apply md:absolute md:right-0 md:top-10 w-63 ml-auto max-md:row-start-2 max-md:row-end-3 max-md:mx-auto; 
     }
   }
 
-  .service-virtual {
-    @apply overflow-hidden relative pt-18 max-md:pt-18.75 pb-40.5 max-md:pb-42.5;
+  .car-top {
+    @apply pt-20 pb-32.5 max-md:pt-25.5 max-md:pb-26.25 text-center;
+  }
 
-    .tire-ornament {
-      @apply absolute w-222.5 -bottom-22 -right-59 select-none pointer-events-none max-md:w-150.75 max-md:max-w-150.75 max-md:-bottom-5 max-md:-right-66;
-    }
-
-    .running-txt {
-      @apply overflow-hidden absolute z-[0] top-[13.5rem] select-none pointer-events-none w-full text-center max-md:top-[12rem];
-
-      > div {
-        @apply font-acumin-variable text-[10.625rem] max-md:text-[6.375rem] tracking-[.02em] leading-[1.15] max-md:leading-[1.2] text-primary;
-        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 800;
-        > span {
-          -webkit-text-stroke: .25rem var(--title-stroke, var(--color-primary));
-          -webkit-text-fill-color: var(--title-fill, transparent);
-        }
-      }
-    }
+  .car-new,
+  .car-used {
+    @apply bg-primary pt-24.5 pb-18 max-md:pt-20;
 
     .wrapper {
-      @apply max-w-325 mx-auto px-27.5 max-md:px-7.5;
+      @apply max-w-325 mx-auto;
     }
+  }
 
-    .vr-content {
-      @apply mt-12.5 max-md:mt-15;
-      img {
-        @apply h-150 rounded-[3.75rem] max-md:rounded-[.9375rem] max-md:h-80.5;
-      }
-    }
+  [data-bg-color="black"] {
+    @apply bg-black;
   }
 }
