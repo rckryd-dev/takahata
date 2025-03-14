@@ -41,6 +41,8 @@ get_header();
     </div>
   </section>
 
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-banner.jpg" alt="">
+
   <section data-bg-color="yellow" class="car-new" id="car-new">
     <div class="wrapper">
       <div class="sc-title fadeUp">
@@ -121,46 +123,38 @@ get_header();
           <div class="point-list__item fadeUp">
             <div class="point-list__num">01</div>
             <div class="point-list__desc">
-              <h3>新車販売</h3>
+              <h3>中古自動車販売士が多数在籍</h3>
               <p>
-                自動車の購入は、人生の一大イベント。<br>お乗り換えやご家族の車の相談など、<br class="md:hidden">なんでもお気軽にご相談ください。
+                日本中古自動車販売協会連合会によって、中古自動車販売士の資格を持ったスタッフが多数在籍しています。
               </p>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-icon-01.svg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-icon-04.svg">
           </div>
           <div class="point-list__item fadeUp">
             <div class="point-list__num">02</div>
             <div class="point-list__desc">
-              <h3>一人ひとりの想いに応える</h3>
-              <p>
-                白紙のオーダー用紙へお客様の本音を聞き出し、<br class="md:hidden">安全性と洗練されたスタイルを兼ね揃えた、<br class="md:hidden">お客様が納得できる一台を提案いたします。
-              </p>
-            </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-icon-02.svg">
-          </div>
-          <div class="point-list__item fadeUp">
-            <div class="point-list__num">03</div>
-            <div class="point-list__desc">
               <h3>豊富な種類</h3>
               <p>
-                国内外あらゆる車種のご提案が可能です。<br>詳しいご要望をヒアリングさせていただき、<br class="md:hidden">お客様目線に立った理想のマイカーをご提供します。
+                国内外問わず、あらゆる車種の取り寄せ販売が可能です。<br>詳しいラインナップは、担当のコンシェルジュにお問い合わせください。
               </p>
             </div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-icon-03.svg">
           </div>
           <div class="point-list__item fadeUp">
-            <div class="point-list__num">04</div>
+            <div class="point-list__num">03</div>
             <div class="point-list__desc">
-              <h3>お客様一人ひとりに担当がつく</h3>
+              <h3>事故車の取り扱い</h3>
               <p>
-                お問い合わせからメンテナンス等のアフターサポートまで、<br class="md:hidden">担当のコンシェルジュが丁寧に対応いたします。<br class="md:hidden">あなたの理想のマイカー像を、<br class="md:hidden">お聞かせください。
+                比較的安価な事故車販売も扱っています。<br>詳しい内容は事前に丁寧に説明いたしますので、ご安心ください。
               </p>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-img-03.png" class="static w-116 md:w-91.25 mt-16.5 md:mt-13.75 mr-auto md:ml-0">
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-icon-04.svg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-icon-05.svg">
           </div>
         </div>
       </div>
     </div>
   </section>
+  <div class="max-md:h-20"></div>
 </main>
 <?php get_footer(); ?>

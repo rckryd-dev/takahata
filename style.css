@@ -308,6 +308,9 @@ Text Domain: takahata
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
+  .mt-16\.5 {
+    margin-top: calc(var(--spacing) * 16.5);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
@@ -322,6 +325,9 @@ Text Domain: takahata
   }
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
+  }
+  .mr-auto {
+    margin-right: auto;
   }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
@@ -382,6 +388,9 @@ Text Domain: takahata
   }
   .w-37\.5 {
     width: calc(var(--spacing) * 37.5);
+  }
+  .w-116 {
+    width: calc(var(--spacing) * 116);
   }
   .w-full {
     width: 100%;
@@ -482,8 +491,18 @@ Text Domain: takahata
     }
   }
   @media (width < 48rem) {
+    .max-md\:mb-20 {
+      margin-bottom: calc(var(--spacing) * 20);
+    }
+  }
+  @media (width < 48rem) {
     .max-md\:hidden {
       display: none;
+    }
+  }
+  @media (width < 48rem) {
+    .max-md\:h-20 {
+      height: calc(var(--spacing) * 20);
     }
   }
   @media (width < 48rem) {
@@ -567,6 +586,11 @@ Text Domain: takahata
     }
   }
   @media (width >= 48rem) {
+    .md\:ml-0 {
+      margin-left: calc(var(--spacing) * 0);
+    }
+  }
+  @media (width >= 48rem) {
     .md\:flex {
       display: flex;
     }
@@ -579,6 +603,11 @@ Text Domain: takahata
   @media (width >= 48rem) {
     .md\:h-200 {
       height: calc(var(--spacing) * 200);
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:w-91\.25 {
+      width: calc(var(--spacing) * 91.25);
     }
   }
   @media (width >= 48rem) {
@@ -4625,6 +4654,29 @@ Text Domain: takahata
   .p-service#service-car {
     background-image: url('assets/img/car-ornament.svg');
   }
+  .p-service#service-maintenance {
+    background-size: 55.625rem auto;
+    background-position: top 27rem right -12.75rem;
+    background-repeat: no-repeat;
+  }
+  @media (width < 48rem) {
+    .p-service#service-maintenance {
+      background-size: 37.6875rem auto;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-maintenance {
+      background-position: top 28rem right -13rem;
+    }
+  }
+  .p-service#service-maintenance {
+    background-image: url('assets/img/tire-ornament.svg');
+  }
+  .p-service#service-maintenance .slide-bg-text__item span {
+    font-size: 1.625rem;
+    --tw-tracking: -.05em;
+    letter-spacing: -.05em;
+  }
   .p-service .anchor ul {
     margin-inline: auto;
     width: fit-content;
@@ -4854,36 +4906,36 @@ Text Domain: takahata
       right: calc(var(--spacing) * 0);
     }
   }
-  .p-service .car-top {
+  .p-service .car-top, .p-service .maintenance-top {
     padding-top: calc(var(--spacing) * 20);
     padding-bottom: calc(var(--spacing) * 32.5);
     text-align: center;
   }
   @media (width < 48rem) {
-    .p-service .car-top {
+    .p-service .car-top, .p-service .maintenance-top {
       padding-top: calc(var(--spacing) * 25.5);
     }
   }
   @media (width < 48rem) {
-    .p-service .car-top {
+    .p-service .car-top, .p-service .maintenance-top {
       padding-bottom: calc(var(--spacing) * 26.25);
     }
   }
-  .p-service .car-new, .p-service .car-used {
+  .p-service .car-new, .p-service .car-used, .p-service .maintenance {
     background-color: var(--color-primary);
     padding-top: calc(var(--spacing) * 24.5);
     padding-bottom: calc(var(--spacing) * 18);
   }
   @media (width < 48rem) {
-    .p-service .car-new, .p-service .car-used {
+    .p-service .car-new, .p-service .car-used, .p-service .maintenance {
       padding-top: calc(var(--spacing) * 20);
     }
   }
-  .p-service .car-new .wrapper, .p-service .car-used .wrapper {
+  .p-service .car-new .wrapper, .p-service .car-used .wrapper, .p-service .maintenance .wrapper {
     margin-inline: auto;
     max-width: calc(var(--spacing) * 325);
   }
-  .p-service [data-bg-color="black"] {
+  .p-service .car-used, .p-service .maintenance {
     background-color: var(--color-black);
   }
   .p-posts {
