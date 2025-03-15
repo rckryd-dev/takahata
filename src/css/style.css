@@ -68,6 +68,7 @@
 
   @import "./pages/home.css";
   @import "./pages/about.css";
+  @import "./pages/services.css";
   @import "./pages/service.css";
   @import "./pages/posts.css";
   @import "./pages/post.css";
