@@ -13,13 +13,13 @@ get_header();
       ['label' => 'サービス']
     ],
     'menu_items' => [
-        '車販売' => ['url' => '#', 'target' => ''],
-        '整備' => ['url' => '#', 'target' => ''],
-        '保険' => ['url' => '#', 'target' => ''],
-        'リース' => ['url' => '#', 'target' => ''],
-        'コーティング' => ['url' => '#', 'target' => ''],
-        '車検' => ['url' => '#', 'target' => ''],
-        'パーツ販売' => ['url' => '#', 'target' => '']
+        '車販売' => ['url' => home_url() . '/service/car', 'target' => ''],
+        '整備' => ['url' => home_url() . '/service/maintenance', 'target' => ''],
+        '保険' => ['url' => home_url() . '/service/insurance', 'target' => ''],
+        'リース' => ['url' => home_url() . '/service/lease', 'target' => ''],
+        'コーティング' => ['url' => home_url() . '/service/coating', 'target' => ''],
+        '車検' => ['url' => home_url() . '/service/mot', 'target' => ''],
+        'パーツ販売' => ['url' => home_url() . '/service/parts', 'target' => '']
     ]
   ]);
   ?>
