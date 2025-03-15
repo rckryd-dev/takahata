@@ -4899,6 +4899,7 @@ Text Domain: takahata
     border-radius: .1875rem;
     background-color: var(--color-primary);
     padding-inline: calc(var(--spacing) * 3.25);
+    padding-block: calc(var(--spacing) * 2);
   }
   .p-service .grid-list > * > div img {
     width: calc(var(--spacing) * 15);
@@ -4939,7 +4940,7 @@ Text Domain: takahata
   .p-service section#car-new {
     background-color: var(--color-primary);
   }
-  .p-service section#insurance {
+  .p-service section#insurance, .p-service section#parts {
     background-color: var(--color-black);
   }
   .p-service#service-car {
@@ -5032,7 +5033,7 @@ Text Domain: takahata
   }
   .p-service#service-mot {
     background-size: 65.3125rem auto;
-    background-position: top 16.5rem right 1rem;
+    background-position: top 22rem right 1rem;
     background-repeat: no-repeat;
   }
   @media (width < 48rem) {
@@ -5059,12 +5060,20 @@ Text Domain: takahata
       letter-spacing: -.05em;
     }
   }
+  .p-service#service-mot .p-service__top {
+    padding-top: calc(var(--spacing) * 42);
+  }
+  @media (width < 48rem) {
+    .p-service#service-mot .p-service__top {
+      padding-top: calc(var(--spacing) * 26);
+    }
+  }
   .p-service#service-mot .point-list img {
     width: calc(var(--spacing) * 70.75);
   }
   .p-service#service-parts {
-    background-size: 65.3125rem auto;
-    background-position: top 16.5rem right 1rem;
+    background-size: 63.5625rem auto;
+    background-position: top 12rem left -11rem;
     background-repeat: no-repeat;
   }
   @media (width < 48rem) {
@@ -5074,7 +5083,7 @@ Text Domain: takahata
   }
   @media (width < 48rem) {
     .p-service#service-parts {
-      background-position: top 24rem right -22rem;
+      background-position: top 7rem left -15rem;
     }
   }
   .p-service#service-parts {
@@ -5093,6 +5102,34 @@ Text Domain: takahata
   }
   .p-service#service-parts .grid-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: calc(var(--spacing) * 9);
+    row-gap: calc(var(--spacing) * 5);
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts .grid-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts .grid-list {
+      column-gap: calc(var(--spacing) * 5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts .grid-list {
+      row-gap: calc(var(--spacing) * 3);
+    }
+  }
+  .p-service#service-parts .p-service__top {
+    padding-top: calc(var(--spacing) * 42);
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts .p-service__top {
+      padding-top: calc(var(--spacing) * 12);
+    }
+  }
+  .p-service#service-parts section#parts {
+    padding-bottom: calc(var(--spacing) * 41);
   }
   .p-posts {
     background-size: 63rem auto;

@@ -60,7 +60,7 @@
       }
 
       > div {
-        @apply bg-primary flex gap-5.5 items-center px-3.25 rounded-[.1875rem];
+        @apply bg-primary flex gap-5.5 items-center px-3.25 py-2 rounded-[.1875rem];
         img {
           @apply w-15;
         }
@@ -86,7 +86,8 @@
   section#car-new {
     @apply bg-primary;
   }
-  section#insurance {
+  section#insurance,
+  section#parts {
     @apply bg-black;
   }
 
@@ -135,13 +136,17 @@
   }
 
   &#service-mot {
-    @apply bg-no-repeat bg-[65.3125rem_auto] bg-[top_16.5rem_right_1rem] max-md:bg-[top_24rem_right_-22rem] max-md:bg-[58rem_auto];
+    @apply bg-no-repeat bg-[65.3125rem_auto] bg-[top_22rem_right_1rem] max-md:bg-[top_24rem_right_-22rem] max-md:bg-[58rem_auto];
     background-image: url('assets/img/car-inspect-ornament.svg');
 
     .slide-bg-text__item {
       span{
         @apply max-md:text-[1.625rem] max-md:tracking-[-.05em];
       }
+    }
+
+    .p-service__top {
+      @apply pt-42 max-md:pt-26;
     }
 
     .point-list {
@@ -152,7 +157,7 @@
   }
   
   &#service-parts {
-    @apply bg-no-repeat bg-[65.3125rem_auto] bg-[top_16.5rem_right_1rem] max-md:bg-[top_24rem_right_-22rem] max-md:bg-[58rem_auto];
+    @apply bg-no-repeat bg-[63.5625rem_auto] bg-[top_12rem_left_-11rem] max-md:bg-[top_7rem_left_-15rem] max-md:bg-[58rem_auto];
     background-image: url('assets/img/speed-ornament.svg');
 
     .slide-bg-text__item {
@@ -162,7 +167,15 @@
     }
 
     .grid-list {
-      @apply grid-cols-3;
+      @apply grid-cols-3 max-md:grid-cols-2 gap-x-9 gap-y-5 max-md:gap-x-5 max-md:gap-y-3;
+    }
+
+    .p-service__top {
+      @apply pt-42 max-md:pt-12;
+    }
+
+    section#parts {
+      @apply pb-41;
     }
   }
 }

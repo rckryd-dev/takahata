@@ -199,7 +199,7 @@ function initAnimations() {
       opacity: 0,
       y: 8,
       duration: 2,
-      stagger: 0.2,
+      stagger: 0.1,
       ease: "power3.out",
       scrollTrigger: {
           trigger: ".fadeUpStag",
