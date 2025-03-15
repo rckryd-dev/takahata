@@ -42,7 +42,7 @@
   @apply max-w-237.5 mx-auto mt-7.5 max-md:mt-5 px-6.25;
 
   ul {
-    @apply flex justify-center flex-wrap gap-13 gap-x-7.25 gap-y-6.5 relative bg-primary text-white py-6.25 rounded-[6rem] px-16 max-md:max-w-145 mx-auto;
+    @apply flex justify-center flex-wrap gap-13 gap-x-7.25 gap-y-6.5 relative bg-primary text-white py-4.5 rounded-[6rem] px-16 max-md:max-w-145 mx-auto;
 
     li {
       a {

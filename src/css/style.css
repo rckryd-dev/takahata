@@ -25,7 +25,7 @@
   }
 
   main {
-    @apply bg-black mb-231.75 md:mb-126.25 relative;
+    @apply bg-black mb-230 md:mb-126.25 relative;
 
     &::before {
       @apply content-[''] absolute top-full left-[-1px] w-36.5 h-36.5;

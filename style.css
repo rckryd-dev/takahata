@@ -491,11 +491,6 @@ Text Domain: takahata
     }
   }
   @media (width < 48rem) {
-    .max-md\:mb-20 {
-      margin-bottom: calc(var(--spacing) * 20);
-    }
-  }
-  @media (width < 48rem) {
     .max-md\:hidden {
       display: none;
     }
@@ -676,7 +671,7 @@ Text Domain: takahata
   }
   main {
     position: relative;
-    margin-bottom: calc(var(--spacing) * 231.75);
+    margin-bottom: calc(var(--spacing) * 230);
     background-color: var(--color-black);
   }
   @media (width >= 48rem) {
@@ -1517,7 +1512,7 @@ Text Domain: takahata
     border-radius: 6rem;
     background-color: var(--color-primary);
     padding-inline: calc(var(--spacing) * 16);
-    padding-block: calc(var(--spacing) * 6.25);
+    padding-block: calc(var(--spacing) * 4.5);
     color: var(--color-white);
   }
   @media (width < 48rem) {
@@ -4641,42 +4636,6 @@ Text Domain: takahata
       border-radius: .9375rem;
     }
   }
-  .p-service#service-car {
-    background-size: 85.625rem auto;
-    background-position: top 24rem right -11.75rem;
-    background-repeat: no-repeat;
-  }
-  @media (width < 48rem) {
-    .p-service#service-car {
-      background-position: top 23rem right -35.5rem;
-    }
-  }
-  .p-service#service-car {
-    background-image: url('assets/img/car-ornament.svg');
-  }
-  .p-service#service-maintenance {
-    background-size: 55.625rem auto;
-    background-position: top 27rem right -12.75rem;
-    background-repeat: no-repeat;
-  }
-  @media (width < 48rem) {
-    .p-service#service-maintenance {
-      background-size: 37.6875rem auto;
-    }
-  }
-  @media (width < 48rem) {
-    .p-service#service-maintenance {
-      background-position: top 28rem right -13rem;
-    }
-  }
-  .p-service#service-maintenance {
-    background-image: url('assets/img/tire-ornament.svg');
-  }
-  .p-service#service-maintenance .slide-bg-text__item span {
-    font-size: 1.625rem;
-    --tw-tracking: -.05em;
-    letter-spacing: -.05em;
-  }
   .p-service .anchor ul {
     margin-inline: auto;
     width: fit-content;
@@ -4810,7 +4769,7 @@ Text Domain: takahata
     -webkit-text-fill-color: transparent;
   }
   .p-service .point-list__desc {
-    max-width: calc(var(--spacing) * 185);
+    max-width: calc(var(--spacing) * 184);
     padding-top: calc(var(--spacing) * 2);
   }
   @media (width < 48rem) {
@@ -4906,37 +4865,191 @@ Text Domain: takahata
       right: calc(var(--spacing) * 0);
     }
   }
-  .p-service .car-top, .p-service .maintenance-top {
+  .p-service .grid-list {
+    margin-inline: auto;
+    margin-top: calc(var(--spacing) * 18);
+    display: grid;
+    max-width: calc(var(--spacing) * 270);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: calc(var(--spacing) * 6.5);
+    row-gap: calc(var(--spacing) * 8);
+  }
+  @media (width < 48rem) {
+    .p-service .grid-list {
+      margin-top: calc(var(--spacing) * 15);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .grid-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .grid-list {
+      padding-inline: calc(var(--spacing) * 7.5);
+    }
+  }
+  .p-service .grid-list > * {
+    aspect-ratio: 250/64;
+  }
+  .p-service .grid-list > * img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .p-service__top {
     padding-top: calc(var(--spacing) * 20);
     padding-bottom: calc(var(--spacing) * 32.5);
     text-align: center;
   }
   @media (width < 48rem) {
-    .p-service .car-top, .p-service .maintenance-top {
+    .p-service__top {
       padding-top: calc(var(--spacing) * 25.5);
     }
   }
   @media (width < 48rem) {
-    .p-service .car-top, .p-service .maintenance-top {
+    .p-service__top {
       padding-bottom: calc(var(--spacing) * 26.25);
     }
   }
-  .p-service .car-new, .p-service .car-used, .p-service .maintenance {
-    background-color: var(--color-primary);
+  .p-service section.style-01 {
     padding-top: calc(var(--spacing) * 24.5);
     padding-bottom: calc(var(--spacing) * 18);
   }
   @media (width < 48rem) {
-    .p-service .car-new, .p-service .car-used, .p-service .maintenance {
+    .p-service section.style-01 {
       padding-top: calc(var(--spacing) * 20);
     }
   }
-  .p-service .car-new .wrapper, .p-service .car-used .wrapper, .p-service .maintenance .wrapper {
+  .p-service section.style-01 .wrapper {
     margin-inline: auto;
     max-width: calc(var(--spacing) * 325);
   }
-  .p-service .car-used, .p-service .maintenance {
+  .p-service section#car-new {
+    background-color: var(--color-primary);
+  }
+  .p-service section#insurance {
     background-color: var(--color-black);
+  }
+  .p-service#service-car {
+    background-size: 85.625rem auto;
+    background-position: top 24rem right -11.75rem;
+    background-repeat: no-repeat;
+  }
+  @media (width < 48rem) {
+    .p-service#service-car {
+      background-position: top 23rem right -35.5rem;
+    }
+  }
+  .p-service#service-car {
+    background-image: url('assets/img/car-ornament.svg');
+  }
+  .p-service#service-maintenance {
+    background-size: 55.625rem auto;
+    background-position: top 27rem right -12.75rem;
+    background-repeat: no-repeat;
+  }
+  @media (width < 48rem) {
+    .p-service#service-maintenance {
+      background-size: 37.6875rem auto;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-maintenance {
+      background-position: top 28rem right -13rem;
+    }
+  }
+  .p-service#service-maintenance {
+    background-image: url('assets/img/tire-ornament.svg');
+  }
+  @media (width < 48rem) {
+    .p-service#service-maintenance .slide-bg-text__item span {
+      font-size: 1.625rem;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-maintenance .slide-bg-text__item span {
+      --tw-tracking: -.05em;
+      letter-spacing: -.05em;
+    }
+  }
+  .p-service#service-insurance {
+    background-size: 68.375rem auto;
+    background-position: top 28rem right -13rem;
+    background-repeat: no-repeat;
+  }
+  @media (width < 48rem) {
+    .p-service#service-insurance {
+      background-position: top 23rem right -35.5rem;
+    }
+  }
+  .p-service#service-insurance {
+    background-image: url('assets/img/circle-ornament.png');
+  }
+  @media (width < 48rem) {
+    .p-service#service-insurance .slide-bg-text__item span {
+      font-size: 1.5rem;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-insurance .slide-bg-text__item span {
+      --tw-tracking: -.05em;
+      letter-spacing: -.05em;
+    }
+  }
+  .p-service#service-insurance .point-list img {
+    width: calc(var(--spacing) * 58);
+  }
+  @media (width >= 48rem) {
+    .p-service#service-insurance .point-list__item {
+      padding-bottom: calc(var(--spacing) * 30);
+    }
+  }
+  .p-service#service-insurance section#insurance {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-color: var(--color-white);
+    padding-bottom: calc(var(--spacing) * 0);
+  }
+  .p-service#service-insurance section#insurance-handling {
+    padding-bottom: calc(var(--spacing) * 25.5);
+  }
+  @media (width < 48rem) {
+    .p-service#service-insurance section#insurance-handling {
+      padding-bottom: calc(var(--spacing) * 43);
+    }
+  }
+  .p-service#service-mot {
+    background-size: 65.3125rem auto;
+    background-position: top 16.5rem right 1rem;
+    background-repeat: no-repeat;
+  }
+  @media (width < 48rem) {
+    .p-service#service-mot {
+      background-size: 58rem auto;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-mot {
+      background-position: top 24rem right -22rem;
+    }
+  }
+  .p-service#service-mot {
+    background-image: url('assets/img/car-inspect-ornament.svg');
+  }
+  @media (width < 48rem) {
+    .p-service#service-mot .slide-bg-text__item span {
+      font-size: 1.625rem;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-mot .slide-bg-text__item span {
+      --tw-tracking: -.05em;
+      letter-spacing: -.05em;
+    }
+  }
+  .p-service#service-mot .point-list img {
+    width: calc(var(--spacing) * 70.75);
   }
   .p-posts {
     background-size: 63rem auto;

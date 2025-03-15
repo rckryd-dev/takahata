@@ -19,7 +19,7 @@ get_header();
   ]);
   ?>
 
-  <section data-bg-color="black" class="maintenance-top">
+  <section data-bg-color="black" class="p-service__top">
     <div class="wrapper">
       <div class="slide-bg-text">
         <div class="slide-bg-text__item mx-auto">
@@ -35,9 +35,9 @@ get_header();
     </div>
   </section>
 
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-maintenance-banner.jpg" alt="">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-maintenance-banner.jpg" class="w-full">
 
-  <section data-bg-color="black" class="maintenance" id="maintenance">
+  <section data-bg-color="black" class="style-01" id="maintenance">
     <div class="wrapper">
       <div class="sc-title fadeUp">
 

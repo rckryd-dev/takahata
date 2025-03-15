@@ -1,20 +1,4 @@
 .p-service {
-  &#service-car {
-    @apply bg-no-repeat bg-[85.625rem_auto] bg-[top_24rem_right_-11.75rem] max-md:bg-[top_23rem_right_-35.5rem];
-    background-image: url('assets/img/car-ornament.svg');
-  }
-  
-  &#service-maintenance {
-    @apply bg-no-repeat bg-[55.625rem_auto] bg-[top_27rem_right_-12.75rem] max-md:bg-[top_28rem_right_-13rem] max-md:bg-[37.6875rem_auto];
-    background-image: url('assets/img/tire-ornament.svg');
-
-    .slide-bg-text__item {
-      span{
-        @apply text-[1.625rem] tracking-[-.05em];
-      }
-    }
-  }
-
   .anchor {
     ul {
       @apply w-fit mx-auto;
@@ -51,7 +35,7 @@
     }
 
     &__desc {
-      @apply max-w-185 pt-2 max-md:row-start-3 max-md:row-end-4 max-md:text-center max-md:pt-3;
+      @apply max-w-184 pt-2 max-md:row-start-3 max-md:row-end-4 max-md:text-center max-md:pt-3;
 
       h3 {
         @apply font-black text-[2.25rem] tracking-[-.04em] leading-[1.18] max-md:text-[2.375rem];
@@ -67,23 +51,95 @@
     }
   }
 
-  .car-top,
-  .maintenance-top {
+  .grid-list {
+    @apply grid gap-y-8 gap-x-6.5 grid-cols-4 max-md:grid-cols-2 mt-18 max-md:mt-15 max-w-270 mx-auto max-md:px-7.5;
+
+    > * {
+      @apply aspect-250/64;
+
+      img {
+        @apply w-full h-full object-contain;
+      }
+    }
+  }
+
+  &__top {
     @apply pt-20 pb-32.5 max-md:pt-25.5 max-md:pb-26.25 text-center;
   }
 
-  .car-new,
-  .car-used,
-  .maintenance {
-    @apply bg-primary pt-24.5 pb-18 max-md:pt-20;
+  section.style-01 {
+    @apply pt-24.5 pb-18 max-md:pt-20;
 
     .wrapper {
       @apply max-w-325 mx-auto;
     }
   }
 
-  .car-used,
-  .maintenance {
+  section#car-new {
+    @apply bg-primary;
+  }
+  section#insurance {
     @apply bg-black;
+  }
+
+  &#service-car {
+    @apply bg-no-repeat bg-[85.625rem_auto] bg-[top_24rem_right_-11.75rem] max-md:bg-[top_23rem_right_-35.5rem];
+    background-image: url('assets/img/car-ornament.svg');
+  }
+  
+  &#service-maintenance {
+    @apply bg-no-repeat bg-[55.625rem_auto] bg-[top_27rem_right_-12.75rem] max-md:bg-[top_28rem_right_-13rem] max-md:bg-[37.6875rem_auto];
+    background-image: url('assets/img/tire-ornament.svg');
+
+    .slide-bg-text__item {
+      span{
+        @apply max-md:text-[1.625rem] max-md:tracking-[-.05em];
+      }
+    }
+  }
+
+  &#service-insurance {
+    @apply bg-no-repeat bg-[68.375rem_auto] bg-[top_28rem_right_-13rem] max-md:bg-[top_23rem_right_-35.5rem];
+    background-image: url('assets/img/circle-ornament.png');
+
+    .slide-bg-text__item {
+      span{
+        @apply max-md:text-[1.5rem] max-md:tracking-[-.05em];
+      }
+    }
+
+    .point-list {
+      img {
+        @apply w-58;
+      }
+
+      &__item {
+        @apply md:pb-30;
+      }
+    } 
+
+    section#insurance {
+      @apply pb-0 border-b border-white;
+    }
+    section#insurance-handling {
+      @apply pb-25.5 max-md:pb-43;
+    }
+  }
+
+  &#service-mot {
+    @apply bg-no-repeat bg-[65.3125rem_auto] bg-[top_16.5rem_right_1rem] max-md:bg-[top_24rem_right_-22rem] max-md:bg-[58rem_auto];
+    background-image: url('assets/img/car-inspect-ornament.svg');
+
+    .slide-bg-text__item {
+      span{
+        @apply max-md:text-[1.625rem] max-md:tracking-[-.05em];
+      }
+    }
+
+    .point-list {
+      img {
+        @apply w-70.75;
+      }
+    } 
   }
 }

@@ -20,7 +20,7 @@ get_header();
   ]);
   ?>
 
-  <section data-bg-color="black" class="car-top">
+  <section data-bg-color="black" class="p-service__top">
     <div class="wrapper">
       <div class="slide-bg-text">
         <div class="slide-bg-text__item mx-auto">
@@ -41,9 +41,9 @@ get_header();
     </div>
   </section>
 
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-car-banner.jpg" alt="">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-mot-banner.jpg" class="w-full">
 
-  <section data-bg-color="yellow" class="car-new" id="car-new">
+  <section data-bg-color="yellow" class="style-01" id="car-new">
     <div class="wrapper">
       <div class="sc-title fadeUp">
 
@@ -104,7 +104,7 @@ get_header();
     </div>
   </section>
 
-  <section data-bg-color="black" class="car-used" id="car-used">
+  <section data-bg-color="black" class="style-01" id="car-used">
     <div class="wrapper">
       <div class="sc-title fadeUp">
 
