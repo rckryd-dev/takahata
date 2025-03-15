@@ -52,13 +52,21 @@
   }
 
   .grid-list {
-    @apply grid gap-y-8 gap-x-6.5 grid-cols-4 max-md:grid-cols-2 mt-18 max-md:mt-15 max-w-270 mx-auto max-md:px-7.5;
+    @apply grid gap-y-8 gap-x-6.5 grid-cols-4 max-md:grid-cols-2 max-w-270 mx-auto max-md:px-7.5;
 
     > * {
-      @apply aspect-250/64;
+      > img {
+        @apply w-full aspect-250/64;
+      }
 
-      img {
-        @apply w-full h-full object-contain;
+      > div {
+        @apply bg-primary flex gap-5.5 items-center px-3.25 rounded-[.1875rem];
+        img {
+          @apply w-15;
+        }
+        p {
+          @apply text-[1.3125rem] font-medium;
+        }
       }
     }
   }
@@ -141,5 +149,20 @@
         @apply w-70.75;
       }
     } 
+  }
+  
+  &#service-parts {
+    @apply bg-no-repeat bg-[65.3125rem_auto] bg-[top_16.5rem_right_1rem] max-md:bg-[top_24rem_right_-22rem] max-md:bg-[58rem_auto];
+    background-image: url('assets/img/speed-ornament.svg');
+
+    .slide-bg-text__item {
+      span{
+        @apply max-md:text-[1.625rem] max-md:tracking-[-.05em];
+      }
+    }
+
+    .grid-list {
+      @apply grid-cols-3;
+    }
   }
 }

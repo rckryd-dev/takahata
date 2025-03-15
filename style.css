@@ -546,6 +546,11 @@ Text Domain: takahata
     }
   }
   @media (width >= 48rem) {
+    .md\:mt-18 {
+      margin-top: calc(var(--spacing) * 18);
+    }
+  }
+  @media (width >= 48rem) {
     .md\:mt-19 {
       margin-top: calc(var(--spacing) * 19);
     }
@@ -4867,17 +4872,11 @@ Text Domain: takahata
   }
   .p-service .grid-list {
     margin-inline: auto;
-    margin-top: calc(var(--spacing) * 18);
     display: grid;
     max-width: calc(var(--spacing) * 270);
     grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: calc(var(--spacing) * 6.5);
     row-gap: calc(var(--spacing) * 8);
-  }
-  @media (width < 48rem) {
-    .p-service .grid-list {
-      margin-top: calc(var(--spacing) * 15);
-    }
   }
   @media (width < 48rem) {
     .p-service .grid-list {
@@ -4889,13 +4888,25 @@ Text Domain: takahata
       padding-inline: calc(var(--spacing) * 7.5);
     }
   }
-  .p-service .grid-list > * {
+  .p-service .grid-list > * > img {
     aspect-ratio: 250/64;
-  }
-  .p-service .grid-list > * img {
-    height: 100%;
     width: 100%;
-    object-fit: contain;
+  }
+  .p-service .grid-list > * > div {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 5.5);
+    border-radius: .1875rem;
+    background-color: var(--color-primary);
+    padding-inline: calc(var(--spacing) * 3.25);
+  }
+  .p-service .grid-list > * > div img {
+    width: calc(var(--spacing) * 15);
+  }
+  .p-service .grid-list > * > div p {
+    font-size: 1.3125rem;
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
   }
   .p-service__top {
     padding-top: calc(var(--spacing) * 20);
@@ -5050,6 +5061,38 @@ Text Domain: takahata
   }
   .p-service#service-mot .point-list img {
     width: calc(var(--spacing) * 70.75);
+  }
+  .p-service#service-parts {
+    background-size: 65.3125rem auto;
+    background-position: top 16.5rem right 1rem;
+    background-repeat: no-repeat;
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts {
+      background-size: 58rem auto;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts {
+      background-position: top 24rem right -22rem;
+    }
+  }
+  .p-service#service-parts {
+    background-image: url('assets/img/speed-ornament.svg');
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts .slide-bg-text__item span {
+      font-size: 1.625rem;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-parts .slide-bg-text__item span {
+      --tw-tracking: -.05em;
+      letter-spacing: -.05em;
+    }
+  }
+  .p-service#service-parts .grid-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .p-posts {
     background-size: 63rem auto;

@@ -192,6 +192,22 @@ function initAnimations() {
   fadeUpAnimation();
   
   document.addEventListener("DOMContentLoaded", fadeUpAnimation);
+ 
+  // **Animate: Fade Up Stag**
+  if (document.querySelector(".fadeUpStag")) {
+    gsap.from(".fadeUpStag", {
+      opacity: 0,
+      y: 8,
+      duration: 2,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+          trigger: ".fadeUpStag",
+          start: "top 80%",
+          toggleActions: "play none none none"
+        }
+    });
+  }
 
   // Animate: Slide BG Text
   gsap.utils.toArray(".slide-bg-text").forEach((element) => {

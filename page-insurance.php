@@ -102,29 +102,29 @@ get_header();
         <p>取扱い保険</p>
       </div>
 
-      <div class="grid-list">
-        <div>
+      <div class="grid-list mt-15 md:mt-18">
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
-        <div>
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
-        <div>
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
-        <div>
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
-        <div>
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
-        <div>
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
-        <div>
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
-        <div>
+        <div class="fadeUpStag">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder-2.svg">
         </div>
       </div>
