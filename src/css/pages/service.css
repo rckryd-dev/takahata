@@ -15,6 +15,44 @@
     }
   }
 
+  .main-card {
+    @apply bg-white text-black-light max-w-270 mx-auto pt-12.5 pb-16 rounded-[1.875rem] text-lg font-medium leading-[1.78] max-md:text-[1.3125rem] max-md:leading-[1.52];
+  
+    &__btn {
+      @apply border border-primary text-primary w-84 h-13.5 grid place-content-center font-bold rounded-4xl mx-auto hover:bg-primary hover:text-white transition-all duration-200;
+    }
+
+    &__top {
+      @apply flex gap-18 items-center px-21;
+      img {
+        @apply w-69;
+      }
+      
+      &__text {
+        h3 {
+          @apply text-[1.875rem] font-black max-md:text-[2rem];
+        }
+
+        p {
+          @apply mt-2; 
+        }
+      }
+    }
+
+    &__bottom {
+      @apply grid grid-cols-2 text-center mt-11.5;
+
+      &__left,
+      &__right {
+        @apply pt-4.5 pb-11;
+      }
+
+      &__right {
+        @apply border-l border-primary;
+      }
+    }
+  }
+
   .point-list {
 
     &__item {
@@ -71,6 +109,41 @@
     }
   }
 
+  .slide-list {
+    @apply mt-13;
+    
+    .splide__slide {
+      @apply !w-104.25;
+    }
+    
+    &__item {
+
+      &__img {
+        @apply relative;
+        img {
+          @apply rounded-[2.8125rem];
+        }
+        span {
+          @apply absolute inline-block font-bebas text-[5rem] bottom-3 right-5 leading-[1];
+          -webkit-text-stroke: .0625rem var(--color-white);
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &__desc {
+        @apply mt-6.5;
+
+        div {
+          @apply bg-primary rounded-4xl text-lg text-center font-medium py-3.25;
+        }
+
+        p {
+          @apply text-lg mt-24 text-center;
+        }
+      }
+    }
+  }
+
   &__top {
     @apply pt-20 pb-32.5 max-md:pt-25.5 max-md:pb-26.25 text-center;
   }
@@ -83,7 +156,8 @@
     }
   }
 
-  section#car-new {
+  section#car-new,
+  section#lease {
     @apply bg-primary;
   }
   section#insurance,
@@ -132,6 +206,19 @@
     }
     section#insurance-handling {
       @apply pb-25.5 max-md:pb-43;
+    }
+  }
+
+  &#service-lease {
+    @apply bg-no-repeat bg-[79.8125rem_auto] bg-[top_37rem_right_-13rem] max-md:bg-[top_23rem_right_-35.5rem];
+    background-image: url('assets/img/car-2-ornament.svg');
+
+    section#lease {
+      @apply pb-32;
+    }
+
+    section#lease-cars {
+      @apply pt-1.5 pb-52 max-md:pb-28;
     }
   }
 

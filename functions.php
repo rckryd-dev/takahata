@@ -85,7 +85,7 @@ function custom_theme_enqueue_scripts() {
         return $tag;
     }, 10, 2);
 
-    if (is_page(array('about', 'service')) || is_single()) {
+    if (is_page(array('about', 'service', 'lease')) || is_single()) {
         wp_enqueue_style(
             'splide-css',
             'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css',

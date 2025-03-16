@@ -41,6 +41,7 @@ Text Domain: takahata
     --font-bebas: "Bebas Neue", sans-serif;
     --default-font-family: var(--font-kozuka-gothic);
     --color-black-dark: #191919;
+    --color-black-light: #3E3A39;
     --color-primary: #A7A04F;
     --color-primary-light: #DEDC78;
     --color-secondary: #FFCE00;
@@ -287,8 +288,14 @@ Text Domain: takahata
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
+  .mt-7 {
+    margin-top: calc(var(--spacing) * 7);
+  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-9 {
+    margin-top: calc(var(--spacing) * 9);
   }
   .mt-9\.5 {
     margin-top: calc(var(--spacing) * 9.5);
@@ -311,8 +318,14 @@ Text Domain: takahata
   .mt-16\.5 {
     margin-top: calc(var(--spacing) * 16.5);
   }
+  .mt-17 {
+    margin-top: calc(var(--spacing) * 17);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-27 {
+    margin-top: calc(var(--spacing) * 27);
   }
   .mt-27\.75 {
     margin-top: calc(var(--spacing) * 27.75);
@@ -392,6 +405,9 @@ Text Domain: takahata
   .w-116 {
     width: calc(var(--spacing) * 116);
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
   }
@@ -431,9 +447,15 @@ Text Domain: takahata
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-primary {
+    border-color: var(--color-primary);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -447,6 +469,12 @@ Text Domain: takahata
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .px-7 {
+    padding-inline: calc(var(--spacing) * 7);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
   }
@@ -458,6 +486,10 @@ Text Domain: takahata
   }
   .text-center {
     text-align: center;
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -485,9 +517,33 @@ Text Domain: takahata
     transition-timing-function: var(--tw-ease, ease);
     transition-duration: var(--tw-duration, 0s);
   }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, ease);
+    transition-duration: var(--tw-duration, 0s);
+  }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  @media (hover: hover) {
+    .hover\:bg-primary:hover {
+      background-color: var(--color-primary);
+    }
+  }
+  @media (hover: hover) {
+    .hover\:text-white:hover {
+      color: var(--color-white);
+    }
+  }
   @media (width < 48rem) {
     .max-md\:mb-14\.5 {
       margin-bottom: calc(var(--spacing) * 14.5);
+    }
+  }
+  @media (width < 48rem) {
+    .max-md\:ml-7\.5 {
+      margin-left: calc(var(--spacing) * 7.5);
     }
   }
   @media (width < 48rem) {
@@ -531,8 +587,18 @@ Text Domain: takahata
     }
   }
   @media (width >= 48rem) {
+    .md\:mt-11\.5 {
+      margin-top: calc(var(--spacing) * 11.5);
+    }
+  }
+  @media (width >= 48rem) {
     .md\:mt-11\.75 {
       margin-top: calc(var(--spacing) * 11.75);
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:mt-12 {
+      margin-top: calc(var(--spacing) * 12);
     }
   }
   @media (width >= 48rem) {
@@ -2486,6 +2552,11 @@ Text Domain: takahata
     line-height: var(--tw-leading, var(--text-lg--line-height));
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .p-home .home-service .wrapper .service-roll-text ul li a:hover > div:nth-child(1) {
+    -webkit-text-fill-color: var(--color-white);
+    -webkit-text-stroke: 1px var(--color-primary);
+    opacity: .3;
   }
   .p-home .home-service .wrapper .service-roll-text-container {
     pointer-events: none;
@@ -4692,6 +4763,98 @@ Text Domain: takahata
       padding-left: calc(var(--spacing) * 7.5);
     }
   }
+  .p-service .main-card {
+    margin-inline: auto;
+    max-width: calc(var(--spacing) * 270);
+    border-radius: 1.875rem;
+    background-color: var(--color-white);
+    padding-top: calc(var(--spacing) * 12.5);
+    padding-bottom: calc(var(--spacing) * 16);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-leading: 1.78;
+    line-height: 1.78;
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-black-light);
+  }
+  @media (width < 48rem) {
+    .p-service .main-card {
+      font-size: 1.3125rem;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card {
+      --tw-leading: 1.52;
+      line-height: 1.52;
+    }
+  }
+  .p-service .main-card__btn {
+    margin-inline: auto;
+    display: grid;
+    height: calc(var(--spacing) * 13.5);
+    width: calc(var(--spacing) * 84);
+    place-content: center;
+    border-radius: var(--radius-4xl);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-primary);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, ease);
+    transition-duration: var(--tw-duration, 0s);
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  @media (hover: hover) {
+    .p-service .main-card__btn:hover {
+      background-color: var(--color-primary);
+    }
+  }
+  @media (hover: hover) {
+    .p-service .main-card__btn:hover {
+      color: var(--color-white);
+    }
+  }
+  .p-service .main-card__top {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 18);
+    padding-inline: calc(var(--spacing) * 21);
+  }
+  .p-service .main-card__top img {
+    width: calc(var(--spacing) * 69);
+  }
+  .p-service .main-card__top__text h3 {
+    font-size: 1.875rem;
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__top__text h3 {
+      font-size: 2rem;
+    }
+  }
+  .p-service .main-card__top__text p {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .p-service .main-card__bottom {
+    margin-top: calc(var(--spacing) * 11.5);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: center;
+  }
+  .p-service .main-card__bottom__left, .p-service .main-card__bottom__right {
+    padding-top: calc(var(--spacing) * 4.5);
+    padding-bottom: calc(var(--spacing) * 11);
+  }
+  .p-service .main-card__bottom__right {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 1px;
+    border-color: var(--color-primary);
+  }
   .p-service .point-list__item {
     position: relative;
     display: grid;
@@ -4909,6 +5072,49 @@ Text Domain: takahata
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .p-service .slide-list {
+    margin-top: calc(var(--spacing) * 13);
+  }
+  .p-service .slide-list .splide__slide {
+    width: calc(var(--spacing) * 104.25) !important;
+  }
+  .p-service .slide-list__item__img {
+    position: relative;
+  }
+  .p-service .slide-list__item__img img {
+    border-radius: 2.8125rem;
+  }
+  .p-service .slide-list__item__img span {
+    position: absolute;
+    right: calc(var(--spacing) * 5);
+    bottom: calc(var(--spacing) * 3);
+    display: inline-block;
+    font-family: var(--font-bebas);
+    font-size: 5rem;
+    --tw-leading: 1;
+    line-height: 1;
+    -webkit-text-stroke: .0625rem var(--color-white);
+    -webkit-text-fill-color: transparent;
+  }
+  .p-service .slide-list__item__desc {
+    margin-top: calc(var(--spacing) * 6.5);
+  }
+  .p-service .slide-list__item__desc div {
+    border-radius: var(--radius-4xl);
+    background-color: var(--color-primary);
+    padding-block: calc(var(--spacing) * 3.25);
+    text-align: center;
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .p-service .slide-list__item__desc p {
+    margin-top: calc(var(--spacing) * 24);
+    text-align: center;
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .p-service__top {
     padding-top: calc(var(--spacing) * 20);
     padding-bottom: calc(var(--spacing) * 32.5);
@@ -4937,7 +5143,7 @@ Text Domain: takahata
     margin-inline: auto;
     max-width: calc(var(--spacing) * 325);
   }
-  .p-service section#car-new {
+  .p-service section#car-new, .p-service section#lease {
     background-color: var(--color-primary);
   }
   .p-service section#insurance, .p-service section#parts {
@@ -5029,6 +5235,31 @@ Text Domain: takahata
   @media (width < 48rem) {
     .p-service#service-insurance section#insurance-handling {
       padding-bottom: calc(var(--spacing) * 43);
+    }
+  }
+  .p-service#service-lease {
+    background-size: 79.8125rem auto;
+    background-position: top 37rem right -13rem;
+    background-repeat: no-repeat;
+  }
+  @media (width < 48rem) {
+    .p-service#service-lease {
+      background-position: top 23rem right -35.5rem;
+    }
+  }
+  .p-service#service-lease {
+    background-image: url('assets/img/car-2-ornament.svg');
+  }
+  .p-service#service-lease section#lease {
+    padding-bottom: calc(var(--spacing) * 32);
+  }
+  .p-service#service-lease section#lease-cars {
+    padding-top: calc(var(--spacing) * 1.5);
+    padding-bottom: calc(var(--spacing) * 52);
+  }
+  @media (width < 48rem) {
+    .p-service#service-lease section#lease-cars {
+      padding-bottom: calc(var(--spacing) * 28);
     }
   }
   .p-service#service-mot {
@@ -6230,6 +6461,10 @@ Text Domain: takahata
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-content {
   syntax: "*";
   inherits: false;
@@ -6240,10 +6475,6 @@ Text Domain: takahata
   inherits: false;
 }
 @property --tw-tracking {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
