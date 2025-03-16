@@ -64,25 +64,25 @@ get_header();
           <div class="main-card__top__text">
             <h3>タカハタのリース事業について</h3>
             <p>
-              弊社は、「CAR FLET’S」の代理店です。<br>新車・中古車問わず様々なお車を取り扱っております。<br>ご利用については注意点がありますので、下記よりご確認ください。
+              弊社は、「CAR FLET’S」の代理店です。<br>新車・中古車問わず様々なお車を取り扱っております。<br>ご利用については注意点がありますので、<br class="md:hidden">下記よりご確認ください。
             </p>
           </div>
         </div>
         <div class="main-card__bottom">
           <div class="main-card__bottom__left">
             <a href="" class="main-card__btn">当社を初めてご利用のお客様名</a>
-            <p class="mt-7">
+            <p class="mt-6 md:mt-7">
               当社を初めてご利用のお客様については、<br><span class="text-primary">新車の軽自動車のみのご利用になります。</span>
             </p>
           </div>
           <div class="main-card__bottom__right">
             <a href="" class="main-card__btn">すでに当社をご利用のお客様</a>
-            <p class="mt-7">
+            <p class="mt-6 md:mt-7">
               すでに当社をご利用のお客様については、<br><span class="text-primary">新車・中古車問わず様々なお車をご利用いただけます。</span>
             </p>
           </div>
         </div>
-        <a class="btn btn--secondary group mx-auto mt-17 md:mt-12" href="">
+        <a class="btn btn--secondary group mx-auto mt-2 md:mt-12" href="">
           <span>VIEW MORE</span>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow.svg" alt="Arrrow" class="-abs">
         </a>
@@ -105,53 +105,6 @@ get_header();
           当社の各種保険に加入いただいているお客様へ向けて、<br>レンタカーの貸し出しを行っております。
           </p>
           <a href="" class="block text-lg font-medium px-7 text-primary border border-primary rounded-lg w-fit py-5 mt-9 md:mt-11.5 max-md:ml-7.5 hover:bg-primary hover:text-white transition-all duration-200">※当社をご利用されている方に限ります。</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section data-bg-color="black" class="style-01" id="lease-cars">
-    <div class="wrapper">
-      <div class="sc-title fadeUp">
-        <h2>CARS</h2>
-        <p>取扱い車種</p>
-      </div>
-
-      <div class="splide slide-list fadeUp">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <div class="slide-list__item">
-                <div class="slide-list__item__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-lease-img-04.jpg" alt="◯◯◯◯◯">
-                </div>
-                <div class="slide-list__item__desc">
-                  <div>レクサス　RX</div>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="slide-list__item">
-                <div class="slide-list__item__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-lease-img-05.jpg" alt="◯◯◯◯◯">
-                </div>
-                <div class="slide-list__item__desc">
-                  <div>アルファード</div>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="slide-list__item">
-                <div class="slide-list__item__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-lease-img-06.jpg" alt="◯◯◯◯◯">
-                </div>
-                <div class="slide-list__item__desc">
-                  <div>メルセデスベンツ　Sクラス</div>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
 

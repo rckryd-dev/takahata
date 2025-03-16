@@ -285,11 +285,11 @@ Text Domain: takahata
   .-mt-80 {
     margin-top: calc(var(--spacing) * -80);
   }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-7 {
-    margin-top: calc(var(--spacing) * 7);
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
@@ -317,9 +317,6 @@ Text Domain: takahata
   }
   .mt-16\.5 {
     margin-top: calc(var(--spacing) * 16.5);
-  }
-  .mt-17 {
-    margin-top: calc(var(--spacing) * 17);
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
@@ -574,6 +571,11 @@ Text Domain: takahata
   @media (width >= 48rem) {
     .md\:pointer-events-none {
       pointer-events: none;
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:mt-7 {
+      margin-top: calc(var(--spacing) * 7);
     }
   }
   @media (width >= 48rem) {
@@ -4780,6 +4782,11 @@ Text Domain: takahata
   }
   @media (width < 48rem) {
     .p-service .main-card {
+      margin-inline: calc(var(--spacing) * 7.5);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card {
       font-size: 1.3125rem;
     }
   }
@@ -4824,8 +4831,28 @@ Text Domain: takahata
     gap: calc(var(--spacing) * 18);
     padding-inline: calc(var(--spacing) * 21);
   }
+  @media (width < 48rem) {
+    .p-service .main-card__top {
+      flex-direction: column;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__top {
+      gap: calc(var(--spacing) * 15);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__top {
+      padding-inline: calc(var(--spacing) * 7.5);
+    }
+  }
   .p-service .main-card__top img {
     width: calc(var(--spacing) * 69);
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__top img {
+      width: calc(var(--spacing) * 97.5);
+    }
   }
   .p-service .main-card__top__text h3 {
     font-size: 1.875rem;
@@ -4840,20 +4867,61 @@ Text Domain: takahata
   .p-service .main-card__top__text p {
     margin-top: calc(var(--spacing) * 2);
   }
+  @media (width < 48rem) {
+    .p-service .main-card__top__text p {
+      margin-top: calc(var(--spacing) * 4);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__top__text p {
+      --tw-tracking: -.04em;
+      letter-spacing: -.04em;
+    }
+  }
   .p-service .main-card__bottom {
     margin-top: calc(var(--spacing) * 11.5);
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     text-align: center;
   }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
   .p-service .main-card__bottom__left, .p-service .main-card__bottom__right {
     padding-top: calc(var(--spacing) * 4.5);
     padding-bottom: calc(var(--spacing) * 11);
   }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom__left, .p-service .main-card__bottom__right {
+      margin-inline: calc(var(--spacing) * 11);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom__left, .p-service .main-card__bottom__right {
+      padding-block: calc(var(--spacing) * 14);
+    }
+  }
   .p-service .main-card__bottom__right {
-    border-left-style: var(--tw-border-style);
-    border-left-width: 1px;
     border-color: var(--color-primary);
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom__right {
+      border-top-style: var(--tw-border-style);
+      border-top-width: 1px;
+    }
+  }
+  @media (width >= 48rem) {
+    .p-service .main-card__bottom__right {
+      border-left-style: var(--tw-border-style);
+      border-left-width: 1px;
+    }
   }
   .p-service .point-list__item {
     position: relative;
@@ -5146,7 +5214,7 @@ Text Domain: takahata
   .p-service section#car-new, .p-service section#lease {
     background-color: var(--color-primary);
   }
-  .p-service section#insurance, .p-service section#parts {
+  .p-service section#insurance, .p-service section#parts, .p-service section#coating {
     background-color: var(--color-black);
   }
   .p-service#service-car {
@@ -5253,12 +5321,65 @@ Text Domain: takahata
   .p-service#service-lease section#lease {
     padding-bottom: calc(var(--spacing) * 32);
   }
+  @media (width < 48rem) {
+    .p-service#service-lease section#lease {
+      padding-bottom: calc(var(--spacing) * 14.5);
+    }
+  }
   .p-service#service-lease section#lease-cars {
     padding-top: calc(var(--spacing) * 1.5);
     padding-bottom: calc(var(--spacing) * 52);
   }
   @media (width < 48rem) {
     .p-service#service-lease section#lease-cars {
+      padding-bottom: calc(var(--spacing) * 28);
+    }
+  }
+  .p-service#service-coating {
+    background-size: 48.625rem auto;
+    background-position: top 30rem right -12rem;
+    background-repeat: no-repeat;
+    background-image: url('assets/img/circle-2-ornament.svg');
+  }
+  .p-service#service-coating .p-service__top {
+    padding-top: calc(var(--spacing) * 42);
+  }
+  @media (width < 48rem) {
+    .p-service#service-coating .p-service__top {
+      padding-top: calc(var(--spacing) * 26);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-coating .slide-bg-text__item span {
+      font-size: 1.625rem;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service#service-coating .slide-bg-text__item span {
+      --tw-tracking: -.05em;
+      letter-spacing: -.05em;
+    }
+  }
+  .p-service#service-coating .main-card__top {
+    gap: 2.25rem;
+  }
+  .p-service#service-coating .main-card__top img {
+    width: calc(var(--spacing) * 67.5);
+  }
+  .p-service#service-coating section#coating {
+    padding-bottom: calc(var(--spacing) * 26);
+  }
+  @media (width < 48rem) {
+    .p-service#service-coating section#coating {
+      padding-bottom: calc(var(--spacing) * 14.5);
+    }
+  }
+  .p-service#service-coating section#lease-cars {
+    padding-top: calc(var(--spacing) * 1.5);
+    padding-bottom: calc(var(--spacing) * 52);
+  }
+  @media (width < 48rem) {
+    .p-service#service-coating section#lease-cars {
       padding-bottom: calc(var(--spacing) * 28);
     }
   }

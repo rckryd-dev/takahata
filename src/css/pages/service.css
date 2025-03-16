@@ -16,16 +16,16 @@
   }
 
   .main-card {
-    @apply bg-white text-black-light max-w-270 mx-auto pt-12.5 pb-16 rounded-[1.875rem] text-lg font-medium leading-[1.78] max-md:text-[1.3125rem] max-md:leading-[1.52];
+    @apply bg-white text-black-light max-w-270 mx-auto pt-12.5 pb-16 rounded-[1.875rem] text-lg font-medium leading-[1.78] max-md:text-[1.3125rem] max-md:leading-[1.52] max-md:mx-7.5;
   
     &__btn {
       @apply border border-primary text-primary w-84 h-13.5 grid place-content-center font-bold rounded-4xl mx-auto hover:bg-primary hover:text-white transition-all duration-200;
     }
 
     &__top {
-      @apply flex gap-18 items-center px-21;
+      @apply flex gap-18 items-center px-21 max-md:flex-col max-md:gap-15 max-md:px-7.5;
       img {
-        @apply w-69;
+        @apply w-69 max-md:w-97.5;
       }
       
       &__text {
@@ -34,21 +34,21 @@
         }
 
         p {
-          @apply mt-2; 
+          @apply mt-2 max-md:tracking-[-.04em] max-md:mt-4; 
         }
       }
     }
 
     &__bottom {
-      @apply grid grid-cols-2 text-center mt-11.5;
+      @apply grid grid-cols-2 text-center mt-11.5 max-md:grid-cols-1 max-md:mt-6;
 
       &__left,
       &__right {
-        @apply pt-4.5 pb-11;
+        @apply pt-4.5 pb-11 max-md:mx-11 max-md:py-14;
       }
 
       &__right {
-        @apply border-l border-primary;
+        @apply max-md:border-t md:border-l border-primary;
       }
     }
   }
@@ -161,7 +161,8 @@
     @apply bg-primary;
   }
   section#insurance,
-  section#parts {
+  section#parts,
+  section#coating {
     @apply bg-black;
   }
 
@@ -214,7 +215,37 @@
     background-image: url('assets/img/car-2-ornament.svg');
 
     section#lease {
-      @apply pb-32;
+      @apply pb-32 max-md:pb-14.5;
+    }
+
+    section#lease-cars {
+      @apply pt-1.5 pb-52 max-md:pb-28;
+    }
+  }
+  
+  &#service-coating {
+    @apply bg-no-repeat bg-[48.625rem_auto] bg-[top_30rem_right_-12rem];
+    background-image: url('assets/img/circle-2-ornament.svg');
+
+    .p-service__top {
+      @apply pt-42 max-md:pt-26;
+    }
+
+    .slide-bg-text__item {
+      span{
+        @apply max-md:text-[1.625rem] max-md:tracking-[-.05em];
+      }
+    }
+
+    .main-card__top {
+      @apply gap-[2.25rem];
+      img {
+        @apply w-67.5;
+      }
+    }
+
+    section#coating {
+      @apply pb-26 max-md:pb-14.5;
     }
 
     section#lease-cars {
