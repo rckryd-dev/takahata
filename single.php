@@ -134,6 +134,7 @@
     </div>
   </section>
   <?php endwhile; endif; ?>
+  <?php get_template_part('parts/page-to-top') ?>
 </main>
 <?php get_footer(); ?>
 

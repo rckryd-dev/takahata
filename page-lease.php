@@ -110,7 +110,55 @@ get_header();
 
     </div>
   </section>
+
+  <section data-bg-color="black" class="style-01" id="lease-cars">
+    <div>
+      <div class="sc-title fadeUp">
+        <h2>CARS</h2>
+        <p>取扱い車種</p>
+      </div>
+
+      <div class="splide slide-list fadeUp">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="slide-list__item">
+                <div class="slide-list__item__img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-lease-img-04.jpg" alt="◯◯◯◯◯">
+                </div>
+                <div class="slide-list__item__desc">
+                  <div>レクサス　RX</div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slide-list__item">
+                <div class="slide-list__item__img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-lease-img-05.jpg" alt="◯◯◯◯◯">
+                </div>
+                <div class="slide-list__item__desc">
+                  <div>アルファード</div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slide-list__item">
+                <div class="slide-list__item__img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-lease-img-06.jpg" alt="◯◯◯◯◯">
+                </div>
+                <div class="slide-list__item__desc">
+                  <div>メルセデスベンツ　Sクラス</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="max-md:h-20"></div>
+  <?php get_template_part('parts/page-to-top') ?>
 </main>
 <?php get_footer(); ?>
 

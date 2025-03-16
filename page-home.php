@@ -559,6 +559,7 @@ get_template_part('parts/scroll-down');
       </div>
     </div>
   </section>
+  <?php get_template_part('parts/page-to-top') ?>
 </main>
 
 <?php 
@@ -571,25 +572,24 @@ get_template_part('parts/scroll-down');
 <script src="https://unpkg.com/three@0.142.0/build/three.min.js"></script>
 
 <script>
-// Import GSAP & ScrollTrigger jika pakai module
 gsap.registerPlugin(ScrollTrigger);
 
 let maxRotation = 1;
 
-// Buat scene Three.js
+// Create scene Three.js
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 500);
 camera.position.set(0, 0, 1.8);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
-// Tambahkan renderer ke dalam elemen .service-roll
+// Add renderer to .service-roll
 const serviceRoll = document.querySelector('.service-roll');
 if (serviceRoll) {
     serviceRoll.appendChild(renderer.domElement);
 }
 
-// Update ukuran renderer
+// Update renderer size
 function updateSize() {
     if (serviceRoll) {
         const { clientWidth, clientHeight } = serviceRoll;
@@ -602,7 +602,7 @@ function updateSize() {
 updateSize();
 window.addEventListener('resize', updateSize);
 
-// Load tekstur gambar
+// Load texture
 const textureLoader = new THREE.TextureLoader();
 textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/service-list.jpg', function(texture) {
     texture.wrapS = THREE.ClampToEdgeWrapping;
@@ -616,22 +616,22 @@ textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/servi
         const imgHeight = img.height;
         maxRotation = (imgWidth / imgHeight) * Math.PI;
 
-        // Buat geometri silinder
+        // create silinder
         const geometry = new THREE.CylinderGeometry(1, 1, 1.2, 50, 1, false);
         const material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
         const cylinder = new THREE.Mesh(geometry, material);
         cylinder.rotation.z = Math.PI / 2;
         scene.add(cylinder);
 
-        // 🔥 GSAP ScrollTrigger untuk mengontrol rotasi saat scroll
+        // use GSAP ScrollTrigger for controll
         gsap.to(cylinder.rotation, {
-            x: -maxRotation / 2.7, // Target rotasi
+            x: -maxRotation / 2.7, // rotation target
             scrollTrigger: {
-                trigger: ".service-roll-wrapper", // Elemen yang memicu animasi
-                start: "top center", // Mulai saat elemen masuk viewport
-                end: "bottom center", // Selesai saat elemen keluar viewport
-                scrub: true, // Animasi mengikuti scroll
-                markers: false // Ganti true jika ingin melihat indikator
+                trigger: ".service-roll-wrapper", 
+                start: "top center", 
+                end: "bottom center", 
+                scrub: true, 
+                markers: false 
             }
         });
 
@@ -639,10 +639,9 @@ textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/servi
     };
 });
 
-// Loop animasi Three.js
+// Loop Three.js
 function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
 }
-
 </script>

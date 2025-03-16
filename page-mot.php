@@ -76,5 +76,6 @@ get_header();
     </div>
   </section>
   <div class="max-md:h-20"></div>
+  <?php get_template_part('parts/page-to-top') ?>
 </main>
 <?php get_footer(); ?>

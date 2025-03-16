@@ -42,6 +42,22 @@
     &__bottom {
       @apply grid grid-cols-2 text-center mt-11.5 max-md:grid-cols-1 max-md:mt-6;
 
+      .badge {
+        @apply flex gap-3 justify-center mt-7 max-md:mt-6 max-md:flex-wrap max-md:gap-5;
+
+        > div {
+          @apply w-fit;
+
+          span {
+            @apply block text-[.75rem] font-bold text-center text-primary mt-2 max-md:text-[1.3125rem] max-md:mt-3;
+          }
+        }
+
+        img {
+          @apply w-15.5 max-md:w-35.5;
+        }
+      }
+
       &__left,
       &__right {
         @apply pt-4.5 pb-11 max-md:mx-11 max-md:py-14;
@@ -240,12 +256,12 @@
     .main-card__top {
       @apply gap-[2.25rem];
       img {
-        @apply w-67.5;
+        @apply w-67.5 max-md:w-88.5;
       }
     }
 
     section#coating {
-      @apply pb-26 max-md:pb-14.5;
+      @apply pb-52 max-md:pb-28;
     }
 
     section#lease-cars {
