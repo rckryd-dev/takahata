@@ -176,6 +176,9 @@
   section#lease {
     @apply bg-primary;
   }
+
+  section#maintenance,
+  section#mot,
   section#insurance,
   section#parts,
   section#coating {

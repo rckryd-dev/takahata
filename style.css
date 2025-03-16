@@ -220,20 +220,8 @@ Text Domain: takahata
   .top-30 {
     top: calc(var(--spacing) * 30);
   }
-  .right-0 {
-    right: calc(var(--spacing) * 0);
-  }
-  .right-1 {
-    right: calc(var(--spacing) * 1);
-  }
-  .right-2 {
-    right: calc(var(--spacing) * 2);
-  }
   .right-3 {
     right: calc(var(--spacing) * 3);
-  }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
   }
   .bottom-5\.5 {
     bottom: calc(var(--spacing) * 5.5);
@@ -407,9 +395,6 @@ Text Domain: takahata
   .w-6\.25 {
     width: calc(var(--spacing) * 6.25);
   }
-  .w-18\.5 {
-    width: calc(var(--spacing) * 18.5);
-  }
   .w-23\.5 {
     width: calc(var(--spacing) * 23.5);
   }
@@ -542,11 +527,6 @@ Text Domain: takahata
   @media (width < 48rem) {
     .max-md\:right-9 {
       right: calc(var(--spacing) * 9);
-    }
-  }
-  @media (width < 48rem) {
-    .max-md\:right-12 {
-      right: calc(var(--spacing) * 12);
     }
   }
   @media (width < 48rem) {
@@ -5291,7 +5271,7 @@ Text Domain: takahata
   .p-service section#car-new, .p-service section#lease {
     background-color: var(--color-primary);
   }
-  .p-service section#insurance, .p-service section#parts, .p-service section#coating {
+  .p-service section#maintenance, .p-service section#mot, .p-service section#insurance, .p-service section#parts, .p-service section#coating {
     background-color: var(--color-black);
   }
   .p-service#service-car {
