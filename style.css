@@ -2336,6 +2336,7 @@ Text Domain: takahata
     padding: calc(var(--spacing) * 6.25);
   }
   .p-home .home-virtual .wrapper .aside__card ._thumb {
+    width: 100%;
     border-radius: .9375rem;
   }
   .p-home .home-virtual .wrapper .aside__card ._list {

@@ -72,7 +72,7 @@ get_template_part('parts/scroll-down');
             'title' => 'タカハラとは何者だ！',
             'description' => "私たちは、自動車販売と整備を通じて、お客様との対等な50:50の関係を大切にし、<br>共に最適なカーライフを実現します。<br>思いやりを期にしたサービス精神と企業努力を惜しまず、<br>日々の品質向上に務めることでお客様と縁を繋いで来ました。<br>急なトラブルにも即時対応できる体制を整え、<br>お客様の安心と安全を最優先に考えたサービスをご提供。<br>また専任のコンシェルジュがご相談から購入後のサーポートまで丁寧に対応し、<br>快適なドライブ体験をお約束します。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '1.mp4',
             'link' => ''
         ],
         [
@@ -80,7 +80,7 @@ get_template_part('parts/scroll-down');
             'title' => 'キーパーコーティング認定工場',
             'description' => "キーパープロショップの代理店として、キーパーコーティング技術の認定を受けています。<br>コーティングいただくことで、ご愛車にキレイな状態で長くご乗車いただけます。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '2.mp4',
             'link' => ''
         ],
         [
@@ -88,7 +88,7 @@ get_template_part('parts/scroll-down');
             'title' => '新車販売・中古車販売',
             'description' => "日本中古自動車販売協会連合会が認定する、安心と信頼のJU適正販売店です。<br>中古車販売における多くの法令・ルールに則った営業をいたします。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '3.mp4',
             'link' => ''
         ],
         [
@@ -96,7 +96,7 @@ get_template_part('parts/scroll-down');
             'title' => '修理・板金・塗装',
             'description' => "認証整備工場での法定点検・分解整備を行い、<br>自動車整備に関するトータルサポートが可能です。豊富な設備環境で丁寧に仕上げます。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '4.mp4',
             'link' => ''
         ],
         [
@@ -104,7 +104,7 @@ get_template_part('parts/scroll-down');
             'title' => '自動車パーツ・アクセサリー販売など',
             'description' => "車検・メンテナンスなどで必要になったパーツは、<br>お客様のご希望に合わせてすべて取り寄せが可能です。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '5.mp4',
             'link' => ''
         ],
         [
@@ -112,7 +112,7 @@ get_template_part('parts/scroll-down');
             'title' => '車検申請・整備',
             'description' => "中部運輸局認証車検工場として、地方運輸局より自動車特定整備事業の認証を受けた安心の事業者です。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '6.mp4',
             'link' => ''
         ],
         [
@@ -120,7 +120,7 @@ get_template_part('parts/scroll-down');
             'title' => '新車・中古車リースレンタカー事業',
             'description' => "お客様のライフスタイルの変化やご予算の都合に合わせて、<br>自動車の販売だけでなくリース提案も可能です。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '7.mp4',
             'link' => ''
         ],
         [
@@ -128,7 +128,7 @@ get_template_part('parts/scroll-down');
             'title' => '新車・中古車リースレンタカー事業',
             'description' => "お客様のライフスタイルの変化やご予算の都合に合わせて、<br>自動車の販売だけでなくリース提案も可能です。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '8.mp4',
             'link' => ''
         ],
         [
@@ -136,14 +136,15 @@ get_template_part('parts/scroll-down');
             'title' => '自動車保険・生命保険・各種お取り扱い',
             'description' => "自動車保険から生命保険にいたるまで、<br>お客様にご安心いただくための豊富なラインナップを取り揃えています。",
             'list' => ['施設内容', '施設内容', '施設内容', '施設内容'],
-            'img' => 'placeholder.svg',
+            'img' => '9.mp4',
             'link' => ''
         ]
       ];      
 
       $jsonData = json_encode($items, JSON_UNESCAPED_UNICODE);
     ?>
-    <div class="wrapper fadeUp mt-20 md:mt-12.5" x-data="{data: 0, showCard: false, selectedData: 0}">
+    <div class="wrapper fadeUp mt-20 md:mt-12.5" 
+      x-data="{data: 0, showCard: false, selectedData: 0}">
       <div class="content">
         <div class="content__img">
           <img :src="`<?php echo get_template_directory_uri(); ?>/assets/img/vr-img${data === 0 ? '' : `-${data}`}.png`" alt="VR Image">
@@ -168,7 +169,8 @@ get_template_part('parts/scroll-down');
               </button>
             </div>
             <div class="aside__card">
-              <img :src="`<?php echo get_template_directory_uri(); ?>/assets/img/${vrData.find(i => i.id === selectedData)?.img || 'vr-img.png'}`" :alt="vrData.find(i => i.id === selectedData)?.title || ''" class="_thumb">
+              <video x-ref="video" :src="`<?php echo get_template_directory_uri(); ?>/assets/vid/${vrData.find(i => i.id === selectedData)?.img || '1.mp4'}`" :alt="vrData.find(i => i.id === selectedData)?.title || ''" autoplay loop muted playsinline class="_thumb">
+              </video>
               
               <ul class="_list">
                 <template x-for="listItem in vrData.find(i => i.id === selectedData)?.list || []">
@@ -230,7 +232,8 @@ get_template_part('parts/scroll-down');
             </button>
           </div>
           <div class="aside__card">
-            <img :src="`<?php echo get_template_directory_uri(); ?>/assets/img/${vrData.find(i => i.id === selectedData)?.img || 'vr-img.png'}`" :alt="vrData.find(i => i.id === selectedData)?.title || ''" class="_thumb">
+            <video x-ref="video" :src="`<?php echo get_template_directory_uri(); ?>/assets/vid/${vrData.find(i => i.id === selectedData)?.img || '1.mp4'}`" :alt="vrData.find(i => i.id === selectedData)?.title || ''" autoplay loop muted playsinline class="_thumb">
+            </video>
             
             <ul class="_list">
               <template x-for="listItem in vrData.find(i => i.id === selectedData)?.list || []">
