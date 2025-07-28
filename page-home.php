@@ -312,7 +312,30 @@ get_template_part('parts/scroll-down');
       <div class="service-roll-wrapper">
         <div class="service-roll-text-track"></div>
         <div class="service-roll">
-          <div class="service-roll-canvas-container"></div>
+          <!-- <div class="service-roll-canvas-container"></div> -->
+          <div class="service-roll-img">
+            <ul>
+              <li>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-menu_01_lite.jpg">
+              </li>
+              <li>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-menu_02_lite.jpg">
+              </li>
+              <li>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-menu_03_lite.jpg">
+              </li>
+              <li>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-menu_04_lite.jpg">
+              </li>
+              <li>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-menu_05_lite.jpg">
+              </li>
+              <li>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-menu_06_lite.jpg">
+              </li>
+            </ul>
+          </div>
+          <div class="service-roll-img-container"></div>
           <div class="service-roll-text">
             <ul>
               <li>
@@ -329,7 +352,7 @@ get_template_part('parts/scroll-down');
                   <div>MAINTENANCE</div>
                   <div>
                     <h3>整備</h3>
-                    <span>修理、鈑金、塗装</span>
+                    <span>整備、車検申請</span>
                   </div>
                 </a>
               </li>
@@ -362,14 +385,14 @@ get_template_part('parts/scroll-down');
               </li>
               <li>
                 <a href="<?php echo home_url(); ?>/service/mot">
-                  <div>CAR INSPECTION</div>
+                  <div class="-long">SHEET METAL <br class="md:hidden">PAINTING</div>
                   <div>
-                    <h3>車検</h3>
-                    <span>車検申請、整備</span>
+                    <h3>板金、塗装</h3>
+                    <span>修理、鈑金塗装</span>
                   </div>
                 </a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="<?php echo home_url(); ?>/service/parts">
                   <div>CAR PARTS</div>
                   <div>
@@ -377,7 +400,7 @@ get_template_part('parts/scroll-down');
                     <span>自動車パーツ、アクセサリー販売など</span>
                   </div>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="service-roll-text-container"></div>
@@ -568,7 +591,7 @@ get_template_part('parts/scroll-down');
 <script>
   const vrData = <?= $jsonData ?>;
 </script>
-<script src="https://unpkg.com/three@0.142.0/build/three.min.js"></script>
+<!-- <script src="https://unpkg.com/three@0.142.0/build/three.min.js"></script>
 
 <script>
 // Import GSAP & ScrollTrigger jika pakai module
@@ -604,7 +627,7 @@ window.addEventListener('resize', updateSize);
 
 // Load tekstur gambar
 const textureLoader = new THREE.TextureLoader();
-textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/service-list.jpg', function(texture) {
+textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/service-list.webp', function(texture) {
     texture.wrapS = THREE.ClampToEdgeWrapping;
     texture.wrapT = THREE.ClampToEdgeWrapping;
     texture.repeat.set(1, 1);
@@ -643,6 +666,6 @@ textureLoader.load('<?php echo get_template_directory_uri(); ?>/assets/img/servi
 function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
-}
+} 
 
-</script>
+</script> -->

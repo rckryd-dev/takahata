@@ -299,7 +299,7 @@
           @apply w-full;
         }
       }
-      .service-roll-canvas-container {
+      /* .service-roll-canvas-container {
         @apply absolute top-0 left-0 w-full h-full z-[1] pointer-events-none;
 
         &::before,
@@ -314,6 +314,32 @@
           @apply -bottom-8;
           background: linear-gradient(0, var(--color-black) 0%, var(--color-black) 65%, transparent 100%);
         }
+      } */
+
+      .service-roll-img {
+        @apply absolute -top-[9rem] left-1/2 -translate-x-1/2 h-full z-[1] w-[33.75rem] md:w-[85rem] mx-auto;
+        
+        ul {
+          @apply absolute w-full h-full;
+          perspective: 312.5rem;
+
+          li {
+            @apply text-center top-[45%];
+            position: absolute;
+            transform-style: preserve-3d;
+            transform-origin: center;
+            transform: translate3d(0, 22rem, -120rem) rotateX(-82deg);
+
+            &::after {
+              @apply absolute content-[''] inset-0 bg-black/60;
+            }
+            
+            @media (width < 48rem) {
+              transform: translate3d(0, 140%, -10rem) rotateX(-70deg);
+             
+            }
+          }
+        }
       }
 
       .service-roll-text {
@@ -322,18 +348,18 @@
         ul {
           @apply absolute w-full h-full;
           perspective: 312.5rem;
-          transform-style: preserve-3d;
+          /* transform-style: preserve-3d; */
 
           li {
             @apply text-center top-[45%];
             position: absolute;
             transform-style: preserve-3d;
             transform-origin: center;
-            transform: translate3d(0, 20rem, -10rem) rotateX(-70deg);
+            transform: translate3d(0, 20rem, -10rem) rotateX(-85deg);
             width: 100%;
             
             @media (width < 48rem) {
-              transform: translate3d(0, 140%, -10rem) rotateX(-70deg);
+              transform: translate3d(0, 200%, -10rem) rotateX(-70deg);
              
             }
 
@@ -357,6 +383,10 @@
                     @apply font-medium text-lg;
                   }
                 }
+                
+                &.-long {
+                  @apply max-md:leading-[.9] max-md:text-[6rem];
+                }
               }
 
               &:hover {
@@ -373,7 +403,7 @@
         }
       }
 
-      .service-roll-text-container {
+      .service-roll-img-container {
         @apply absolute top-0 left-0 w-full h-full z-[1] pointer-events-none;
 
         &::before,
@@ -381,10 +411,25 @@
           @apply absolute content-[''] w-screen left-1/2 -translate-x-1/2 h-45 from-black via-black to-transparent max-md:h-20;
         }
         &::before {
-          @apply -top-40 bg-gradient-to-b max-md:-top-18;
+          @apply -top-20 bg-gradient-to-b max-md:-top-28;
         }
         &::after {
-          @apply -bottom-40 bg-gradient-to-t max-md:-bottom-15;
+          @apply -bottom-28 bg-gradient-to-t max-md:-bottom-18;
+        }
+      }
+
+      .service-roll-text-container {
+        @apply absolute top-0 left-0 w-full h-full z-[1] pointer-events-none;
+
+        &::before,
+        &::after {
+          @apply absolute content-[''] w-screen left-1/2 -translate-x-1/2 h-45 from-black via-black to-transparent max-md:h-22;
+        }
+        &::before {
+          @apply -top-40 bg-gradient-to-b max-md:-top-39;
+        }
+        &::after {
+          @apply -bottom-40 bg-gradient-to-t max-md:-bottom-29;
         }
       }
     }

@@ -305,6 +305,21 @@ function initAnimations() {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
+      gsap.to(".service-roll-img li", {
+        scrollTrigger: {
+          trigger: ".service-roll-text-track",
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: 1,
+          markers: false
+        },
+        keyframes: [
+          { y: 0, z: '-100rem', rotateX: 0, ease: "none" },  
+          { y: '-22rem', z: '-120rem', rotateX: 85, ease: "none" } 
+        ],
+        stagger: 0.5 
+      });
+
       gsap.to(".service-roll-text li", {
         scrollTrigger: {
           trigger: ".service-roll-text-track",
@@ -315,13 +330,28 @@ function initAnimations() {
         },
         keyframes: [
           { y: 0, z: 0, rotateX: 0, ease: "none" },  
-          { y: '-23rem', z: '-10rem', rotateX: 74, ease: "none" } 
+          { y: '-22rem', z: '-10rem', rotateX: 80, ease: "none" } 
         ],
         stagger: 0.5 
       });
     });
 
     mm.add("(max-width: 767px)", () => {
+      gsap.to(".service-roll-img li", {
+        scrollTrigger: {
+          trigger: ".service-roll-text-track",
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: 1,
+          markers: false
+        },
+        keyframes: [
+          { y: '45%', z: 0, rotateX: 0, ease: "none" },  
+          { y: '-100%', z: '-10rem', rotateX: 74, ease: "none" } 
+        ],
+        stagger: 0.5 
+      });
+
       gsap.to(".service-roll-text li", {
         scrollTrigger: {
           trigger: ".service-roll-text-track",
@@ -332,7 +362,7 @@ function initAnimations() {
         },
         keyframes: [
           { y: 0, z: 0, rotateX: 0, ease: "none" },  
-          { y: '-220%', z: '-10rem', rotateX: 74, ease: "none" } 
+          { y: '-300%', z: '-10rem', rotateX: 74, ease: "none" } 
         ],
         stagger: 0.5 
       });
