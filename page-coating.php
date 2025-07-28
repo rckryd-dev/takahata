@@ -60,22 +60,42 @@ get_header();
           <div class="main-card__top__text">
             <h3>コーティング施工</h3>
             <p>
-             弊社は、「KeePer」の代理店です。<br>新車時の光沢を取り戻しつつ、洗車の回数を短縮できます。<br>これにより、お客様が行うメンテナンスの負担を最低限に抑えられます。
+              弊社は、「KeePer」の代理店です。<br>新車時の光沢を取り戻しつつ、洗車の回数を短縮できます。<br class="max-md:hidden">これにより、お客様が行うメンテナンスの負担を最低限に抑えられます。
             </p>
           </div>
         </div>
         <div class="main-card__bottom">
           <div class="main-card__bottom__left">
             <a href="" class="main-card__btn">取扱いサービス</a>
-            <p class="mt-6 md:mt-7">
-              当社を初めてご利用のお客様については、<br><span class="text-primary">新車の軽自動車のみのご利用になります。</span>
-            </p>
+            <div class="badge">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-01.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-02.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-03.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-04.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-05.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-06.png" alt="">
+            </div>
           </div>
           <div class="main-card__bottom__right">
             <a href="" class="main-card__btn">資格者</a>
-            <p class="mt-6 md:mt-7">
-              すでに当社をご利用のお客様については、<br><span class="text-primary">新車・中古車問わず様々なお車をご利用いただけます。</span>
-            </p>
+            <div class="badge max-md:w-11/12 mx-auto">
+              <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-07.png" alt="">
+                <span>1名</span>
+              </div>
+              <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-08.png" alt="">
+                <span>有り</span>
+              </div>
+              <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-09.png" alt="">
+                <span>2名</span>
+              </div>
+              <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-coating-badge-10.png" alt="">
+                <span>2名</span>
+              </div>
+            </div>
           </div>
         </div>
         <a class="btn btn--secondary group mx-auto mt-2 md:mt-12" href="">
@@ -86,5 +106,6 @@ get_header();
     </div>
   </section>
   <div class="max-md:h-20"></div>
+  <?php get_template_part('parts/page-to-top') ?>
 </main>
 <?php get_footer(); ?>

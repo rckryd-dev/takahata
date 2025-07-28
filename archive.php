@@ -11,5 +11,6 @@
             <p><?php esc_html_e('No posts found.'); ?></p>
         <?php endif; ?>
     </div>
+    <?php get_template_part('parts/page-to-top') ?>
 </main>
 <?php get_footer(); ?>

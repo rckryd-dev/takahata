@@ -35,7 +35,7 @@ get_header();
 
   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service-mot-banner.jpg" class="w-full">
 
-  <section data-bg-color="black" class="style-01">
+  <section data-bg-color="black" class="style-01" id="mot">
     <div class="wrapper">
       <div class="sc-title fadeUp">
 
@@ -76,5 +76,6 @@ get_header();
     </div>
   </section>
   <div class="max-md:h-20"></div>
+  <?php get_template_part('parts/page-to-top') ?>
 </main>
 <?php get_footer(); ?>

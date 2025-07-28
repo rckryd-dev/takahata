@@ -13,7 +13,6 @@ Text Domain: takahata
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --color-blue-500: oklch(0.623 0.214 259.815);
     --color-black: #232323;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -221,11 +220,11 @@ Text Domain: takahata
   .top-30 {
     top: calc(var(--spacing) * 30);
   }
-  .right-5 {
-    right: calc(var(--spacing) * 5);
+  .right-3 {
+    right: calc(var(--spacing) * 3);
   }
-  .bottom-5 {
-    bottom: calc(var(--spacing) * 5);
+  .bottom-5\.5 {
+    bottom: calc(var(--spacing) * 5.5);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -396,6 +395,9 @@ Text Domain: takahata
   .w-6\.25 {
     width: calc(var(--spacing) * 6.25);
   }
+  .w-23\.5 {
+    width: calc(var(--spacing) * 23.5);
+  }
   .w-37\.5 {
     width: calc(var(--spacing) * 37.5);
   }
@@ -441,9 +443,6 @@ Text Domain: takahata
   .rounded-\[\.9375rem\] {
     border-radius: .9375rem;
   }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -456,12 +455,6 @@ Text Domain: takahata
   }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
-  }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
@@ -495,13 +488,6 @@ Text Domain: takahata
   .text-primary {
     color: var(--color-primary);
   }
-  .text-white {
-    color: var(--color-white);
-  }
-  .shadow-lg {
-    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -533,6 +519,16 @@ Text Domain: takahata
       color: var(--color-white);
     }
   }
+  @media (hover: hover) {
+    .hover\:opacity-60:hover {
+      opacity: 60%;
+    }
+  }
+  @media (width < 48rem) {
+    .max-md\:right-9 {
+      right: calc(var(--spacing) * 9);
+    }
+  }
   @media (width < 48rem) {
     .max-md\:mb-14\.5 {
       margin-bottom: calc(var(--spacing) * 14.5);
@@ -551,6 +547,11 @@ Text Domain: takahata
   @media (width < 48rem) {
     .max-md\:h-20 {
       height: calc(var(--spacing) * 20);
+    }
+  }
+  @media (width < 48rem) {
+    .max-md\:w-11\/12 {
+      width: calc(11/12 * 100%);
     }
   }
   @media (width < 48rem) {
@@ -671,6 +672,11 @@ Text Domain: takahata
   @media (width >= 48rem) {
     .md\:h-200 {
       height: calc(var(--spacing) * 200);
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:w-18\.5 {
+      width: calc(var(--spacing) * 18.5);
     }
   }
   @media (width >= 48rem) {
@@ -2330,6 +2336,7 @@ Text Domain: takahata
     padding: calc(var(--spacing) * 6.25);
   }
   .p-home .home-virtual .wrapper .aside__card ._thumb {
+    width: 100%;
     border-radius: .9375rem;
   }
   .p-home .home-virtual .wrapper .aside__card ._list {
@@ -4970,6 +4977,57 @@ Text Domain: takahata
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
   }
+  .p-service .main-card__bottom .badge {
+    margin-top: calc(var(--spacing) * 7);
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--spacing) * 3);
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom .badge {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom .badge {
+      flex-wrap: wrap;
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom .badge {
+      gap: calc(var(--spacing) * 5);
+    }
+  }
+  .p-service .main-card__bottom .badge > div {
+    width: fit-content;
+  }
+  .p-service .main-card__bottom .badge > div span {
+    margin-top: calc(var(--spacing) * 2);
+    display: block;
+    text-align: center;
+    font-size: .75rem;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom .badge > div span {
+      margin-top: calc(var(--spacing) * 3);
+    }
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom .badge > div span {
+      font-size: 1.3125rem;
+    }
+  }
+  .p-service .main-card__bottom .badge img {
+    width: calc(var(--spacing) * 15.5);
+  }
+  @media (width < 48rem) {
+    .p-service .main-card__bottom .badge img {
+      width: calc(var(--spacing) * 35.5);
+    }
+  }
   .p-service .main-card__bottom__left, .p-service .main-card__bottom__right {
     padding-top: calc(var(--spacing) * 4.5);
     padding-bottom: calc(var(--spacing) * 11);
@@ -5290,7 +5348,7 @@ Text Domain: takahata
   .p-service section#car-new, .p-service section#lease {
     background-color: var(--color-primary);
   }
-  .p-service section#insurance, .p-service section#parts, .p-service section#coating {
+  .p-service section#maintenance, .p-service section#mot, .p-service section#insurance, .p-service section#parts, .p-service section#coating {
     background-color: var(--color-black);
   }
   .p-service#service-car {
@@ -5442,12 +5500,17 @@ Text Domain: takahata
   .p-service#service-coating .main-card__top img {
     width: calc(var(--spacing) * 67.5);
   }
+  @media (width < 48rem) {
+    .p-service#service-coating .main-card__top img {
+      width: calc(var(--spacing) * 88.5);
+    }
+  }
   .p-service#service-coating section#coating {
-    padding-bottom: calc(var(--spacing) * 26);
+    padding-bottom: calc(var(--spacing) * 52);
   }
   @media (width < 48rem) {
     .p-service#service-coating section#coating {
-      padding-bottom: calc(var(--spacing) * 14.5);
+      padding-bottom: calc(var(--spacing) * 28);
     }
   }
   .p-service#service-coating section#lease-cars {
@@ -6557,61 +6620,6 @@ Text Domain: takahata
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-inset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-inset-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-inset-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-inset-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-ring-inset {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ring-offset-width {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0px;
-}
-@property --tw-ring-offset-color {
-  syntax: "*";
-  inherits: false;
-  initial-value: #fff;
-}
-@property --tw-ring-offset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
 }
 @property --tw-outline-style {
   syntax: "*";
